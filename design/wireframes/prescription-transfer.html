@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transfer Your Prescription — Four Winds Roots Pharmacy, North York</title>
+<meta name="description" content="Switch to Four Winds Roots Pharmacy in two minutes. We handle the transfer from your current pharmacy. Keele &amp; Finch, North York.">
+<!-- WIREFRAME MOCKUP — demonstrates a PHIPA-conscious transfer form. Not a working form. -->
+<style>
+  :root{--color-primary:#2E5D4B;--color-action:#1B7F66;--color-ink:#1F2421;--color-paper:#FAFAF7;
+    --color-calm:#DCEAE4;--radius:12px;--text-base:18px;--maxw:760px;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);font-size:var(--text-base);line-height:1.55;
+    color:var(--color-ink);background:var(--color-paper);padding-bottom:64px}
+  a{color:var(--color-action)}
+  .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:.5rem}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+  header.site{background:var(--color-primary);color:#fff;position:sticky;top:0;z-index:20}
+  header.site .wrap{display:flex;align-items:center;gap:1rem;min-height:64px}
+  .logo{font-weight:800;color:#fff;text-decoration:none;margin-right:auto}
+  .btn{display:inline-block;padding:.7rem 1.1rem;border-radius:var(--radius);font-weight:700;
+    text-decoration:none;border:2px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--color-action);color:#fff}
+  .btn-ghost{background:#fff;color:var(--color-primary);border-color:var(--color-primary)}
+  h1{color:var(--color-primary)}
+  .steps{display:flex;gap:1rem;flex-wrap:wrap;margin:1.25rem 0}
+  .step{flex:1;min-width:180px;background:var(--color-calm);border-radius:var(--radius);padding:1rem}
+  form{background:#fff;border:1px solid #e6e6e0;border-radius:var(--radius);padding:1.25rem;margin-top:1rem}
+  label{display:block;font-weight:600;margin:.9rem 0 .3rem}
+  input,select,textarea{width:100%;padding:.65rem;font-size:1rem;border:1px solid #bbb;
+    border-radius:8px;font-family:inherit}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--color-action);outline-offset:1px}
+  .req{color:#a23}
+  .consent{display:flex;gap:.6rem;align-items:flex-start;background:var(--color-calm);
+    padding:1rem;border-radius:var(--radius);margin:1rem 0}
+  .consent input{width:auto;margin-top:.3rem}
+  .note{font-size:.95rem;color:#555}
+  .fallback{margin-top:1rem}
+  .mobilebar{position:fixed;bottom:0;left:0;right:0;display:flex;background:#fff;
+    border-top:1px solid #ddd;z-index:30}
+  .mobilebar a{flex:1;text-align:center;padding:.8rem;text-decoration:none;font-weight:700;color:var(--color-primary)}
+  footer.site{background:var(--color-primary);color:#fff;padding:1.5rem 0;margin-top:2rem}
+  footer.site a{color:#fff}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+  <a class="logo" href="homepage.html">Four Winds Roots Pharmacy</a>
+  <a class="btn btn-ghost" href="tel:+14163988200">Call</a>
+</div></header>
+
+<main id="main" class="wrap">
+  <h1>Transfer your prescription — we'll do the work</h1>
+  <p>Already filling at another pharmacy? Switching to Four Winds Roots takes about two minutes.
+     Tell us what to move and we contact your current pharmacy for you.</p>
+
+  <div class="steps">
+    <div class="step"><strong>1.</strong> Tell us your details and what to transfer.</div>
+    <div class="step"><strong>2.</strong> We contact your current pharmacy.</div>
+    <div class="step"><strong>3.</strong> Pick up or get free delivery — we'll confirm when it's ready.</div>
+  </div>
+
+  <form aria-labelledby="formtitle" novalidate>
+    <h2 id="formtitle">Transfer request</h2>
+    <p class="note">We only ask for what we need to complete your transfer. Required fields marked <span class="req">*</span>.</p>
+
+    <label for="name">Your full name <span class="req">*</span></label>
+    <input id="name" name="name" autocomplete="name" required>
+
+    <label for="phone">Phone <span class="req">*</span></label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+    <label for="dob">Date of birth</label>
+    <input id="dob" name="dob" type="date">
+
+    <label for="from">Current pharmacy name &amp; location <span class="req">*</span></label>
+    <input id="from" name="from" required>
+
+    <label for="meds">Medication(s) to transfer <span class="req">*</span></label>
+    <textarea id="meds" name="meds" rows="3" placeholder="Name and Rx number if you have it"></textarea>
+
+    <label for="method">Pickup or delivery?</label>
+    <select id="method" name="method">
+      <option>Pick up in store</option>
+      <option>Free delivery</option>
+    </select>
+
+    <div class="consent">
+      <input id="consent" name="consent" type="checkbox" required>
+      <label for="consent" style="font-weight:400;margin:0">
+        <strong>Consent <span class="req">*</span>:</strong> I consent to Four Winds Roots Pharmacy
+        collecting this information to process my prescription transfer and to contacting my current
+        pharmacy on my behalf. I understand my information is handled per the
+        <a href="#">Privacy Policy</a>.
+      </label>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit transfer request</button>
+    <p class="note fallback">Prefer to talk to us? Call <a href="tel:+14163988200">(416) 398-8200</a>.</p>
+    <p class="note">[Mockup note] This form must submit to a <strong>PHIPA-compliant</strong> backend
+       over HTTPS — never plain email. See <code>../compliance-checklist.md</code>.</p>
+  </form>
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong>Four Winds Roots Pharmacy</strong> · 3932A Keele St, North York, ON M3J 1N8 ·
+     <a href="tel:+14163988200">(416) 398-8200</a></p>
+  <p>Registered with the Ontario College of Pharmacists · <a href="#">Privacy</a> · <a href="#">Accessibility</a></p>
+</div></footer>
+
+<nav class="mobilebar" aria-label="Quick actions">
+  <a href="tel:+14163988200">Call</a>
+  <a href="homepage.html">Home</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</body>
+</html>

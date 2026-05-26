@@ -1,0 +1,72 @@
+{
+  "scoring_model": {
+    "score_scale": "Each criterion scored 0-5 (integer).",
+    "weighted_formula": "weighted_total = sum( (criterion_score / 5) * criterion_weight )",
+    "max_weighted_total": 100,
+    "tie_breakers": ["service_clarity raw score", "local_seo_visibility raw score"]
+  },
+  "criteria": [
+    {
+      "key": "local_seo_visibility",
+      "weight": 15,
+      "what_it_measures": "Owned web property, complete NAP + hours + map, location-specific copy/keywords, Google Business Profile strength and review volume.",
+      "score_scale": "0 = no meaningful local web presence; 5 = strong location-specific SEO and discoverability"
+    },
+    {
+      "key": "trust_and_professional_credibility",
+      "weight": 15,
+      "what_it_measures": "Named pharmacist/owner/team, accreditation/OCP licensing, current and legitimate look, visible privacy/accessibility policies, professionalism without unsupported claims.",
+      "score_scale": "0 = low trust / unclear ownership; 5 = strong professional + regulatory confidence"
+    },
+    {
+      "key": "service_clarity",
+      "weight": 15,
+      "what_it_measures": "Services clearly listed and organized (refills, transfers, MedsCheck, blister packs, delivery, vaccines, injections, diabetes, travel, smoking cessation, compounding, Paxlovid, senior care), with who each is for.",
+      "score_scale": "0 = services unclear; 5 = full, clear, patient-friendly presentation"
+    },
+    {
+      "key": "conversion_and_patient_actions",
+      "weight": 15,
+      "what_it_measures": "Ease of calling, refilling, transferring, booking, asking questions; visible CTAs; click-to-call on mobile; one-click map; low friction for seniors/families/students.",
+      "score_scale": "0 = no clear action path; 5 = excellent conversion flow"
+    },
+    {
+      "key": "mobile_usability",
+      "weight": 10,
+      "what_it_measures": "Loads/displays well on mobile, usable buttons/menus/maps, key info without excess scrolling, readable fonts and contrast, works for older or less digital users.",
+      "score_scale": "0 = poor mobile usability; 5 = excellent mobile experience"
+    },
+    {
+      "key": "content_quality_and_patient_education",
+      "weight": 10,
+      "what_it_measures": "Useful educational content in plain language, locally relevant health topics, original and current, no vague filler.",
+      "score_scale": "0 = no useful content; 5 = strong educational and locally relevant content"
+    },
+    {
+      "key": "brand_differentiation",
+      "weight": 10,
+      "what_it_measures": "Clear reason to choose this pharmacy, unique services emphasised, memorable identity, local/community feel, distinct from chains.",
+      "score_scale": "0 = generic / no differentiation; 5 = highly differentiated and memorable"
+    },
+    {
+      "key": "accessibility_and_compliance",
+      "weight": 5,
+      "what_it_measures": "Accessible for users with disabilities, readable text/contrast, useful alt text, simple privacy-conscious forms, no problematic health claims.",
+      "score_scale": "0 = accessibility/compliance concerns; 5 = accessible and compliant"
+    },
+    {
+      "key": "reputation_signals",
+      "weight": 5,
+      "what_it_measures": "Visible/linked reviews, compliant testimonials, community involvement, review responsiveness, ratings vs competitors.",
+      "score_scale": "0 = no reputation signals; 5 = strong reputation signals"
+    }
+  ],
+  "guardrails": [
+    "Never score a criterion without evidence; record evidence per score.",
+    "Directory-listing-only competitors are capped at local_seo_visibility = 2 and trust = 3 (cannot exceed without an owned web property).",
+    "Confidence is 'low' for any competitor where fewer than 2 of its pages were directly fetched. In this WebSearch-only pass, ALL competitors carry low confidence on HTML-level criteria.",
+    "compute_weighted_total is the single source of truth for the /100 number; never estimate it in prose.",
+    "Do not invent services — mark unknown services as 'not found'."
+  ],
+  "_weights_sum_check": 100
+}

@@ -1,0 +1,121 @@
+{
+  "audit_target": {
+    "name": "Four Winds Roots Pharmacy",
+    "address": "3932A Keele St, North York, ON M3J 1N8",
+    "phone": "(416) 398-8200",
+    "fax": "(416) 398-6745",
+    "rating_observed": "4.9",
+    "website": null,
+    "distinctive_services": ["holistic", "herb_drug_interaction_review", "blister_packaging", "raid_home_health_supplies", "blood_pressure_kiosk", "optical", "wellness"]
+  },
+  "competitors": [
+    {
+      "competitor_id": "keele_finch_compounding",
+      "name": "Keele and Finch Compounding Pharmacy (Pharmasave)",
+      "address": "1275 Finch Ave W, Unit 102, North York, ON M3J 2G5",
+      "phone": "647-349-2273",
+      "priority": "High",
+      "reason_included": "Closest major brand-affiliated independent with a compounding specialty that overlaps Four Winds' holistic positioning.",
+      "website_type": "Brand network page + active social",
+      "links": [
+        "https://www.centralhealthline.ca/displayservice.aspx?id=199467",
+        "https://dukeheights.ca/members/pharmasave-keele-and-finch-pharmacy/",
+        "https://www.instagram.com/keelefinchpharmacy/",
+        "https://www.facebook.com/KEELEANDFINCHPHARMASAVE/"
+      ]
+    },
+    {
+      "competitor_id": "pharma_d_drugs",
+      "name": "Pharma D Drugs",
+      "address": "45 Four Winds Dr, North York, ON M3J 1K7",
+      "phone": "416-663-3666",
+      "priority": "High",
+      "reason_included": "Geographically the closest competitor (same Four Winds Drive cluster) — a real foot-traffic rival despite a weak web presence.",
+      "website_type": "Directory listing only",
+      "links": [
+        "https://www.centralhealthline.ca/displayService.aspx?id=150632",
+        "https://cortico.health/pharmacies/toronto-on/pharma-d-drugs-33660/"
+      ]
+    },
+    {
+      "competitor_id": "bh_pharmacy_remedysrx",
+      "name": "BH Pharmacy (Remedy'sRx)",
+      "address": "1300 Finch Ave W, Unit 29, North York, ON",
+      "phone": "416-633-2268",
+      "priority": "High",
+      "reason_included": "Nearby branded independent with a pharmacy-network web presence.",
+      "website_type": "Brand network page",
+      "links": [
+        "https://www.guardian-ida-remedysrx.ca/en/ontario/north-york/bh-pharmacy-7025303",
+        "https://www.centralhealthline.ca/displayService.aspx?id=200039"
+      ]
+    },
+    {
+      "competitor_id": "dufferin_finch",
+      "name": "Dufferin-Finch Pharmacy",
+      "address": "2 Champagne Dr, Unit C1, North York, ON M3J 2C5",
+      "phone": "416-665-6669",
+      "priority": "Medium",
+      "reason_included": "Nearby independent that runs its own dedicated website.",
+      "website_type": "Dedicated website",
+      "links": [
+        "https://dufferinfinchpharmacy.ca/",
+        "https://dufferinfinchpharmacy.ca/contact.html",
+        "https://www.centralhealthline.ca/displayservice.aspx?id=151362"
+      ]
+    },
+    {
+      "competitor_id": "nor_arm_ida",
+      "name": "Nor-Arm Pharmacy (I.D.A.)",
+      "address": "1280 Finch Ave W, Unit 107, North York, ON M3J 3K6",
+      "phone": "416-667-8430",
+      "priority": "Medium",
+      "reason_included": "Finch & Keele area competitor on the I.D.A. brand network with a very broad service list.",
+      "website_type": "Brand network page",
+      "links": [
+        "https://www.centralhealthline.ca/printService.aspx?id=150613",
+        "https://www.doctr.ca/app/clinics/745591/IDA-Pharmacy---North-York---1280-Finch-Ave-W-Nor-Arm/en"
+      ]
+    },
+    {
+      "competitor_id": "walmart_keele",
+      "name": "Walmart Pharmacy - Keele St",
+      "address": "3757 Keele St, North York, ON",
+      "phone": "416-633-7593",
+      "priority": "Medium",
+      "reason_included": "Big-box competitor with price, convenience, long hours (7am-11pm), and brand-trust advantages.",
+      "website_type": "Brand network page (corporate)",
+      "links": [
+        "https://www.centralhealthline.ca/printService.aspx?id=198982"
+      ]
+    },
+    {
+      "competitor_id": "wellcare_ida",
+      "name": "Wellcare Pharmacy (I.D.A. / Remedy'sRx)",
+      "address": "3352 Keele St, Toronto, ON M3J 1L5",
+      "phone": "416-630-4513",
+      "priority": "Medium",
+      "reason_included": "Independent south on Keele with a brand-network listing and long retail hours.",
+      "website_type": "Brand network page",
+      "links": [
+        "https://www.guardian-ida-remedysrx.ca/en/ontario/toronto/wellcare-pharmacy-7015037",
+        "https://www.centralhealthline.ca/printService.aspx?id=199768"
+      ]
+    },
+    {
+      "competitor_id": "university_health_centre",
+      "name": "University Health Centre Pharmacy",
+      "address": "4801 Keele St, Unit 59, North York, ON M3J 3A4",
+      "phone": "416-514-1090",
+      "priority": "Medium",
+      "reason_included": "Serves the York University student / staff / campus-adjacent market and runs its own site.",
+      "website_type": "Dedicated website",
+      "links": [
+        "https://www.torontocentralhealthline.ca/displayservice.aspx?id=151063",
+        "http://unihealthcentre.ca/",
+        "https://www.getmeds.ca/"
+      ]
+    }
+  ],
+  "_provenance": "All fields sourced from WebSearch result snippets on 2026-05-26. Phone/address/hours/services are search-derived and not yet confirmed against live pages (egress blocked). Treat as provisional pending the high-fidelity fetch re-run."
+}

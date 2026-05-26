@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four Winds Roots Pharmacy — Holistic Community Pharmacy at Keele &amp; Finch, North York</title>
+<meta name="description" content="Four Winds Roots Pharmacy: North York's holistic community pharmacy at Keele &amp; Finch. Prescriptions, free delivery, blister packaging, vaccinations, optical &amp; wellness.">
+<!-- WIREFRAME MOCKUP — placeholder content + starting brand tokens. Not the final site. -->
+<style>
+  :root{
+    --color-primary:#2E5D4B; --color-secondary:#C2724B; --color-calm:#DCEAE4;
+    --color-action:#1B7F66; --color-ink:#1F2421; --color-paper:#FAFAF7;
+    --space:1rem; --radius:12px; --text-base:18px; --maxw:1080px;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);font-size:var(--text-base);line-height:1.55;
+    color:var(--color-ink);background:var(--color-paper)}
+  a{color:var(--color-action)}
+  .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:.5rem;z-index:100}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+  .btn{display:inline-block;padding:.7rem 1.1rem;border-radius:var(--radius);font-weight:700;
+    text-decoration:none;border:2px solid transparent}
+  .btn-primary{background:var(--color-action);color:#fff}
+  .btn-ghost{background:#fff;color:var(--color-primary);border-color:var(--color-primary)}
+  header.site{background:var(--color-primary);color:#fff;position:sticky;top:0;z-index:20}
+  header.site .wrap{display:flex;align-items:center;gap:1rem;min-height:64px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:1.15rem;color:#fff;text-decoration:none;margin-right:auto}
+  header.site nav a{color:#fff;margin-right:1rem;text-decoration:none;font-weight:600}
+  .hero{background:linear-gradient(180deg,var(--color-calm),var(--color-paper));padding:3rem 0}
+  .hero h1{font-size:2rem;margin:.2rem 0;color:var(--color-primary)}
+  .hero p.lead{font-size:1.25rem;max-width:40ch}
+  .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
+  .rating{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid #ddd;
+    padding:.4rem .7rem;border-radius:999px;font-weight:700;margin-top:1rem}
+  section{padding:2.25rem 0}
+  h2{color:var(--color-primary)}
+  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  .card{background:#fff;border:1px solid #e6e6e0;border-radius:var(--radius);padding:1rem}
+  .card h3{margin:.2rem 0;color:var(--color-primary)}
+  .card .who{color:#555;font-size:.95rem}
+  .highlight{background:var(--color-secondary);color:#fff;border-radius:var(--radius);padding:1.5rem}
+  .highlight a{color:#fff;font-weight:700}
+  .segments{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .reviews{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  blockquote{margin:0;background:#fff;border-left:4px solid var(--color-secondary);
+    padding:1rem;border-radius:0 var(--radius) var(--radius) 0}
+  .nap{display:grid;gap:1rem;grid-template-columns:1fr 1fr;align-items:start}
+  .map{background:#cdd8d2;border-radius:var(--radius);min-height:220px;display:flex;
+    align-items:center;justify-content:center;color:#456}
+  footer.site{background:var(--color-primary);color:#fff;padding:2rem 0;margin-top:1rem}
+  footer.site a{color:#fff}
+  .mobilebar{position:fixed;bottom:0;left:0;right:0;display:none;background:#fff;
+    border-top:1px solid #ddd;z-index:30}
+  .mobilebar a{flex:1;text-align:center;padding:.8rem .4rem;text-decoration:none;
+    font-weight:700;color:var(--color-primary)}
+  @media(max-width:720px){
+    .nap{grid-template-columns:1fr}
+    header.site nav{display:none}
+    .mobilebar{display:flex}
+    body{padding-bottom:60px}
+    .hero h1{font-size:1.6rem}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#">Four Winds Roots Pharmacy</a>
+    <nav aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#holistic">Holistic Wellness</a>
+      <a href="#optical">Optical</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-ghost" href="tel:+14163988200">Call</a>
+    <a class="btn btn-primary" href="prescription-transfer.html">Transfer Rx</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <h1>North York's holistic community pharmacy at Keele &amp; Finch</h1>
+      <p class="lead">Personal, professional care meets whole-person wellness, optical, and free
+        delivery. A pharmacist who knows you — not a checkout lane.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="prescription-transfer.html">Transfer your prescription</a>
+        <a class="btn btn-ghost" href="tel:+14163988200">Call (416) 398-8200</a>
+      </div>
+      <div class="rating" aria-label="Rated 4.9 out of 5 stars">★ 4.9 &nbsp;·&nbsp; Highest-rated pharmacy in the area</div>
+    </div>
+  </section>
+
+  <section id="services" class="wrap">
+    <h2>Pharmacy services</h2>
+    <div class="grid">
+      <div class="card"><h3>Prescription Refills</h3><p class="who">Request a refill in under a minute.</p><a href="#">Refill →</a></div>
+      <div class="card"><h3>Prescription Transfers</h3><p class="who">We do the work — switching is easy.</p><a href="prescription-transfer.html">Transfer →</a></div>
+      <div class="card"><h3>MedsCheck / Medication Reviews</h3><p class="who">A free sit-down with your pharmacist.</p><a href="#">Book →</a></div>
+      <div class="card"><h3>Blister Packaging</h3><p class="who">Stay on track — no extra cost.</p><a href="#">Learn more →</a></div>
+      <div class="card"><h3>Free Delivery</h3><p class="who">Your medications, to your door.</p><a href="#">Request →</a></div>
+      <div class="card"><h3>Vaccinations &amp; Injections</h3><p class="who">Flu, COVID, travel and more.</p><a href="#">Book →</a></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="highlight">
+      <h2 style="color:#fff;margin-top:0">Holistic, optical &amp; wellness — under one roof</h2>
+      <p>Herb–drug interaction review, whole-person wellness, and optical care alongside your
+        pharmacy. The care no big-box pharmacy offers. <a href="#holistic">Explore holistic care →</a></p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Who we help</h2>
+    <div class="segments">
+      <div class="card"><h3>Seniors &amp; families</h3><p class="who">Blister packaging + free delivery + a pharmacist who knows you.</p></div>
+      <div class="card"><h3>York University students</h3><p class="who">Fast transfers and multilingual service, minutes from campus.</p></div>
+      <div class="card"><h3>Wellness seekers</h3><p class="who">Holistic review, optical &amp; wellness in one place.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>What our patients say</h2>
+    <div class="reviews">
+      <blockquote>“[Placeholder review] The pharmacist took time to explain everything.” <br><strong>— Patient, Google</strong></blockquote>
+      <blockquote>“[Placeholder review] Free delivery and friendly service every time.” <br><strong>— Patient, Google</strong></blockquote>
+      <p><a href="#">Leave us a review →</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2>Visit us</h2>
+    <div class="nap">
+      <div>
+        <p><strong>Four Winds Roots Pharmacy</strong><br>
+        3932A Keele St, North York, ON M3J 1N8</p>
+        <p><a href="tel:+14163988200">Call (416) 398-8200</a> · Fax (416) 398-6745</p>
+        <p><strong>Hours:</strong> [confirm with owner]</p>
+        <a class="btn btn-primary" href="#">Get directions</a>
+      </div>
+      <div class="map" aria-label="Map location placeholder">[ Google Maps embed ]</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Four Winds Roots Pharmacy</strong> · 3932A Keele St, North York, ON M3J 1N8 ·
+      <a href="tel:+14163988200">(416) 398-8200</a></p>
+    <p>Registered with the Ontario College of Pharmacists ·
+      <a href="#">Privacy Policy</a> · <a href="#">Accessibility</a></p>
+  </div>
+</footer>
+
+<nav class="mobilebar" aria-label="Quick actions">
+  <a href="tel:+14163988200">Call</a>
+  <a href="prescription-transfer.html">Transfer</a>
+  <a href="#contact">Directions</a>
+</nav>
+</body>
+</html>
