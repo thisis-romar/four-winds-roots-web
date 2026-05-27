@@ -222,6 +222,33 @@ li {
   opacity: 1;
 }
 
+/* btn-primary = solid primary colour (alias of btn-call semantics) */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-paper);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* btn-secondary = outlined primary (alias of btn-outline semantics) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
 /* ── Layout helpers ───────────────────────────────────────────────────────── */
 
 .container {
