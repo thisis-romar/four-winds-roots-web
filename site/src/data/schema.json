@@ -5,9 +5,15 @@
   "@comment_name": "Canonical business name — align with GBP and all directories (NAP consistency)",
   "name": "Four Winds Roots Pharmacy",
 
+  "@comment_legalName": "Legal operating entity — helps Google resolve entity ambiguity across directory variants",
+  "legalName": "Can Pharm Service Inc",
+
+  "disambiguatingDescription": "Independent holistic pharmacy at 3932A Keele St, North York — formerly listed as Guardian Four Winds Pharmacy. Operating as Four Winds Roots Pharmacy with holistic wellness, optical, and full dispensary services.",
+
   "alternateName": [
     "Roots Four Winds Pharmacy",
-    "R.O.O.T.S. Four Winds Pharmacy"
+    "R.O.O.T.S. Four Winds Pharmacy",
+    "Guardian Four Winds Pharmacy"
   ],
 
   "@comment_url": "TODO: confirm final domain before go-live (currently placeholder)",
@@ -110,8 +116,13 @@
     },
     {
       "@type": "MedicalTherapy",
-      "name": "Vaccinations and Injections",
-      "description": "Flu shots, COVID-19 vaccines, travel immunizations, and injection services."
+      "name": "Preventive Care and Immunizations",
+      "description": "Flu immunizations, COVID-19 protective care, travel health preparation, and antiviral prescribing as part of a whole-person preventive health approach."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Minor Ailments Assessment and Treatment",
+      "description": "Ontario pharmacist expanded-scope assessments and prescribing for 13 authorized minor ailments — no doctor referral required."
     },
     {
       "@type": "MedicalTherapy",

@@ -1,10 +1,6 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
+# Build configuration has moved to the repo root netlify.toml
+# (root/netlify.toml sets base = "site" so Netlify also reads this file)
+# Do NOT add a [build] section here — it would override the root config.
+#
+# Site-level header overrides (supplement root headers) go here if needed.
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"

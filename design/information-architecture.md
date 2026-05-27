@@ -14,12 +14,14 @@ Home
 │   ├── Medication Reviews / MedsCheck
 │   ├── Blister Packaging
 │   ├── Free Delivery
-│   └── Preventive Care & Holistic Immunizations
+│   ├── Preventive Care & Holistic Immunizations
+│   └── Minor Ailments                              ← /services/minor-ailments/
 ├── Holistic Wellness
 ├── Optical & Wellness Centre
 ├── Who We Help
 │   ├── Seniors & Family Care
 │   └── Student Pharmacy near York University
+├── About / Meet the Team                           ← /about/
 └── Contact / Location / Hours
 ```
 

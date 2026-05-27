@@ -1,0 +1,97 @@
+---
+/**
+ * About — Meet the Team at Four Winds Roots Pharmacy
+ * Route: /about/
+ * Purpose: Build trust, introduce the pharmacist(s), tell the R.O.O.T.S story.
+ * Content: ALL marked TODO — requires owner intake (Task #13).
+ * Source: design/information-architecture.md
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Us | Four Winds Roots Pharmacy, North York"
+  description="Meet the team at Four Winds Roots Pharmacy — your independent holistic pharmacy at Keele & Finch, North York. Personalized care, whole-person wellness, and optical services under one roof."
+>
+  <div class="container section">
+
+    <h1>About Four Winds Roots Pharmacy</h1>
+
+    <!--
+      CONTENT TODOS — requires owner intake (Task #13):
+      1. What does "R.O.O.T.S" stand for? (potential brand story opener)
+      2. Founding year — "Serving the community since [year]"
+      3. Pharmacist name(s) and registration number(s) (OCP compliance)
+      4. Why independent + holistic? Owner's philosophy in their own words
+      5. The Guardian franchise history — how/why the pharmacy became independent
+      6. Community ties — any specific cultural/language communities served?
+      7. Team photo or headshot for trust signal
+      8. OCP registration badge / credentials display
+    -->
+
+    <section aria-labelledby="about-story">
+      <h2 id="about-story">Our Story</h2>
+      <p>
+        TODO: Owner story — founding year, why they opened an independent holistic pharmacy
+        at Keele &amp; Finch, what makes Four Winds Roots different from chain pharmacies.
+        If "R.O.O.T.S" is an acronym, expand it here as the headline of this section.
+      </p>
+    </section>
+
+    <section aria-labelledby="about-team">
+      <h2 id="about-team">Meet Your Pharmacist</h2>
+      <p>
+        TODO: Pharmacist bio — name, OCP registration number, years of experience,
+        areas of expertise (holistic, herb-drug interactions, optical, compounding if applicable).
+        Photo with alt text: "Portrait of [Name], registered pharmacist at Four Winds Roots Pharmacy".
+      </p>
+      <!-- OCP Registration: TODO_OCP_REG_NUMBER -->
+    </section>
+
+    <section aria-labelledby="about-holistic">
+      <h2 id="about-holistic">A Different Kind of Pharmacy</h2>
+      <p>
+        TODO: Philosophy paragraph — what "holistic" means here in practice:
+        reviewing the whole picture (prescriptions + supplements + lifestyle),
+        optical care alongside pharmacy care, time for real conversations.
+        Contrast with chain pharmacy experience without naming competitors.
+      </p>
+      <p>
+        <a href="/holistic-wellness">Learn about our holistic wellness approach &rarr;</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="about-community">
+      <h2 id="about-community">Rooted in the Keele &amp; Finch Community</h2>
+      <p>
+        TODO: Community paragraph — how long the pharmacy has served this neighbourhood,
+        languages spoken, cultural communities served, ties to York University area.
+        Include "serving since [year]" once confirmed.
+      </p>
+    </section>
+
+    <section aria-labelledby="about-contact">
+      <h2 id="about-contact">Visit Us</h2>
+      <p>
+        3932A Keele St, North York, ON M3J 1N8<br>
+        <a href="tel:4163988200">(416) 398-8200</a>
+      </p>
+      <p>
+        <a href="/contact" class="btn btn-primary">Hours &amp; Directions</a>
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .container.section {
+    max-width: 70ch;
+  }
+
+  section + section {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-border);
+  }
+</style>
