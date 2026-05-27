@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Blister Packaging
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -48,7 +49,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section aria-labelledby="blister-request">
       <h2 id="blister-request">Request Blister Packaging</h2>
       <p>
-        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
       </p>
       <p>TODO: Add delivery tie-in — blister packs can also be delivered free across North York</p>
     </section>

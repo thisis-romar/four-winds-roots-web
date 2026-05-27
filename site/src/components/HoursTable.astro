@@ -27,6 +27,7 @@ const hours = [
   { day: 'Saturday',  open: '9:00 am', close: '2:00 pm', closed: false },
   { day: 'Sunday',    open: null,      close: null,       closed: true  },
 ];
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <!-- TODO: Confirm all hours with owner — these are placeholders only -->
@@ -53,7 +54,7 @@ const hours = [
     <p class="hours-table__holiday">
       <em>
         <!-- TODO: add statutory holiday schedule once confirmed with owner -->
-        Holiday hours may vary. Call to confirm: <a href="tel:4163988200">(416) 398-8200</a>
+        Holiday hours may vary. Call to confirm: <PhoneLink />
       </em>
     </p>
   )}

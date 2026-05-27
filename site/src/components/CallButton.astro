@@ -27,9 +27,10 @@ const {
 <!-- TODO: Style CallButton size variants; wire up analytics event tracking -->
 <a
   data-component="CallButton"
-  href="tel:4163988200"
-  class:list={['btn btn-call', `btn--${size}`]}
-  aria-label="Call Four Winds Roots Pharmacy at (416) 398-8200"
+  href="#"
+  class:list={['btn btn-call tel-protected', `btn--${size}`]}
+  data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+  aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
 >
   {showIcon && (
     <svg
@@ -48,4 +49,8 @@ const {
     </svg>
   )}
   {label}
-</a>
+</a><noscript><a
+  href="tel:4163988200"
+  class:list={['btn btn-call', `btn--${size}`]}
+  aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+>{label}</a></noscript>

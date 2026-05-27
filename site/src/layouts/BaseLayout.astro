@@ -7,6 +7,7 @@
 
 import '../styles/global.css';
 import schemaData from '../data/schema.json';
+import PhoneLink from '../components/PhoneLink.astro';
 
 interface Props {
   title: string;
@@ -183,12 +184,7 @@ const schemaJsonLd = JSON.stringify(
               <span class="footer-nap__city">North York, ON M3J 1N8</span>
             </p>
             <p>
-              <a
-                href="#"
-                class="footer-nap__phone tel-protected"
-                data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
-                aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
-              >(416) 398-8200</a>
+              <PhoneLink class="footer-nap__phone" />
             </p>
             <p>
               <span class="footer-nap__fax">Fax: (416) 398-6745</span>

@@ -6,6 +6,7 @@
  * Brand note: "Under one roof" is the key differentiator — no competitor claims this.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -56,9 +57,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 id="optical-cta">Visit Us or Call to Learn More</h2>
       <address>
         <p>3932A Keele St, North York, ON M3J 1N8</p>
-        <p><a href="tel:4163988200">(416) 398-8200</a></p>
+        <p><PhoneLink /></p>
       </address>
-      <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
     </section>
   </div>
 </BaseLayout>

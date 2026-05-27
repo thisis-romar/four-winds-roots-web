@@ -14,6 +14,7 @@
  * TODO: Wire up form action to a PHIPA-compliant backend before go-live.
  * TODO: Have consent language reviewed by owner and OCP before publishing.
  */
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <form
@@ -138,6 +139,6 @@
   <div role="status" aria-live="polite" class="form-status" id="refill-form-status"></div>
 
   <p class="form-fallback">
-    Prefer to call? <a href="tel:4163988200">(416) 398-8200</a>
+    Prefer to call? <PhoneLink />
   </p>
 </form>

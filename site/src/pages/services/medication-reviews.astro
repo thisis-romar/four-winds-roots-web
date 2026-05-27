@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Medication Reviews / MedsCheck
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -50,7 +51,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>TODO: BookingCTA — phone booking or embedded scheduler (confirm with owner which to use)</p>
       <p>
         <strong>Call to book:</strong>
-        <a href="tel:4163988200">(416) 398-8200</a>
+        <PhoneLink />
       </p>
     </section>
   </div>

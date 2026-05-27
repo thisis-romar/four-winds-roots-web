@@ -11,6 +11,7 @@
  * Status: STUB — update with accurate WCAG audit results before go-live.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 
 const currentYear = new Date().getFullYear();
 ---
@@ -94,13 +95,7 @@ const currentYear = new Date().getFullYear();
           3932A Keele St, North York, ON M3J 1N8
         </p>
         <p>
-          Phone:
-          <a
-            href="#"
-            class="tel-protected"
-            data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
-            aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
-          >(416) 398-8200</a>
+          Phone: <PhoneLink />
         </p>
         <p>
           <!-- TODO: add email address once confirmed with owner -->

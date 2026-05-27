@@ -15,6 +15,7 @@
  * TODO: Wire up form action to a PHIPA-compliant backend before go-live.
  * TODO: Confirm delivery coverage area and time windows with owner.
  */
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <form
@@ -117,6 +118,6 @@
   <div role="status" aria-live="polite" class="form-status" id="delivery-form-status"></div>
 
   <p class="form-fallback">
-    Prefer to call? <a href="tel:4163988200">(416) 398-8200</a>
+    Prefer to call? <PhoneLink />
   </p>
 </form>

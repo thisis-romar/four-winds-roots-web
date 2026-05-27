@@ -28,6 +28,7 @@ const {
   ctaVariant = 'primary',
   phoneAlternative = true,
 } = Astro.props;
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <!-- TODO: Style ServiceHero with design tokens + calm-light background -->
@@ -42,7 +43,7 @@ const {
     </a>
     {phoneAlternative && (
       <span class="service-hero__phone-alt">
-        or call <a href="tel:4163988200">(416) 398-8200</a>
+        or call <PhoneLink />
       </span>
     )}
   </div>

@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Prescription Refills
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -44,7 +45,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>TODO: RefillForm component — PHIPA-compliant (consent checkbox, secure POST, minimal fields)</p>
       <p>
         <strong>Prefer to call?</strong>
-        <a href="tel:4163988200">(416) 398-8200</a>
+        <PhoneLink />
       </p>
     </section>
 

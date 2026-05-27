@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Seniors & Family Care
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -52,7 +53,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section aria-labelledby="seniors-call">
       <h2 id="seniors-call">Call Us — We're Here to Help</h2>
       <p>Our pharmacists take the time to talk. No rush, no jargon.</p>
-      <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
     </section>
   </div>
 </BaseLayout>

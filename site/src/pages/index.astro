@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Home
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -35,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Rated 4.9★ by our community.
       </p>
       <div class="hero__ctas">
-        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
         <a href="/services/transfers" class="btn btn-transfer">Transfer My Prescription</a>
       </div>
     </div>

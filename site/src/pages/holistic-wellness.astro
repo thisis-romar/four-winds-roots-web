@@ -7,6 +7,7 @@
  * Language: plain, warm, non-overclaiming. No unsubstantiated health claims.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -65,7 +66,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 id="holistic-how-to-start">How to Start</h2>
       <p>TODO: StepList — call to book a wellness consultation, bring your full list (Rx + supplements), private chat</p>
       <p>
-        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
       </p>
     </section>
   </div>

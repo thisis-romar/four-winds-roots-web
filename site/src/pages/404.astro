@@ -4,6 +4,7 @@
  * Four Winds Roots Pharmacy
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -18,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <div class="not-found__actions">
       <a href="/" class="btn btn-primary">Go to Homepage</a>
-      <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
     </div>
 
     <nav class="not-found__links" aria-label="Helpful links">

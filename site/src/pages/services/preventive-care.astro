@@ -7,11 +7,13 @@
  * Renamed from vaccinations.astro — brand direction: holistic-first, clinical second
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
   title="Preventive Care & Holistic Wellness | Four Winds Roots Pharmacy, North York"
   description="Preventive health and holistic wellness at Four Winds Roots Pharmacy, Keele & Finch, North York — flu immunizations, travel health, Paxlovid, and whole-person preventive care. Call (416) 398-8200."
+  noAnalytics={true}
 >
   <!--
     IA KEY BLOCKS:
@@ -76,7 +78,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h2 id="preventive-book">Book Your Preventive Care Visit</h2>
       <p>TODO: BookingCTA — phone or embedded Jane App scheduler (confirm with owner)</p>
       <p>
-        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
       </p>
     </section>
   </div>

@@ -26,6 +26,7 @@ const {
   variant = 'generic',
   schedulerUrl,
 } = Astro.props;
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <!-- TODO: Style BookingCTA; wire up real scheduler URL if available -->
@@ -46,9 +47,7 @@ const {
   ) : (
     <!-- Phone booking fallback — always available -->
     <p>
-      <a href="tel:4163988200" class="btn btn-call">
-        Call to Book: (416) 398-8200
-      </a>
+      <PhoneLink class="btn btn-call" display="Call to Book: (416) 398-8200" />
     </p>
   )}
 

@@ -9,11 +9,13 @@
  *   do not imply unlimited prescribing authority.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
   title="Minor Ailments Treatment — No Doctor Needed | Four Winds Roots Pharmacy, North York"
   description="Ontario pharmacists can now treat 13 common minor ailments — no doctor or walk-in visit required. Four Winds Roots Pharmacy, Keele & Finch, North York. Call (416) 398-8200."
+  noAnalytics={true}
 >
   <div class="container section">
 
@@ -99,7 +101,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h2 id="ailments-book">Get Seen Today</h2>
       <p>Walk in or call — most minor ailment assessments are same-day.</p>
       <div class="ailments-ctas">
-        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
         <a href="/contact" class="btn btn-secondary">Hours &amp; Location</a>
       </div>
       <!-- TODO: add Jane App booking widget once confirmed with owner -->

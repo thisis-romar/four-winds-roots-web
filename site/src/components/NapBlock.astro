@@ -23,6 +23,7 @@ const {
   showHours = false,
   compact = false,
 } = Astro.props;
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <!-- TODO: Implement full NapBlock — currently a stub -->
@@ -30,7 +31,7 @@ const {
   <address aria-label="Pharmacy address and contact information">
     <p><strong>Four Winds Roots Pharmacy</strong></p>
     <p>3932A Keele St<br />North York, ON M3J 1N8</p>
-    <p>Phone: <a href="tel:4163988200">(416) 398-8200</a></p>
+    <p>Phone: <PhoneLink /></p>
     <p>Fax: (416) 398-6745</p>
   </address>
 

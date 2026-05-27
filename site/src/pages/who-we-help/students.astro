@@ -6,6 +6,7 @@
  * Note: This is an under-served, geographically captive market segment.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -62,7 +63,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h2 id="students-cta">Get Started</h2>
       <p>
         <a href="/services/transfers" class="btn btn-transfer">Transfer My Rx</a>
-        <a href="tel:4163988200" class="btn btn-call">Call Us</a>
+        <PhoneLink class="btn btn-call" display="Call Us" />
       </p>
     </section>
   </div>

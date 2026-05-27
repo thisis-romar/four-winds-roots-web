@@ -5,6 +5,7 @@
  * Source: design/information-architecture.md — Contact / Location / Hours
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
 ---
 
 <BaseLayout
@@ -34,9 +35,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- Prominent call CTA — top of page, before anything else -->
     <section aria-labelledby="contact-call-heading" class="contact-call-first">
       <h2 id="contact-call-heading">Call Us Now</h2>
-      <a href="tel:4163988200" class="btn btn-call contact-call-big">
-        (416) 398-8200
-      </a>
+      <PhoneLink class="btn btn-call contact-call-big" display="(416) 398-8200" />
       <p>
         <!-- TODO: confirm hours with owner -->
         Mon–Fri 9 am–6 pm &nbsp;·&nbsp; Sat 9 am–2 pm
@@ -53,7 +52,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           North York, ON M3J 1N8
         </p>
         <p>
-          Phone: <a href="tel:4163988200">(416) 398-8200</a>
+          Phone: <PhoneLink />
         </p>
         <p>
           Fax: (416) 398-6745
@@ -115,7 +114,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>
         <em>
           <!-- TODO: add actual statutory holiday hours once confirmed with owner -->
-          Holiday hours may vary. Call to confirm: <a href="tel:4163988200">(416) 398-8200</a>
+          Holiday hours may vary. Call to confirm: <PhoneLink />
         </em>
       </p>
     </section>
@@ -141,7 +140,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 id="contact-form-heading">Send Us a Message</h2>
       <p>
         <strong>For prescriptions and health information, please call us directly:</strong>
-        <a href="tel:4163988200">(416) 398-8200</a>
+        <PhoneLink />
       </p>
       <!-- Simple general contact form — no PHIPA-sensitive data collected here -->
       <!-- TODO: implement contact form (name, email/phone, general message only) -->

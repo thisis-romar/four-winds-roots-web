@@ -16,6 +16,7 @@
  * TODO: Have the consent language reviewed by the owner/OCP before publishing.
  * TODO: Test with screen readers (NVDA/JAWS + VoiceOver) before go-live.
  */
+import PhoneLink from './PhoneLink.astro';
 ---
 
 <!-- TODO: Style TransferForm with design tokens; implement real backend action -->
@@ -181,6 +182,6 @@
 
   <p class="form-fallback">
     Prefer to call? We're happy to take this over the phone:
-    <a href="tel:4163988200">(416) 398-8200</a>
+    <PhoneLink />
   </p>
 </form>
