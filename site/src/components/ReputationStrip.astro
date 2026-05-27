@@ -1,0 +1,41 @@
+---
+/**
+ * ReputationStrip — Four Winds Roots Pharmacy
+ * Displays the 4.9★ aggregate rating, selected review quotes, and a "leave a review" link.
+ * This is the pharmacy's strongest asset — surfaces trust at a glance.
+ * Compliance: only display real reviews with patient consent; no fabricated testimonials.
+ * TODO: source real patient reviews with consent before populating.
+ * TODO: confirm GBP review URL with owner for the ReviewRequestLink.
+ * TODO: verify ratingCount from Google Business Profile before publishing (currently placeholder).
+ *
+ * Accessibility: aria-label on rating, role="list" on reviews, sr-only rating text for screen readers.
+ */
+---
+
+<!-- TODO: Implement full ReputationStrip — currently a stub -->
+<section data-component="ReputationStrip" aria-labelledby="reputation-heading">
+  <h2 id="reputation-heading" class="sr-only">Patient Reviews</h2>
+
+  <div class="reputation-strip__rating" aria-label="Rated 4.9 out of 5 stars">
+    <!-- TODO: render star icons (inline SVG, aria-hidden) + numeric rating -->
+    <p>
+      <span aria-hidden="true">★★★★★</span>
+      <strong>4.9</strong> / 5
+      <!-- TODO: verify ratingCount from GBP before publishing -->
+    </p>
+  </div>
+
+  <!-- TODO: ReviewCard components (2-3 real patient reviews with consent) -->
+  <ul role="list" class="reputation-strip__reviews">
+    <li>TODO: ReviewCard — real patient quote, name/initial, source</li>
+    <li>TODO: ReviewCard — real patient quote, name/initial, source</li>
+    <li>TODO: ReviewCard — real patient quote, name/initial, source</li>
+  </ul>
+
+  <!-- TODO: ReviewRequestLink — GBP review URL, confirmed with owner -->
+  <p>
+    <a href="TODO_GBP_REVIEW_URL" target="_blank" rel="noopener noreferrer">
+      Leave us a review on Google
+    </a>
+  </p>
+</section>

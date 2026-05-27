@@ -1,0 +1,52 @@
+---
+/**
+ * NapBlock — Four Winds Roots Pharmacy
+ * Canonical Name / Address / Phone block. Single source of truth for NAP.
+ * Reused in: footer, contact page, homepage location section.
+ * SEO critical: NAP must be identical across all pages and match schema.json + GBP exactly.
+ * Accessibility: <address> element, click-to-call <a href="tel:">, descriptive aria-label.
+ *
+ * Props:
+ *   showDirectionsLink?: boolean (default: true)
+ *   showHours?: boolean (default: false) — set true to include HoursTable inline
+ *   compact?: boolean (default: false) — minimal layout for footer use
+ */
+
+interface Props {
+  showDirectionsLink?: boolean;
+  showHours?: boolean;
+  compact?: boolean;
+}
+
+const {
+  showDirectionsLink = true,
+  showHours = false,
+  compact = false,
+} = Astro.props;
+---
+
+<!-- TODO: Implement full NapBlock — currently a stub -->
+<div data-component="NapBlock" class:list={['nap-block', compact && 'nap-block--compact']}>
+  <address aria-label="Pharmacy address and contact information">
+    <p><strong>Four Winds Roots Pharmacy</strong></p>
+    <p>3932A Keele St<br />North York, ON M3J 1N8</p>
+    <p>Phone: <a href="tel:4163988200">(416) 398-8200</a></p>
+    <p>Fax: (416) 398-6745</p>
+  </address>
+
+  {showDirectionsLink && (
+    <a
+      href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Get directions to Four Winds Roots Pharmacy on Google Maps (opens in new tab)"
+    >
+      Get Directions
+    </a>
+  )}
+
+  {showHours && (
+    <!-- TODO: render HoursTable component inline when showHours is true -->
+    <p>TODO: HoursTable component slot</p>
+  )}
+</div>

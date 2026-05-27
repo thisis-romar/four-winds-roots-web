@@ -1,0 +1,43 @@
+---
+/**
+ * ReviewRequestLink — Four Winds Roots Pharmacy
+ * Post-service prompt linking to the GBP review URL.
+ * Placed on: homepage (lower section), footer area, post-service thank-you pages.
+ * The 4.9★ rating is the pharmacy's strongest asset — this component helps maintain it.
+ *
+ * COMPLIANCE: Review solicitation must comply with Google's review policies.
+ * Do not offer incentives for reviews. Solicit reviews from satisfied patients only.
+ * TODO: Confirm GBP review URL with owner before publishing.
+ *
+ * Props:
+ *   label?: string — link/button text
+ *   variant?: 'btn' | 'link' (default: 'link')
+ */
+
+interface Props {
+  label?: string;
+  variant?: 'btn' | 'link';
+}
+
+const {
+  label = 'Leave us a review on Google',
+  variant = 'link',
+} = Astro.props;
+
+// TODO: Replace with the real GBP review shortlink once confirmed with owner
+const reviewUrl = 'TODO_GBP_REVIEW_URL';
+---
+
+<div data-component="ReviewRequestLink" class="review-request">
+  <p>Happy with our service?</p>
+  <a
+    href={reviewUrl}
+    class:list={[variant === 'btn' && 'btn btn-outline']}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Leave Four Winds Roots Pharmacy a review on Google (opens in new tab)"
+  >
+    {label}
+  </a>
+  <!-- TODO: replace TODO_GBP_REVIEW_URL with the actual Google review link from owner -->
+</div>

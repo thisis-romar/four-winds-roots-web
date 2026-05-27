@@ -1,0 +1,161 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+
+  "@comment_name": "Canonical business name — align with GBP and all directories (NAP consistency)",
+  "name": "Four Winds Roots Pharmacy",
+
+  "alternateName": [
+    "Roots Four Winds Pharmacy",
+    "R.O.O.T.S. Four Winds Pharmacy"
+  ],
+
+  "@comment_url": "TODO: confirm final domain before go-live (currently placeholder)",
+  "url": "https://fourwindsrootspharmacy.ca",
+
+  "logo": "https://fourwindsrootspharmacy.ca/images/logo.png",
+
+  "image": [
+    "https://fourwindsrootspharmacy.ca/images/storefront.jpg"
+  ],
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3932A Keele St",
+    "addressLocality": "North York",
+    "addressRegion": "ON",
+    "postalCode": "M3J 1N8",
+    "addressCountry": "CA"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "@comment_geo": "TODO: verify exact lat/lon from Google Maps for this address",
+    "latitude": 43.766,
+    "longitude": -79.476
+  },
+
+  "telephone": "+14163988200",
+  "faxNumber": "+14163986745",
+
+  "@comment_openingHours": "TODO: confirm exact hours with owner — these are placeholders only",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "@comment_ratingCount": "TODO: verify current review count from Google Business Profile before publishing",
+    "ratingCount": "TODO_VERIFY_FROM_GBP"
+  },
+
+  "@comment_pharmacistName": "TODO: confirm registered pharmacist name(s) with owner for TrustBar display",
+  "employee": [
+    {
+      "@type": "Person",
+      "jobTitle": "Registered Pharmacist",
+      "@comment_name_pharmacist": "TODO: confirm name with owner",
+      "name": "TODO: Pharmacist Name"
+    }
+  ],
+
+  "@comment_OCP": "TODO: confirm OCP registration number with owner — required for TrustBar and compliance",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Ontario College of Pharmacists Registration",
+    "credentialCategory": "Professional Registration",
+    "@comment_identifier": "TODO: enter OCP registration number",
+    "identifier": "TODO_OCP_REG_NUMBER"
+  },
+
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Prescription Refills",
+      "description": "Fast, easy prescription refills with delivery available across North York."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Prescription Transfers",
+      "description": "Transfer your prescriptions from any pharmacy — we handle the paperwork."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "MedsCheck Medication Reviews",
+      "description": "Free government-funded medication reviews with a licensed pharmacist."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Blister Packaging",
+      "description": "Customized blister packs for seniors and patients managing complex medication regimens."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Free Prescription Delivery",
+      "description": "Free prescription delivery across North York and surrounding areas."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Vaccinations and Injections",
+      "description": "Flu shots, COVID-19 vaccines, travel immunizations, and injection services."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Holistic Wellness Consultation",
+      "description": "Herb-drug interaction review, holistic wellness guidance, and whole-person care."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Herb-Drug Interaction Review",
+      "description": "Expert review of herbal supplements alongside prescription medications for safety."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Optical Services",
+      "description": "Optical and wellness centre services under one roof — glasses, vision care, and more."
+    }
+  ],
+
+  "@comment_priceRange": "TODO: confirm if owner wants to display pricing tier",
+  "priceRange": "$$",
+
+  "currenciesAccepted": "CAD",
+
+  "paymentAccepted": "Cash, Credit Card, Debit Card",
+
+  "@comment_languages": "TODO: confirm which languages are spoken at the pharmacy",
+  "knowsLanguage": ["English"],
+
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "North York"
+    },
+    {
+      "@type": "City",
+      "name": "Toronto"
+    }
+  ],
+
+  "hasMap": "https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8",
+
+  "@comment_sameAs": "TODO: add verified social media and directory profile URLs",
+  "sameAs": [
+    "TODO_GOOGLE_BUSINESS_PROFILE_URL",
+    "TODO_FACEBOOK_URL"
+  ]
+}

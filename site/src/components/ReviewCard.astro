@@ -1,0 +1,46 @@
+---
+/**
+ * ReviewCard — Four Winds Roots Pharmacy
+ * A single patient testimonial: name/initial, quote, source, date.
+ * COMPLIANCE: Only display real, consented reviews. No fabricated testimonials.
+ * TODO: Source actual patient reviews with written or recorded consent before populating.
+ *
+ * Props:
+ *   quote: string — the review text (real patient words only)
+ *   author: string — name or initial (e.g., "Sarah M.") — confirm consent
+ *   source: string — "Google" | "In-person" | etc.
+ *   rating?: number — 1-5 (default 5)
+ *   date?: string — ISO date string
+ */
+
+interface Props {
+  quote: string;
+  author: string;
+  source?: string;
+  rating?: number;
+  date?: string;
+}
+
+const { quote, author, source = 'Google', rating = 5, date } = Astro.props;
+
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<!-- TODO: Style ReviewCard with design tokens -->
+<article data-component="ReviewCard" class="review-card">
+  <blockquote class="review-card__quote">
+    <p>{quote}</p>
+  </blockquote>
+  <footer class="review-card__footer">
+    <cite class="review-card__author">{author}</cite>
+    {source && <span class="review-card__source"> via {source}</span>}
+    <span class="review-card__rating" aria-label={`${rating} out of 5 stars`}>
+      <span aria-hidden="true">{stars}</span>
+    </span>
+    {date && (
+      <time class="review-card__date" datetime={date}>
+        {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long' })}
+      </time>
+    )}
+  </footer>
+</article>

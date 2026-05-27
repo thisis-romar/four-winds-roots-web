@@ -1,0 +1,55 @@
+---
+/**
+ * MapEmbed — Four Winds Roots Pharmacy
+ * Google Maps iframe embed, lazy-loaded for performance.
+ * TODO: Obtain an API key or use the embeds.maps.google.com URL (no key needed for basic embed).
+ * TODO: If targeting GDPR/PIPEDA compliance, add a consent notice before loading the iframe.
+ * Accessibility: <iframe title>, <figcaption> with address text, DirectionsButton alongside.
+ *
+ * Props:
+ *   height?: number (default: 400)
+ *   showDirectionsLink?: boolean (default: true)
+ */
+
+interface Props {
+  height?: number;
+  showDirectionsLink?: boolean;
+}
+
+const { height = 400, showDirectionsLink = true } = Astro.props;
+
+// TODO: Replace with a proper Maps Embed API URL once API key is obtained.
+// Basic no-key embed URL (works but has limited usage):
+const embedSrc =
+  'https://maps.google.com/maps?q=3932A+Keele+St+North+York+ON+M3J+1N8&output=embed';
+---
+
+<!-- TODO: Add consent notice / lazy-load wrapper before iframe for PIPEDA compliance -->
+<figure data-component="MapEmbed" class="map-embed">
+  <iframe
+    title="Map showing Four Winds Roots Pharmacy at 3932A Keele St, North York, ON M3J 1N8"
+    src={embedSrc}
+    width="100%"
+    height={height}
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    style="border: 0;"
+    aria-label="Google Maps showing the location of Four Winds Roots Pharmacy"
+  ></iframe>
+  <figcaption class="map-embed__caption">
+    Four Winds Roots Pharmacy · 3932A Keele St, North York, ON M3J 1N8
+    {showDirectionsLink && (
+      <>
+        ·
+        <a
+          href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open in Google Maps (new tab)"
+        >
+          Open in Google Maps
+        </a>
+      </>
+    )}
+  </figcaption>
+</figure>

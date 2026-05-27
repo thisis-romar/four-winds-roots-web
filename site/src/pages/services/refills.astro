@@ -1,0 +1,55 @@
+---
+/**
+ * Prescription Refills — Four Winds Roots Pharmacy
+ * Primary keyword: prescription refills North York
+ * Source: design/information-architecture.md — Prescription Refills
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Prescription Refills | Four Winds Roots Pharmacy, North York"
+  description="Request a prescription refill online or by phone at Four Winds Roots Pharmacy, 3932A Keele St, North York. Fast turnaround. Free delivery available. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Prescription Refills):
+    1. ServiceHero — title, plain-language intro, primary CTA (call or refill form)
+    2. What you need — Rx number, patient name, contact info (EligibilityNote)
+    3. RefillForm — Rx number(s), name, contact, pickup/delivery choice, consent checkbox
+       - PHIPA-safe: secure transport, minimal fields, explicit consent language
+       - Honeypot field (aria-hidden) for spam prevention
+       - Success state + failure state with phone fallback
+    4. Call alternative — "Prefer to call? (416) 398-8200"
+    5. Turnaround + delivery note — e.g., "Ready same day / next day. Free delivery available."
+    Primary keyword: "prescription refills North York", "refill prescription Keele Finch"
+  -->
+
+  <div class="container section">
+    <h1>Prescription Refills in North York</h1>
+    <p>TODO: ServiceHero — intro and primary CTA (refill form anchor + call button)</p>
+
+    <section aria-labelledby="refills-what-you-need">
+      <h2 id="refills-what-you-need">What You Need to Refill</h2>
+      <p>TODO: EligibilityNote — Rx number, patient name, contact info; walk-in also accepted</p>
+    </section>
+
+    <section aria-labelledby="refills-how-it-works">
+      <h2 id="refills-how-it-works">How It Works</h2>
+      <p>TODO: StepList — 3 steps: submit below / call in / drop off Rx, we prepare, pick up or delivery</p>
+    </section>
+
+    <section aria-labelledby="refills-form">
+      <h2 id="refills-form">Request a Refill</h2>
+      <p>TODO: RefillForm component — PHIPA-compliant (consent checkbox, secure POST, minimal fields)</p>
+      <p>
+        <strong>Prefer to call?</strong>
+        <a href="tel:4163988200">(416) 398-8200</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="refills-delivery">
+      <h2 id="refills-delivery">Free Delivery Available</h2>
+      <p>TODO: delivery note — free across North York; link to /services/free-delivery</p>
+    </section>
+  </div>
+</BaseLayout>

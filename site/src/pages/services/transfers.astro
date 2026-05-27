@@ -1,0 +1,59 @@
+---
+/**
+ * Prescription Transfers — Four Winds Roots Pharmacy
+ * Primary keyword: prescription transfer North York
+ * Source: design/information-architecture.md — Prescription Transfers
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Prescription Transfers | Four Winds Roots Pharmacy, North York"
+  description="Transfer your prescriptions to Four Winds Roots Pharmacy, North York — we do all the work. Fast, free, and easy. Call (416) 398-8200 or fill out the form online."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Prescription Transfers):
+    1. ServiceHero — "We do the work" reassurance headline + transfer form anchor CTA
+    2. "We do the work" reassurance — plain copy, address transfer anxiety
+    3. TransferForm — from-pharmacy info, patient details, medication(s), consent checkbox
+       - PHIPA-safe: secure transport, minimal fields, explicit consent language
+       - Honeypot field for spam prevention without blocking assistive tech
+       - Success state + failure state with phone fallback
+    4. Call alternative — "Prefer to call? (416) 398-8200"
+    5. "Ready in X" expectation — turnaround time promise
+    6. Free delivery tie-in — link to /services/free-delivery
+    Primary keyword: "prescription transfer North York", "transfer prescription Keele Finch"
+  -->
+
+  <div class="container section">
+    <h1>Transfer Your Prescription to Four Winds Roots Pharmacy</h1>
+    <p>TODO: ServiceHero — "We handle the call to your old pharmacy" reassurance + form CTA</p>
+
+    <section aria-labelledby="transfers-we-do-the-work">
+      <h2 id="transfers-we-do-the-work">We Do All the Work</h2>
+      <p>TODO: Reassurance copy — patient gives us the info, we call the old pharmacy, no hassle</p>
+    </section>
+
+    <section aria-labelledby="transfers-how-it-works">
+      <h2 id="transfers-how-it-works">How a Transfer Works</h2>
+      <p>TODO: StepList — 3 steps: fill form / call in, we contact old pharmacy, prescription ready here</p>
+    </section>
+
+    <section aria-labelledby="transfers-form">
+      <h2 id="transfers-form">Start Your Transfer</h2>
+      <p>TODO: TransferForm component — PHIPA-compliant (from-pharmacy, patient info, meds, consent)</p>
+      <p>
+        <strong>Prefer to call?</strong>
+        <a href="tel:4163988200">(416) 398-8200</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="transfers-turnaround">
+      <h2 id="transfers-turnaround">Ready in Hours, Not Days</h2>
+      <p>
+        <!-- TODO: confirm turnaround time with owner -->
+        TODO: Turnaround expectation + free delivery offer
+      </p>
+    </section>
+  </div>
+</BaseLayout>

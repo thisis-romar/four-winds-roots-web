@@ -1,0 +1,69 @@
+---
+/**
+ * Student Pharmacy near York University — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy near York University / student pharmacy North York
+ * Source: design/information-architecture.md — Student Pharmacy near York University
+ * Note: This is an under-served, geographically captive market segment.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Student Pharmacy near York University | Four Winds Roots"
+  description="Fast prescription refills, transfers, and free delivery for students near York University. Four Winds Roots Pharmacy at Keele & Finch — 10 minutes from campus. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Student Pharmacy near York University):
+    1. SegmentPanel / hero — "Pharmacy for York University students at Keele & Finch" headline + transfer CTA
+    2. Fast transfers highlight — "Transfer from your home pharmacy in minutes" ServiceCard
+    3. Free delivery highlight — no car needed, we deliver to your door
+    4. Multilingual service note — TODO: confirm which languages are spoken at the pharmacy with owner
+    5. Proximity to campus — "10 minutes from York University" (TODO: verify travel time)
+    6. Transfer CTA — prominent — "Transfer your prescription from home" is the #1 student action
+    Primary keyword: "pharmacy near York University", "student pharmacy North York", "pharmacy Keele Finch"
+    Note: Keele St is a major transit corridor connecting to York U — emphasize transit accessibility.
+    TODO: confirm languages spoken at pharmacy, actual walking/transit distance to York U main campus.
+  -->
+
+  <div class="container section">
+    <h1>Student Pharmacy near York University — Keele &amp; Finch</h1>
+    <p>TODO: SegmentPanel hero — "Close to campus, fast service, free delivery" for students</p>
+
+    <section aria-labelledby="students-transfers">
+      <h2 id="students-transfers">Transfer Your Prescription from Home</h2>
+      <p>TODO: ServiceCard highlight — link to /services/transfers; "we do the work, you get on with your day"</p>
+      <a href="/services/transfers" class="btn btn-transfer">Transfer My Prescription</a>
+    </section>
+
+    <section aria-labelledby="students-delivery">
+      <h2 id="students-delivery">Free Delivery — No Car Needed</h2>
+      <p>TODO: Free delivery highlight — link to /services/free-delivery, note coverage of campus area</p>
+    </section>
+
+    <section aria-labelledby="students-multilingual">
+      <h2 id="students-multilingual">Service in Multiple Languages</h2>
+      <p>
+        <!-- TODO: confirm which languages are spoken at the pharmacy with owner -->
+        TODO: Multilingual service note — list languages spoken. This is a key differentiator for
+        the diverse York U student community. Do not publish without owner confirmation.
+      </p>
+    </section>
+
+    <section aria-labelledby="students-proximity">
+      <h2 id="students-proximity">Close to York University</h2>
+      <p>
+        <!-- TODO: verify actual transit/walking time from York University main campus -->
+        TODO: Proximity copy — transit accessibility from York U via Keele St, distance/time note.
+        Include transit route information if useful (TTC bus on Keele).
+      </p>
+    </section>
+
+    <section aria-labelledby="students-cta">
+      <h2 id="students-cta">Get Started</h2>
+      <p>
+        <a href="/services/transfers" class="btn btn-transfer">Transfer My Rx</a>
+        <a href="tel:4163988200" class="btn btn-call">Call Us</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+/**
+ * Seniors & Family Care — Four Winds Roots Pharmacy
+ * Primary keyword: seniors medication packaging North York / blister packaging pharmacy Toronto
+ * Source: design/information-architecture.md — Seniors & Family Care
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Seniors & Family Pharmacy Care | Four Winds Roots, North York"
+  description="Pharmacy services for seniors and caregivers in North York — blister packaging, free delivery, MedsCheck, and personal service at Four Winds Roots Pharmacy. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Seniors & Family Care):
+    1. SegmentPanel / hero — "Pharmacy care built for seniors and their families" headline + call CTA
+    2. Blister packaging highlight — ServiceCard linking to /services/blister-packaging
+    3. Free delivery highlight — ServiceCard linking to /services/free-delivery
+    4. MedsCheck highlight — ServiceCard linking to /services/medication-reviews
+    5. Reviews — 1-2 ReviewCards from senior/caregiver patients (real, compliant, with consent)
+       TODO: source real patient reviews with consent before publishing
+    6. Caregiver-friendly framing — "Call on behalf of a family member" language
+    7. Call CTA — prominent click-to-call for seniors who prefer phone
+    Primary keyword: "seniors medication packaging North York", "pharmacy for seniors North York"
+    Design note: Larger text, simple language, prominent phone number — refer to brand-direction.md
+  -->
+
+  <div class="container section">
+    <h1>Pharmacy Care for Seniors &amp; Families in North York</h1>
+    <p>TODO: SegmentPanel hero — warm, reassuring intro for seniors and their caregivers</p>
+
+    <section aria-labelledby="seniors-blister">
+      <h2 id="seniors-blister">Blister Packaging — Never Miss a Dose</h2>
+      <p>TODO: ServiceCard highlight — link to /services/blister-packaging with "free" callout</p>
+    </section>
+
+    <section aria-labelledby="seniors-delivery">
+      <h2 id="seniors-delivery">Free Delivery to Your Door</h2>
+      <p>TODO: ServiceCard highlight — link to /services/free-delivery with North York coverage note</p>
+    </section>
+
+    <section aria-labelledby="seniors-medscheck">
+      <h2 id="seniors-medscheck">Free MedsCheck Medication Reviews</h2>
+      <p>TODO: ServiceCard highlight — link to /services/medication-reviews with eligibility note</p>
+    </section>
+
+    <section aria-labelledby="seniors-caregivers">
+      <h2 id="seniors-caregivers">Helping Caregivers Too</h2>
+      <p>TODO: Caregiver-friendly copy — "Call on behalf of a family member, we'll coordinate everything"</p>
+    </section>
+
+    <section aria-labelledby="seniors-call">
+      <h2 id="seniors-call">Call Us — We're Here to Help</h2>
+      <p>Our pharmacists take the time to talk. No rush, no jargon.</p>
+      <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+/**
+ * Vaccinations & Injections — Four Winds Roots Pharmacy
+ * Primary keyword: vaccination pharmacy North York / flu shot Keele Finch
+ * Source: design/information-architecture.md — Vaccinations & Injections
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Vaccinations & Injections | Four Winds Roots Pharmacy, North York"
+  description="Flu shots, COVID-19 vaccines, travel immunizations, and injection services at Four Winds Roots Pharmacy, Keele & Finch, North York. Walk-in and by appointment. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Vaccinations & Injections):
+    1. ServiceHero — "Get vaccinated today at Keele & Finch" headline + book CTA
+    2. Services list — what vaccines/injections are available (flu, COVID, travel, Paxlovid, etc.)
+       TODO: confirm full list with owner — include only services currently offered
+    3. Who can get them — EligibilityNote: age/health eligibility by vaccine type
+    4. Walk-in vs booked — which vaccines are walk-in vs appointment (TODO: confirm with owner)
+    5. BookingCTA — phone or scheduler to book an appointment
+    6. Seasonal note — flu shot season timing, COVID updates
+    Primary keyword: "vaccination pharmacy North York", "flu shot Keele Finch", "Paxlovid pharmacy North York"
+    IMPORTANT: Do not list specific vaccines without owner confirmation — regulatory compliance.
+  -->
+
+  <div class="container section">
+    <h1>Vaccinations &amp; Injections at Keele &amp; Finch, North York</h1>
+    <p>TODO: ServiceHero — "Protect yourself and your family" intro + walk-in welcome note + book CTA</p>
+
+    <section aria-labelledby="vaccines-services">
+      <h2 id="vaccines-services">Available Vaccines &amp; Injections</h2>
+      <p>
+        <!-- TODO: confirm exact list with owner — only list currently offered services -->
+        TODO: Services list — flu vaccine, COVID-19 vaccine, travel immunizations, injection services.
+        Do not publish without owner sign-off on which services are offered.
+      </p>
+    </section>
+
+    <section aria-labelledby="vaccines-eligibility">
+      <h2 id="vaccines-eligibility">Who Can Get Vaccinated</h2>
+      <p>TODO: EligibilityNote — eligibility by vaccine type (age, health card, Ontario resident, etc.)</p>
+    </section>
+
+    <section aria-labelledby="vaccines-walkin">
+      <h2 id="vaccines-walkin">Walk-In or By Appointment</h2>
+      <p>
+        <!-- TODO: confirm walk-in vs appointment policy with owner -->
+        TODO: Walk-in vs appointment guidance for each vaccine type.
+      </p>
+    </section>
+
+    <section aria-labelledby="vaccines-book">
+      <h2 id="vaccines-book">Book Your Vaccination</h2>
+      <p>TODO: BookingCTA — phone or embedded scheduler (confirm with owner)</p>
+      <p>
+        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

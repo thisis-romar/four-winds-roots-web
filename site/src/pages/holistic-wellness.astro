@@ -1,0 +1,72 @@
+---
+/**
+ * Holistic Wellness — Four Winds Roots Pharmacy
+ * Primary keyword: holistic pharmacy North York / compounding pharmacy North York
+ * Source: design/information-architecture.md — Holistic Wellness
+ * Brand note: This is a key differentiator — no competitor claims this space.
+ * Language: plain, warm, non-overclaiming. No unsubstantiated health claims.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Holistic Pharmacy & Wellness Consultation | Four Winds Roots, North York"
+  description="Holistic pharmacy care at Four Winds Roots, Keele & Finch, North York. Herb-drug interaction reviews, wellness consultations, and whole-person pharmacy support. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Holistic Wellness):
+    1. ServiceHero — "Whole-person care at your corner pharmacy" headline + consult CTA
+    2. What holistic care means here — plain language: herb-drug interaction review, wellness
+       guidance, listening to the whole picture. NOT medical advice, NOT disease treatment claims.
+    3. Who it's for — EligibilityNote: people managing complex regimens, supplements users,
+       anyone who wants more than a prescription hand-off
+    4. How to start — StepList: book a consult, bring your med/supplement list, private conversation
+    5. Compounding — if offered; TODO: confirm with owner whether compounding is available
+    6. Clear non-overclaiming language — legal/compliance note: "guidance, not medical diagnosis"
+    7. BookingCTA — phone or scheduler
+    Primary keyword: "holistic pharmacy North York", "herb drug interaction review"
+    BRAND NOTE: this page should feel warm and distinctive — not clinical, not new-age.
+    LEGAL: Do not publish any specific health claims without review by the owner/OCP.
+  -->
+
+  <div class="container section">
+    <h1>Holistic Pharmacy &amp; Wellness at Keele &amp; Finch</h1>
+    <p>TODO: ServiceHero — "We look at the whole picture, not just the prescription" intro + consult CTA</p>
+
+    <section aria-labelledby="holistic-what-it-means">
+      <h2 id="holistic-what-it-means">What Holistic Pharmacy Care Means Here</h2>
+      <p>TODO: Plain-language explanation — herb-drug interaction review, supplement safety, wellness conversations.
+        Emphasize: this complements your medical care, it does not replace your doctor.
+        LEGAL: All copy must be reviewed by owner before publishing. No disease treatment claims.</p>
+    </section>
+
+    <section aria-labelledby="holistic-who-its-for">
+      <h2 id="holistic-who-its-for">Who This Is For</h2>
+      <p>TODO: EligibilityNote — patients on multiple supplements, those seeking herb safety review,
+        anyone who wants a fuller conversation about their health and their meds.</p>
+    </section>
+
+    <section aria-labelledby="holistic-herb-drug">
+      <h2 id="holistic-herb-drug">Herb-Drug Interaction Review</h2>
+      <p>TODO: Explain what a herb-drug interaction review is, why it matters, who needs one.
+        Non-overclaiming language. Link to MedsCheck page where relevant.</p>
+    </section>
+
+    <section aria-labelledby="holistic-compounding">
+      <h2 id="holistic-compounding">Compounding</h2>
+      <p>
+        <!-- TODO: confirm whether compounding is offered and to what scope with owner -->
+        TODO: Compounding section — only publish if confirmed with owner. Describe what compounding
+        is and the types of preparations available.
+      </p>
+    </section>
+
+    <section aria-labelledby="holistic-how-to-start">
+      <h2 id="holistic-how-to-start">How to Start</h2>
+      <p>TODO: StepList — call to book a wellness consultation, bring your full list (Rx + supplements), private chat</p>
+      <p>
+        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+/**
+ * Medication Reviews / MedsCheck — Four Winds Roots Pharmacy
+ * Primary keyword: medication review pharmacy Toronto / MedsCheck North York
+ * Source: design/information-architecture.md — Medication Reviews / MedsCheck
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="MedsCheck Medication Reviews | Four Winds Roots Pharmacy"
+  description="Free MedsCheck medication reviews with a registered pharmacist at Four Winds Roots Pharmacy, North York. Government-funded. Book your appointment today — (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Medication Reviews / MedsCheck):
+    1. ServiceHero — "Free MedsCheck — understanding your meds" headline + book CTA
+    2. Who qualifies — EligibilityNote: Ontario residents taking 3+ prescriptions, diabetics, hospital discharge
+    3. What to expect — StepList: what happens in the session, how long, what you'll receive
+    4. Plain-language benefits — 3-4 bullet points without overclaiming
+    5. BookingCTA — link to booking flow (phone or embedded scheduler)
+    6. Call alternative — (416) 398-8200
+    Primary keyword: "medication review pharmacy Toronto", "MedsCheck North York"
+    Note: MedsCheck is a government-funded ODB program — do not overstate eligibility.
+    TODO: confirm exact eligibility criteria with owner / OCP guidelines before publishing.
+  -->
+
+  <div class="container section">
+    <h1>MedsCheck Medication Reviews in North York</h1>
+    <p>TODO: ServiceHero — intro explaining the free government-funded MedsCheck program + book CTA</p>
+
+    <section aria-labelledby="medscheck-who-qualifies">
+      <h2 id="medscheck-who-qualifies">Who Qualifies</h2>
+      <p>TODO: EligibilityNote — Ontario residents, 3+ chronic prescriptions, diabetics, post-hospital discharge</p>
+      <p><em>TODO: verify current eligibility criteria with owner before publishing</em></p>
+    </section>
+
+    <section aria-labelledby="medscheck-what-to-expect">
+      <h2 id="medscheck-what-to-expect">What to Expect</h2>
+      <p>TODO: StepList — private consultation, medication review, written summary, follow-up if needed</p>
+    </section>
+
+    <section aria-labelledby="medscheck-benefits">
+      <h2 id="medscheck-benefits">Why a MedsCheck Helps</h2>
+      <p>TODO: Plain-language benefit bullets — catch interactions, reduce side effects, understand timing</p>
+    </section>
+
+    <section aria-labelledby="medscheck-book">
+      <h2 id="medscheck-book">Book Your Free MedsCheck</h2>
+      <p>TODO: BookingCTA — phone booking or embedded scheduler (confirm with owner which to use)</p>
+      <p>
+        <strong>Call to book:</strong>
+        <a href="tel:4163988200">(416) 398-8200</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+/**
+ * Home — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy Keele and Finch / holistic pharmacy North York
+ * Source: design/information-architecture.md — Home
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Holistic Pharmacy at Keele & Finch, North York | Four Winds Roots Pharmacy"
+  description="Four Winds Roots Pharmacy — holistic pharmacy, optical & wellness centre at Keele & Finch, North York. 4.9★ rating. Prescription refills, free delivery, MedsCheck, vaccinations. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Home):
+    1. Hero — positioning headline + Call/Transfer CTAs
+    2. Reputation strip — 4.9★ rating + selected review quotes + "leave a review" link
+    3. Service grid — ServiceCard for each of the 6 core services + Holistic + Optical
+    4. Holistic wellness highlight — differentiator panel with secondary CTA
+    5. Optical & Wellness Centre highlight — differentiator panel with CTA
+    6. Free delivery banner — "free across North York" value prop
+    7. "Who we help" segments — Seniors & Families / Students near York U
+    8. NAP block + Google Maps embed + hours — contact conversion backstop
+    9. Review prompt / ReviewRequestLink — solicit 5-star reviews post-service
+    Primary keyword: "pharmacy Keele and Finch", "holistic pharmacy North York"
+  -->
+
+  <section class="hero" aria-labelledby="home-hero-heading">
+    <div class="container">
+      <h1 id="home-hero-heading">
+        Your holistic pharmacy at Keele &amp; Finch, North York
+      </h1>
+      <p class="hero__sub">
+        Prescriptions, wellness, and optical care — under one roof at 3932A Keele St.
+        Rated 4.9★ by our community.
+      </p>
+      <div class="hero__ctas">
+        <a href="tel:4163988200" class="btn btn-call">Call (416) 398-8200</a>
+        <a href="/services/transfers" class="btn btn-transfer">Transfer My Prescription</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-services-heading">
+    <div class="container">
+      <h2 id="home-services-heading">Our Services</h2>
+      <p>TODO: Service grid — 8 ServiceCard components (refills, transfers, MedsCheck,
+        blister packaging, free delivery, vaccinations, holistic wellness, optical)</p>
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-reputation-heading">
+    <div class="container">
+      <h2 id="home-reputation-heading">What Our Patients Say</h2>
+      <p>TODO: ReputationStrip — 4.9★ aggregate + 3 ReviewCard components + ReviewRequestLink</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-delivery-heading">
+    <div class="container">
+      <h2 id="home-delivery-heading">Free Prescription Delivery Across North York</h2>
+      <p>TODO: Free delivery banner — coverage area, how to request, link to /services/free-delivery</p>
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-segments-heading">
+    <div class="container">
+      <h2 id="home-segments-heading">We Help Every Member of Your Family</h2>
+      <p>TODO: SegmentPanel components — Seniors & Family Care + Students near York U</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-location-heading">
+    <div class="container">
+      <h2 id="home-location-heading">Find Us at Keele &amp; Finch</h2>
+      <p>TODO: NapBlock + MapEmbed (Google Maps, lazy-loaded) + HoursTable</p>
+      <!-- NapBlock: 3932A Keele St, North York ON M3J 1N8 · (416) 398-8200 -->
+      <!-- MapEmbed: iframe pointing to address, loading="lazy" -->
+      <!-- HoursTable: mirrors schema.json openingHoursSpecification -->
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background-color: var(--color-calm-light);
+    padding-block: var(--space-20);
+    text-align: center;
+  }
+
+  .hero h1 {
+    max-width: 22ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__sub {
+    font-size: var(--text-lg);
+    max-width: 55ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-8);
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

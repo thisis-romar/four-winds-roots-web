@@ -1,0 +1,60 @@
+---
+/**
+ * SegmentPanel — Four Winds Roots Pharmacy
+ * "Who We Help" panel for Seniors/Family and Students segments.
+ * Used on the homepage and the respective who-we-help pages.
+ * Accessibility: landmark <section> with heading, descriptive CTA link text.
+ *
+ * Props:
+ *   title: string — segment name (e.g., "Seniors & Family Care")
+ *   description: string — 1-2 sentence intro
+ *   services: string[] — bullet list of relevant services
+ *   ctaLabel: string — CTA button label
+ *   ctaHref: string — link to the segment landing page
+ *   imageAlt?: string — alt text for segment image (TODO: add real photos)
+ *   variant?: 'seniors' | 'students' (for colour/layout variation)
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  services: string[];
+  ctaLabel: string;
+  ctaHref: string;
+  imageAlt?: string;
+  variant?: 'seniors' | 'students';
+}
+
+const {
+  title,
+  description,
+  services,
+  ctaLabel,
+  ctaHref,
+  imageAlt,
+  variant = 'seniors',
+} = Astro.props;
+---
+
+<!-- TODO: Style SegmentPanel with design tokens; two-column layout on desktop -->
+<section
+  data-component="SegmentPanel"
+  data-variant={variant}
+  class:list={['segment-panel', `segment-panel--${variant}`]}
+  aria-labelledby={`segment-${variant}-heading`}
+>
+  {imageAlt && (
+    <!-- TODO: add real photo once pharmacy photos are taken -->
+    <div class="segment-panel__image" aria-hidden="true">
+      <p>TODO: Image — {imageAlt}</p>
+    </div>
+  )}
+  <div class="segment-panel__content">
+    <h2 id={`segment-${variant}-heading`} class="segment-panel__title">{title}</h2>
+    <p class="segment-panel__desc">{description}</p>
+    <ul class="segment-panel__services" role="list">
+      {services.map((s) => <li>{s}</li>)}
+    </ul>
+    <a href={ctaHref} class="btn btn-call">{ctaLabel}</a>
+  </div>
+</section>
