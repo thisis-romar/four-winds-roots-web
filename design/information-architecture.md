@@ -14,7 +14,7 @@ Home
 │   ├── Medication Reviews / MedsCheck
 │   ├── Blister Packaging
 │   ├── Free Delivery
-│   └── Vaccinations & Injections
+│   └── Preventive Care & Holistic Immunizations
 ├── Holistic Wellness
 ├── Optical & Wellness Centre
 ├── Who We Help
@@ -64,9 +64,15 @@ two persistent action buttons: **Call** and **Transfer Rx**.
 - **Purpose:** convenience hook.
 - **Key blocks:** coverage area, how to request, delivery request form, "free" stated plainly.
 
-### Vaccinations & Injections
-- **Purpose:** seasonal + clinical conversions (flu, COVID/Paxlovid, travel, injections).
-- **Key blocks:** services list, who can get them, book-a-vaccine CTA, walk-in vs booked.
+### Preventive Care & Holistic Immunizations
+- **Route:** /services/preventive-care/
+- **Purpose:** frame immunizations, antiviral prescribing, and travel health as part of the
+  holistic care philosophy — prevention as whole-person wellness, not a clinical counter service.
+- **Key blocks:** protective services list (flu, COVID, travel health, Paxlovid if confirmed),
+  holistic connection paragraph (links to /holistic-wellness), no-referral eligibility note,
+  walk-in vs appointment, BookingCTA.
+- **Heading language:** "Protective Health", "Preventive Care", "Immunizations" — avoid leading
+  with "Vaccinations" in H1/H2; keep it in body copy for SEO only.
 
 ### Holistic Wellness  *(differentiator)*
 - **Purpose:** own the holistic niche no competitor claims.
