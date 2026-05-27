@@ -6,9 +6,20 @@
     "fax": "(416) 398-6745",
     "rating_observed": "4.9",
     "website": null,
-    "distinctive_services": ["holistic", "herb_drug_interaction_review", "blister_packaging", "raid_home_health_supplies", "blood_pressure_kiosk", "optical", "wellness"],
+    "distinctive_services": [
+      "holistic",
+      "herb_drug_interaction_review",
+      "blister_packaging",
+      "raid_home_health_supplies",
+      "blood_pressure_kiosk",
+      "optical",
+      "wellness"
+    ],
     "audit_date": "2026-05-26",
-    "competitor_count": 18
+    "competitor_count": 18,
+    "operating_entity": "Can Pharm Service Inc",
+    "registered_name": "R.O.O.T.S Four Winds Pharmacy",
+    "notes": " CLARIFIED 2026-05-27: Can Pharm Service Inc is the legal operating entity for the client pharmacy. The Guardian Four Winds legacy directory listing at 3932A Keele is the client own old listing — not a competitor. GBP disambiguation strategy updated accordingly."
   },
   "competitors": [
     {
@@ -40,9 +51,16 @@
         "brand_differentiation": 4,
         "accessibility_and_compliance": 1,
         "reputation_signals": 2,
-        "weighted_total": 52.0
+        "weighted_total": 52
       },
-      "key_services": ["non-sterile compounding", "blister packs", "free delivery", "CDE", "flu vaccine", "multilingual (Hindi/Portuguese/Spanish/Tagalog/Vietnamese)"],
+      "key_services": [
+        "non-sterile compounding",
+        "blister packs",
+        "free delivery",
+        "CDE",
+        "flu vaccine",
+        "multilingual (Hindi/Portuguese/Spanish/Tagalog/Vietnamese)"
+      ],
       "hours": "M-F 9:30am-5pm, Sat 9am-2pm",
       "rating": null,
       "links": [
@@ -80,9 +98,12 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 2,
         "reputation_signals": 4,
-        "weighted_total": 64.0
+        "weighted_total": 64
       },
-      "key_services": ["standard pharmacy services", "social media active"],
+      "key_services": [
+        "standard pharmacy services",
+        "social media active"
+      ],
       "hours": null,
       "rating": "4.5-4.7★/50+ reviews",
       "links": [
@@ -119,9 +140,12 @@
         "brand_differentiation": 1,
         "accessibility_and_compliance": 2,
         "reputation_signals": 3,
-        "weighted_total": 42.0
+        "weighted_total": 42
       },
-      "key_services": ["standard dispensing", "blister packs"],
+      "key_services": [
+        "standard dispensing",
+        "blister packs"
+      ],
       "hours": null,
       "rating": "4.3★/125 Lumino",
       "links": [
@@ -159,9 +183,14 @@
         "brand_differentiation": 2,
         "accessibility_and_compliance": 3,
         "reputation_signals": 1,
-        "weighted_total": 57.0
+        "weighted_total": 57
       },
-      "key_services": ["standard dispensing", "blister packs", "MedsCheck", "vaccinations"],
+      "key_services": [
+        "standard dispensing",
+        "blister packs",
+        "MedsCheck",
+        "vaccinations"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -199,9 +228,14 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 1,
         "reputation_signals": 3,
-        "weighted_total": 54.0
+        "weighted_total": 54
       },
-      "key_services": ["standard dispensing", "compounding", "blister packs", "MedsCheck"],
+      "key_services": [
+        "standard dispensing",
+        "compounding",
+        "blister packs",
+        "MedsCheck"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -239,9 +273,21 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 3,
         "reputation_signals": 2,
-        "weighted_total": 68.0
+        "weighted_total": 68
       },
-      "key_services": ["Paxlovid", "minor-ailments prescribing", "MedsCheck", "smoking cessation", "CDE", "vaccinations", "blister packs", "free delivery", "medication return", "sharps", "online booking"],
+      "key_services": [
+        "Paxlovid",
+        "minor-ailments prescribing",
+        "MedsCheck",
+        "smoking cessation",
+        "CDE",
+        "vaccinations",
+        "blister packs",
+        "free delivery",
+        "medication return",
+        "sharps",
+        "online booking"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -278,9 +324,15 @@
         "brand_differentiation": 2,
         "accessibility_and_compliance": 4,
         "reputation_signals": 3,
-        "weighted_total": 69.0
+        "weighted_total": 69
       },
-      "key_services": ["standard dispensing", "online refills", "photo", "vision", "money services"],
+      "key_services": [
+        "standard dispensing",
+        "online refills",
+        "photo",
+        "vision",
+        "money services"
+      ],
       "hours": "7am-11pm daily",
       "rating": null,
       "links": [
@@ -317,9 +369,14 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 3,
         "reputation_signals": 3,
-        "weighted_total": 58.0
+        "weighted_total": 58
       },
-      "key_services": ["standard dispensing", "MedsCheck", "vaccinations", "blister packs"],
+      "key_services": [
+        "standard dispensing",
+        "MedsCheck",
+        "vaccinations",
+        "blister packs"
+      ],
       "hours": "M-Sat extended hours, Sunday open",
       "rating": null,
       "links": [
@@ -356,9 +413,13 @@
         "brand_differentiation": 4,
         "accessibility_and_compliance": 1,
         "reputation_signals": 2,
-        "weighted_total": 52.0
+        "weighted_total": 52
       },
-      "key_services": ["standard dispensing", "campus health integration", "OTC products"],
+      "key_services": [
+        "standard dispensing",
+        "campus health integration",
+        "OTC products"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -395,9 +456,18 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 1,
         "reputation_signals": 4,
-        "weighted_total": 54.0
+        "weighted_total": 54
       },
-      "key_services": ["compounding", "blister packs", "free delivery", "flu vaccine", "blood pressure checks", "home health supplies", "senior discount", "multilingual (Turkish/Persian/Russian)"],
+      "key_services": [
+        "compounding",
+        "blister packs",
+        "free delivery",
+        "flu vaccine",
+        "blood pressure checks",
+        "home health supplies",
+        "senior discount",
+        "multilingual (Turkish/Persian/Russian)"
+      ],
       "hours": "M-F 10am-7pm, Sat 10am-4pm, Sun closed",
       "rating": "4.4★/131 Google reviews",
       "links": [
@@ -434,9 +504,17 @@
         "brand_differentiation": 4,
         "accessibility_and_compliance": 2,
         "reputation_signals": 2,
-        "weighted_total": 63.0
+        "weighted_total": 63
       },
-      "key_services": ["complex compounding", "blister packs", "GTA delivery", "COVID-19 antivirals", "compression therapy", "MedsCheck", "flu vaccine"],
+      "key_services": [
+        "complex compounding",
+        "blister packs",
+        "GTA delivery",
+        "COVID-19 antivirals",
+        "compression therapy",
+        "MedsCheck",
+        "flu vaccine"
+      ],
       "hours": "M-F 8:30am-7pm (earliest open/latest close weekdays in audit), Sat 9am-1pm, Sun closed",
       "rating": null,
       "links": [
@@ -474,9 +552,15 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 1,
         "reputation_signals": 2,
-        "weighted_total": 52.0
+        "weighted_total": 52
       },
-      "key_services": ["medication services", "specialized care", "home healthcare", "customized packaging", "telemedicine (MedEssist)"],
+      "key_services": [
+        "medication services",
+        "specialized care",
+        "home healthcare",
+        "customized packaging",
+        "telemedicine (MedEssist)"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -513,9 +597,20 @@
         "brand_differentiation": 4,
         "accessibility_and_compliance": 1,
         "reputation_signals": 3,
-        "weighted_total": 79.0
+        "weighted_total": 79
       },
-      "key_services": ["custom compounding", "express clinic", "same-day delivery", "PrEP", "men's health", "opioid treatment", "vaccinations", "medication reviews", "chronic prescription renewals", "blood pressure checks"],
+      "key_services": [
+        "custom compounding",
+        "express clinic",
+        "same-day delivery",
+        "PrEP",
+        "men's health",
+        "opioid treatment",
+        "vaccinations",
+        "medication reviews",
+        "chronic prescription renewals",
+        "blood pressure checks"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -553,9 +648,17 @@
         "brand_differentiation": 3,
         "accessibility_and_compliance": 1,
         "reputation_signals": 2,
-        "weighted_total": 40.0
+        "weighted_total": 40
       },
-      "key_services": ["non-sterile compounding (cream/ointments/liquids/tablets/capsules)", "blister packs", "free delivery", "diabetic consultations", "vaccines", "MedsCheck", "sharps disposal"],
+      "key_services": [
+        "non-sterile compounding (cream/ointments/liquids/tablets/capsules)",
+        "blister packs",
+        "free delivery",
+        "diabetic consultations",
+        "vaccines",
+        "MedsCheck",
+        "sharps disposal"
+      ],
       "hours": "M-F 9am-7pm, Sat 9am-1:30pm",
       "rating": null,
       "links": [
@@ -592,9 +695,11 @@
         "brand_differentiation": 2,
         "accessibility_and_compliance": 1,
         "reputation_signals": 1,
-        "weighted_total": 33.0
+        "weighted_total": 33
       },
-      "key_services": ["standard dispensing"],
+      "key_services": [
+        "standard dispensing"
+      ],
       "hours": null,
       "rating": null,
       "links": [
@@ -631,56 +736,19 @@
         "brand_differentiation": 2,
         "accessibility_and_compliance": 1,
         "reputation_signals": 1,
-        "weighted_total": 28.0
+        "weighted_total": 28
       },
-      "key_services": ["standard dispensing"],
+      "key_services": [
+        "standard dispensing"
+      ],
       "hours": "M-Th 9am-8pm, Fri 9am-5pm, Sat 9am-1pm",
       "rating": null,
       "links": [
         "https://medimap.ca/clinics/pharmacies/on/north-york/yorkview-pharmacists-and-chemists"
       ],
       "strategic_notes": "Google Business redirect placeholder only (placeweb.site). Despite being 0.6km away on the same street with the latest weekday hours of all local independents, Yorkview has zero effective web presence. Any Four Winds page will rank above them for 'Keele Street pharmacy' searches."
-    },
-    {
-      "competitor_id": "can_pharm_services",
-      "name": "Can Pharm Services (formerly Guardian Four Winds Pharmacy)",
-      "address": "3932A Keele St, North York, ON M3J 1N8",
-      "phone": "416-398-8200",
-      "priority": "High",
-      "reason_included": "Located in the same building at the same address — old listings under 'Guardian Four Winds Pharmacy' create brand confusion risk for Four Winds Roots patients searching online.",
-      "website_type": "Directory listing only",
-      "owned_website": null,
-      "distance_from_four_winds": "0m — same building, adjacent unit",
-      "verified_html_criteria": {
-        "title_tag": false,
-        "meta_description": false,
-        "phone_tel_link": false,
-        "contact_form": false,
-        "alt_text_on_images": null,
-        "hours_published": false,
-        "ctas_present": false
-      },
-      "scores": {
-        "local_seo_visibility": 1,
-        "trust_and_professional_credibility": 2,
-        "service_clarity": 2,
-        "conversion_and_patient_actions": 1,
-        "mobile_usability": 1,
-        "content_quality_and_patient_education": 1,
-        "brand_differentiation": 1,
-        "accessibility_and_compliance": 1,
-        "reputation_signals": 1,
-        "weighted_total": 26.0
-      },
-      "key_services": ["standard dispensing"],
-      "hours": null,
-      "rating": null,
-      "links": [
-        "https://www.yellowpages.ca/bus/Ontario/North-York/Guardian-Four-Winds-Pharmacy/4226783.html",
-        "https://medimap.ca/clinic/pharmacies/on/north-york/can-pharm-services-inc"
-      ],
-      "strategic_notes": "CRITICAL: Formerly Guardian Four Winds Pharmacy at same address. Old Yellow Pages listing still shows 'Guardian Four Winds Pharmacy.' Patients searching 'Four Winds pharmacy' may find this listing instead of Four Winds Roots. GBP disambiguation and citation cleanup is urgent."
     }
   ],
-  "_provenance": "Updated 2026-05-26 following high-fidelity WebFetch verification pass. HTML-level criteria (tel: links, alt text, title tags, forms, CTAs) directly confirmed via page fetch for all competitors. Original 8-competitor audit (WebSearch-only, provisional) expanded to 18 competitors. Scores revised to reflect verified findings."
+  "_provenance": "Updated 2026-05-26 following high-fidelity WebFetch verification pass. HTML-level criteria (tel: links, alt text, title tags, forms, CTAs) directly confirmed via page fetch for all competitors. Original 8-competitor audit (WebSearch-only, provisional) expanded to 18 competitors. Scores revised to reflect verified findings.",
+  "competitor_count": 16
 }
