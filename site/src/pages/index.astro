@@ -45,8 +45,40 @@ import PhoneLink from '../components/PhoneLink.astro';
   <section class="section" aria-labelledby="home-services-heading">
     <div class="container">
       <h2 id="home-services-heading">Our Services</h2>
-      <p>TODO: Service grid — 8 ServiceCard components (refills, transfers, MedsCheck,
-        blister packaging, free delivery, preventive care, holistic wellness, optical)</p>
+      <ul class="service-grid" role="list">
+        <li><a href="/services/refills" class="service-card">
+          <strong>Prescription Refills</strong>
+          <span>Online, by phone, or in person — ready same day.</span>
+        </a></li>
+        <li><a href="/services/transfers" class="service-card">
+          <strong>Prescription Transfers</strong>
+          <span>We call your old pharmacy — you do nothing.</span>
+        </a></li>
+        <li><a href="/services/medication-reviews" class="service-card">
+          <strong>Medication Reviews (MedsCheck)</strong>
+          <span>Free one-on-one review — ODB-covered for eligible patients.</span>
+        </a></li>
+        <li><a href="/services/blister-packaging" class="service-card">
+          <strong>Blister Packaging</strong>
+          <span>Organized weekly packs — no extra charge.</span>
+        </a></li>
+        <li><a href="/services/free-delivery" class="service-card">
+          <strong>Free Delivery</strong>
+          <span>Free prescription delivery across North York.</span>
+        </a></li>
+        <li><a href="/services/preventive-care" class="service-card">
+          <strong>Preventive Care</strong>
+          <span>ODB Smoking Cessation and more.</span>
+        </a></li>
+        <li><a href="/holistic-wellness" class="service-card">
+          <strong>Holistic Wellness</strong>
+          <span>Natural health, herb–drug interactions, wellness support.</span>
+        </a></li>
+        <li><a href="/optical-wellness" class="service-card">
+          <strong>Optical &amp; Wellness Centre</strong>
+          <span>Eye care and wellness — under the same roof.</span>
+        </a></li>
+      </ul>
     </div>
   </section>
 
@@ -66,25 +98,52 @@ import PhoneLink from '../components/PhoneLink.astro';
   <section class="section" aria-labelledby="home-delivery-heading">
     <div class="container">
       <h2 id="home-delivery-heading">Free Prescription Delivery Across North York</h2>
-      <p>TODO: Free delivery banner — coverage area, how to request, link to /services/free-delivery</p>
+      <p>
+        We deliver prescriptions at no charge — no minimum order, no delivery fee.
+        Call us or request delivery when you submit your refill online.
+        <a href="/services/free-delivery">Learn more about free delivery →</a>
+      </p>
     </div>
   </section>
 
   <section class="section section--calm" aria-labelledby="home-segments-heading">
     <div class="container">
       <h2 id="home-segments-heading">We Help Every Member of Your Family</h2>
-      <p>TODO: SegmentPanel components — Seniors & Family Care + Students near York U</p>
+      <ul class="segment-list" role="list">
+        <li>
+          <a href="/who-we-help/seniors" class="segment-card">
+            <strong>Seniors &amp; Family Care</strong>
+            <span>Blister packs, MedsCheck, free delivery, caregiver support.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/who-we-help/students" class="segment-card">
+            <strong>Students near York University</strong>
+            <span>Steps from the Finch West LRT. Fast transfers, free delivery on campus.</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="section" aria-labelledby="home-location-heading">
     <div class="container">
       <h2 id="home-location-heading">Find Us at Keele &amp; Finch</h2>
-      <p>TODO: NapBlock + MapEmbed (Google Maps, lazy-loaded) + HoursTable</p>
-      <!-- NapBlock: 3932A Keele St (Centennial Plaza), North York ON M3J 1N8 · (416) 398-8200 -->
-      <!-- MapEmbed: iframe pointing to address, loading="lazy" -->
-      <!-- HoursTable: mirrors schema.json openingHoursSpecification -->
-      <!-- Accessibility note: partially wheelchair-accessible -->
+      <address class="location-nap">
+        <p><strong>Four Winds Roots Pharmacy</strong></p>
+        <p>3932A Keele St (Centennial Plaza)<br />North York, ON M3J 1N8</p>
+        <p>Phone: <PhoneLink /> &nbsp;|&nbsp; Fax: (416) 398-6745</p>
+        <p>Partially wheelchair-accessible.</p>
+      </address>
+      <p>
+        <a
+          href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          aria-label="Get directions to Four Winds Roots Pharmacy on Google Maps (opens in new tab)"
+        >Get Directions</a>
+      </p>
     </div>
   </section>
 

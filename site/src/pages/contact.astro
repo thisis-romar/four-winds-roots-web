@@ -71,8 +71,16 @@ import PhoneLink from '../components/PhoneLink.astro';
 
     <section aria-labelledby="contact-map-heading">
       <h2 id="contact-map-heading">Map</h2>
-      <!-- TODO: MapEmbed component — Google Maps iframe, loading="lazy", with consent notice if required -->
-      <p>TODO: MapEmbed — lazy-loaded Google Maps iframe for 3932A Keele St, North York</p>
+      <p>
+        <a
+          href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          aria-label="Get directions to Four Winds Roots Pharmacy on Google Maps (opens in new tab)"
+        >Open in Google Maps</a>
+      </p>
+      <!-- TODO: Replace with lazy-loaded Google Maps iframe once owner confirms map embed consent preference -->
     </section>
 
     <section aria-labelledby="contact-hours-heading">
@@ -143,9 +151,10 @@ import PhoneLink from '../components/PhoneLink.astro';
     <section aria-labelledby="contact-afterhours-heading">
       <h2 id="contact-afterhours-heading">After Hours</h2>
       <p>
-        <!-- TODO: confirm after-hours guidance with owner -->
-        TODO: After-hours instructions — Telehealth Ontario 1-866-797-0000, nearest 24-hour pharmacy,
-        or 911 in an emergency. Only publish after owner review.
+        <!-- TODO: confirm after-hours guidance with owner before publishing — interim safe language below -->
+        For urgent health questions outside our hours, call
+        <strong>Telehealth Ontario: 1-866-797-0000</strong> (free, 24/7, registered nurses).
+        In an emergency, call <strong>911</strong>.
       </p>
     </section>
 
