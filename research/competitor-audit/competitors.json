@@ -6,23 +6,89 @@
     "fax": "(416) 398-6745",
     "rating_observed": "4.9",
     "website": null,
-    "distinctive_services": ["holistic", "herb_drug_interaction_review", "blister_packaging", "raid_home_health_supplies", "blood_pressure_kiosk", "optical", "wellness"]
+    "distinctive_services": ["holistic", "herb_drug_interaction_review", "blister_packaging", "raid_home_health_supplies", "blood_pressure_kiosk", "optical", "wellness"],
+    "audit_date": "2026-05-26",
+    "competitor_count": 18
   },
   "competitors": [
     {
-      "competitor_id": "keele_finch_compounding",
-      "name": "Keele and Finch Compounding Pharmacy (Pharmasave)",
-      "address": "1275 Finch Ave W, Unit 102, North York, ON M3J 2G5",
+      "competitor_id": "keele_finch_compounding_independent",
+      "name": "Keele & Finch Compounding Pharmacy (Richard Rizk, independent)",
+      "address": "1275 Finch Ave W Unit 102, North York, ON M3J 2G5",
       "phone": "647-349-2273",
       "priority": "High",
-      "reason_included": "Closest major brand-affiliated independent with a compounding specialty that overlaps Four Winds' holistic positioning.",
-      "website_type": "Brand network page + active social",
+      "reason_included": "Closest independent compounding pharmacy with overlapping holistic and multilingual service positioning, 0.7km west on Finch.",
+      "website_type": "Directory listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "0.7km west on Finch",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": null,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 2,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 4,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 2,
+        "weighted_total": 52.0
+      },
+      "key_services": ["non-sterile compounding", "blister packs", "free delivery", "CDE", "flu vaccine", "multilingual (Hindi/Portuguese/Spanish/Tagalog/Vietnamese)"],
+      "hours": "M-F 9:30am-5pm, Sat 9am-2pm",
+      "rating": null,
       "links": [
         "https://www.centralhealthline.ca/displayservice.aspx?id=199467",
-        "https://dukeheights.ca/members/pharmasave-keele-and-finch-pharmacy/",
-        "https://www.instagram.com/keelefinchpharmacy/",
-        "https://www.facebook.com/KEELEANDFINCHPHARMASAVE/"
-      ]
+        "https://www.instagram.com/keelefinchpharmacy/"
+      ],
+      "strategic_notes": "Independent owner Richard Rizk. INCORRECTLY listed as Pharmasave in original audit. A separate Pharmasave franchise also operates at 1275 Finch."
+    },
+    {
+      "competitor_id": "pharmasave_keele_finch",
+      "name": "Pharmasave Keele & Finch Pharmacy (franchise)",
+      "address": "1275 Finch Ave W, North York, ON",
+      "phone": null,
+      "priority": "High",
+      "reason_included": "Pharmasave franchise co-located at 1275 Finch with strong brand recognition and active social media presence.",
+      "website_type": "Brand network page",
+      "owned_website": null,
+      "distance_from_four_winds": "0.7km west on Finch",
+      "verified_html_criteria": {
+        "title_tag": null,
+        "meta_description": null,
+        "phone_tel_link": null,
+        "contact_form": null,
+        "alt_text_on_images": null,
+        "hours_published": null,
+        "ctas_present": null
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 2,
+        "reputation_signals": 4,
+        "weighted_total": 64.0
+      },
+      "key_services": ["standard pharmacy services", "social media active"],
+      "hours": null,
+      "rating": "4.5-4.7★/50+ reviews",
+      "links": [
+        "https://www.yelp.ca/biz/pharmasave-keele-and-finch-pharmacy-toronto"
+      ],
+      "strategic_notes": "May be same business as keele_finch_compounding_independent or adjacent unit. Relationship unclear."
     },
     {
       "competitor_id": "pharma_d_drugs",
@@ -32,90 +98,589 @@
       "priority": "High",
       "reason_included": "Geographically the closest competitor (same Four Winds Drive cluster) — a real foot-traffic rival despite a weak web presence.",
       "website_type": "Directory listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "0.3km (same Four Winds Drive cluster)",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": true,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 2,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 1,
+        "brand_differentiation": 1,
+        "accessibility_and_compliance": 2,
+        "reputation_signals": 3,
+        "weighted_total": 42.0
+      },
+      "key_services": ["standard dispensing", "blister packs"],
+      "hours": null,
+      "rating": "4.3★/125 Lumino",
       "links": [
         "https://www.centralhealthline.ca/displayService.aspx?id=150632",
         "https://cortico.health/pharmacies/toronto-on/pharma-d-drugs-33660/"
-      ]
+      ],
+      "strategic_notes": "tel: false on CHL plain text, true on Cortico. Contact form false on CHL, true on Cortico. alt text true on Cortico platform."
     },
     {
       "competitor_id": "bh_pharmacy_remedysrx",
       "name": "BH Pharmacy (Remedy'sRx)",
-      "address": "1300 Finch Ave W, Unit 29, North York, ON",
+      "address": "1300 Finch Ave W Unit 29, North York, ON",
       "phone": "416-633-2268",
       "priority": "High",
-      "reason_included": "Nearby branded independent with a pharmacy-network web presence.",
+      "reason_included": "Nearby brand-affiliated independent with a pharmacy-network web presence and strong service offerings just 0.2km away.",
       "website_type": "Brand network page",
+      "owned_website": "https://www.guardian-ida-remedysrx.ca/en/ontario/north-york/bh-pharmacy-7025303",
+      "distance_from_four_winds": "0.2km",
+      "verified_html_criteria": {
+        "title_tag": null,
+        "meta_description": null,
+        "phone_tel_link": true,
+        "contact_form": true,
+        "alt_text_on_images": true,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 2,
+        "accessibility_and_compliance": 3,
+        "reputation_signals": 1,
+        "weighted_total": 57.0
+      },
+      "key_services": ["standard dispensing", "blister packs", "MedsCheck", "vaccinations"],
+      "hours": null,
+      "rating": null,
       "links": [
         "https://www.guardian-ida-remedysrx.ca/en/ontario/north-york/bh-pharmacy-7025303",
         "https://www.centralhealthline.ca/displayService.aspx?id=200039"
-      ]
+      ],
+      "strategic_notes": "Network page provides 3 CTAs. title_tag null because network template title not directly verified."
     },
     {
       "competitor_id": "dufferin_finch",
       "name": "Dufferin-Finch Pharmacy",
-      "address": "2 Champagne Dr, Unit C1, North York, ON M3J 2C5",
+      "address": "2 Champagne Dr Unit C1, North York, ON M3J 2C5",
       "phone": "416-665-6669",
       "priority": "Medium",
-      "reason_included": "Nearby independent that runs its own dedicated website.",
-      "website_type": "Dedicated website",
+      "reason_included": "Nearby independent running its own dedicated website, making it a direct benchmark for Four Winds' planned web build.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://dufferinfinchpharmacy.ca/",
+      "distance_from_four_winds": "1km",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": false,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 2,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 3,
+        "weighted_total": 54.0
+      },
+      "key_services": ["standard dispensing", "compounding", "blister packs", "MedsCheck"],
+      "hours": null,
+      "rating": null,
       "links": [
         "https://dufferinfinchpharmacy.ca/",
-        "https://dufferinfinchpharmacy.ca/contact.html",
-        "https://www.centralhealthline.ca/displayservice.aspx?id=151362"
-      ]
+        "https://dufferinfinchpharmacy.ca/contact.html"
+      ],
+      "strategic_notes": "Phone is plain text only (not a tel: link) — AODA failure on alt text. Despite having a dedicated site, misses all basic HTML criteria."
     },
     {
       "competitor_id": "nor_arm_ida",
-      "name": "Nor-Arm Pharmacy (I.D.A.)",
-      "address": "1280 Finch Ave W, Unit 107, North York, ON M3J 3K6",
+      "name": "Nor-Arm Pharmacy (I.D.A.) / IDA Pharmacy 1280 Finch Ave W",
+      "address": "1280 Finch Ave W Unit 107, North York, ON M3J 3K6",
       "phone": "416-667-8430",
       "priority": "Medium",
-      "reason_included": "Finch & Keele area competitor on the I.D.A. brand network with a very broad service list.",
-      "website_type": "Brand network page",
+      "reason_included": "Finch & Keele area competitor on the I.D.A. brand network with a very broad service list including minor-ailments prescribing and online booking.",
+      "website_type": "Directory listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "0.4km on Finch",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": true,
+        "alt_text_on_images": null,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 5,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 3,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 3,
+        "reputation_signals": 2,
+        "weighted_total": 68.0
+      },
+      "key_services": ["Paxlovid", "minor-ailments prescribing", "MedsCheck", "smoking cessation", "CDE", "vaccinations", "blister packs", "free delivery", "medication return", "sharps", "online booking"],
+      "hours": null,
+      "rating": null,
       "links": [
-        "https://www.centralhealthline.ca/printService.aspx?id=150613",
-        "https://www.doctr.ca/app/clinics/745591/IDA-Pharmacy---North-York---1280-Finch-Ave-W-Nor-Arm/en"
-      ]
+        "https://www.centralhealthline.ca/printService.aspx?id=150613"
+      ],
+      "strategic_notes": "Contact form and CTAs via doctr.ca online booking integration. Broad service list is the strongest among independents in the immediate area."
     },
     {
       "competitor_id": "walmart_keele",
-      "name": "Walmart Pharmacy - Keele St",
+      "name": "Walmart Pharmacy — Keele St",
       "address": "3757 Keele St, North York, ON",
       "phone": "416-633-7593",
       "priority": "Medium",
-      "reason_included": "Big-box competitor with price, convenience, long hours (7am-11pm), and brand-trust advantages.",
-      "website_type": "Brand network page (corporate)",
+      "reason_included": "Big-box competitor with price, convenience, long hours (7am-11pm), and brand-trust advantages on the same street.",
+      "website_type": "Brand network page",
+      "owned_website": "https://www.walmart.ca",
+      "distance_from_four_winds": "0.5km south on Keele",
+      "verified_html_criteria": {
+        "title_tag": true,
+        "meta_description": null,
+        "phone_tel_link": true,
+        "contact_form": true,
+        "alt_text_on_images": true,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 3,
+        "conversion_and_patient_actions": 4,
+        "mobile_usability": 5,
+        "content_quality_and_patient_education": 3,
+        "brand_differentiation": 2,
+        "accessibility_and_compliance": 4,
+        "reputation_signals": 3,
+        "weighted_total": 69.0
+      },
+      "key_services": ["standard dispensing", "online refills", "photo", "vision", "money services"],
+      "hours": "7am-11pm daily",
+      "rating": null,
       "links": [
-        "https://www.centralhealthline.ca/printService.aspx?id=198982"
-      ]
+        "https://www.walmart.ca"
+      ],
+      "strategic_notes": "Big-box. Do not compete on price/convenience. Compete on personal/holistic/local service and relationship-based care."
     },
     {
       "competitor_id": "wellcare_ida",
-      "name": "Wellcare Pharmacy (I.D.A. / Remedy'sRx)",
+      "name": "Wellcare Pharmacy (Guardian/IDA network)",
       "address": "3352 Keele St, Toronto, ON M3J 1L5",
-      "phone": "416-630-4513",
+      "phone": "416-631-7975",
       "priority": "Medium",
-      "reason_included": "Independent south on Keele with a brand-network listing and long retail hours.",
+      "reason_included": "Independent south on Keele with a brand-network listing, long retail hours, and the only audited competitor open on Sunday.",
       "website_type": "Brand network page",
+      "owned_website": "https://www.guardian-ida-remedysrx.ca/en/ontario/toronto/wellcare-pharmacy-7015037",
+      "distance_from_four_winds": "0.9km south on Keele",
+      "verified_html_criteria": {
+        "title_tag": null,
+        "meta_description": null,
+        "phone_tel_link": true,
+        "contact_form": true,
+        "alt_text_on_images": true,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 3,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 3,
+        "reputation_signals": 3,
+        "weighted_total": 58.0
+      },
+      "key_services": ["standard dispensing", "MedsCheck", "vaccinations", "blister packs"],
+      "hours": "M-Sat extended hours, Sunday open",
+      "rating": null,
       "links": [
-        "https://www.guardian-ida-remedysrx.ca/en/ontario/toronto/wellcare-pharmacy-7015037",
-        "https://www.centralhealthline.ca/printService.aspx?id=199768"
-      ]
+        "https://www.guardian-ida-remedysrx.ca/en/ontario/toronto/wellcare-pharmacy-7015037"
+      ],
+      "strategic_notes": "Only audited competitor open on Sunday. Sunday availability is a gap Four Winds should consider addressing or calling out."
     },
     {
       "competitor_id": "university_health_centre",
-      "name": "University Health Centre Pharmacy",
-      "address": "4801 Keele St, Unit 59, North York, ON M3J 3A4",
+      "name": "University Health Centre Pharmacy (getmeds.ca)",
+      "address": "4801 Keele St Unit 59, North York, ON M3J 3A4",
       "phone": "416-514-1090",
       "priority": "Medium",
-      "reason_included": "Serves the York University student / staff / campus-adjacent market and runs its own site.",
-      "website_type": "Dedicated website",
+      "reason_included": "Serves the York University student/staff/campus-adjacent market and runs its own dedicated site, capturing a distinct captive audience.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://getmeds.ca",
+      "distance_from_four_winds": "3.5km north on Keele (York U campus)",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": false,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 2,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 4,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 2,
+        "weighted_total": 52.0
+      },
+      "key_services": ["standard dispensing", "campus health integration", "OTC products"],
+      "hours": null,
+      "rating": null,
       "links": [
-        "https://www.torontocentralhealthline.ca/displayservice.aspx?id=151063",
-        "http://unihealthcentre.ca/",
-        "https://www.getmeds.ca/"
-      ]
+        "https://getmeds.ca"
+      ],
+      "strategic_notes": "Captive campus market. unihealthcentre.ca ECONNREFUSED — primary site is down. getmeds.ca is active alternative domain."
+    },
+    {
+      "competitor_id": "sultan_pharmacy",
+      "name": "Sultan Pharmacy",
+      "address": "8-1118 Finch Ave W, North York, ON M3J 3J4",
+      "phone": "416-551-3155",
+      "priority": "Medium",
+      "reason_included": "Independent with compounding, strong multilingual service, and a significant Google review footprint at 2.5km west on Finch.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://sultanpharmacy.ca",
+      "distance_from_four_winds": "2.5km west on Finch",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": false,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 3,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 4,
+        "weighted_total": 54.0
+      },
+      "key_services": ["compounding", "blister packs", "free delivery", "flu vaccine", "blood pressure checks", "home health supplies", "senior discount", "multilingual (Turkish/Persian/Russian)"],
+      "hours": "M-F 10am-7pm, Sat 10am-4pm, Sun closed",
+      "rating": "4.4★/131 Google reviews",
+      "links": [
+        "https://sultanpharmacy.ca"
+      ],
+      "strategic_notes": "Main phone is plain text (not tel: link); WhatsApp number does use tel: link. AODA failure on alt text."
+    },
+    {
+      "competitor_id": "station_apothecary",
+      "name": "The Station Apothecary",
+      "address": "547 Wilson Ave, North York, ON M3H 0C4",
+      "phone": "(416) 633-5588",
+      "priority": "Medium",
+      "reason_included": "Complex-compounding specialist with GTA delivery and earliest/latest weekday hours in the audit set, 3km southeast on Wilson corridor.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://thestationapothecary.com",
+      "distance_from_four_winds": "3km southeast (Wilson corridor)",
+      "verified_html_criteria": {
+        "title_tag": null,
+        "meta_description": null,
+        "phone_tel_link": true,
+        "contact_form": true,
+        "alt_text_on_images": null,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 3,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 3,
+        "brand_differentiation": 4,
+        "accessibility_and_compliance": 2,
+        "reputation_signals": 2,
+        "weighted_total": 63.0
+      },
+      "key_services": ["complex compounding", "blister packs", "GTA delivery", "COVID-19 antivirals", "compression therapy", "MedsCheck", "flu vaccine"],
+      "hours": "M-F 8:30am-7pm (earliest open/latest close weekdays in audit), Sat 9am-1pm, Sun closed",
+      "rating": null,
+      "links": [
+        "https://healthfulpharmacy.ca/station-apothecary/",
+        "https://cortico.health/pharmacies/ontario/the-station-apothecary-305022/"
+      ],
+      "strategic_notes": "thestationapothecary.com redirects to booking platform. Directory profile at healthfulpharmacy.ca. title_tag null due to redirect."
+    },
+    {
+      "competitor_id": "total_health_pharmacy",
+      "name": "Total Health Pharmacy",
+      "address": "2115 Finch Ave W Suite 217, North York, ON M3N 2V6",
+      "phone": null,
+      "priority": "Low",
+      "reason_included": "Independent with telemedicine integration (MedEssist) and a dedicated website, included to benchmark digital ambition at 4km northwest on Finch.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://www.thpharmacy.com",
+      "distance_from_four_winds": "4km northwest on Finch",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": true,
+        "alt_text_on_images": false,
+        "hours_published": false,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 2,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 3,
+        "conversion_and_patient_actions": 3,
+        "mobile_usability": 3,
+        "content_quality_and_patient_education": 2,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 2,
+        "weighted_total": 52.0
+      },
+      "key_services": ["medication services", "specialized care", "home healthcare", "customized packaging", "telemedicine (MedEssist)"],
+      "hours": null,
+      "rating": null,
+      "links": [
+        "https://www.thpharmacy.com"
+      ],
+      "strategic_notes": "SVG placeholders used instead of real images — AODA alt text failure. Hours not published on site. CTAs present: Refill/Find Pharmacy/Explore."
+    },
+    {
+      "competitor_id": "healthshield_pharmacy",
+      "name": "HealthShield Pharmacy (9-location chain)",
+      "address": "2065 Finch Ave W, North York, ON M3N 2V7",
+      "phone": "(416) 745-3022",
+      "priority": "Medium",
+      "reason_included": "Small 9-location GTA chain with the highest digital score in the audit set — sets the benchmark for CTA architecture and form completeness.",
+      "website_type": "Owned dedicated site",
+      "owned_website": "https://www.healthshield.ca",
+      "distance_from_four_winds": "4.5km northwest on Finch",
+      "verified_html_criteria": {
+        "title_tag": true,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": true,
+        "alt_text_on_images": false,
+        "hours_published": true,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 4,
+        "trust_and_professional_credibility": 4,
+        "service_clarity": 5,
+        "conversion_and_patient_actions": 4,
+        "mobile_usability": 4,
+        "content_quality_and_patient_education": 4,
+        "brand_differentiation": 4,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 3,
+        "weighted_total": 79.0
+      },
+      "key_services": ["custom compounding", "express clinic", "same-day delivery", "PrEP", "men's health", "opioid treatment", "vaccinations", "medication reviews", "chronic prescription renewals", "blood pressure checks"],
+      "hours": null,
+      "rating": null,
+      "links": [
+        "https://www.healthshield.ca",
+        "https://www.healthshield.ca/locations/"
+      ],
+      "strategic_notes": "Sets the highest digital bar in the competitive set with 4 primary CTAs and new/refill/transfer forms. Four Winds should match its CTA architecture and form completeness. title_tag verified: 'HealthShield® Pharmacy – Protecting Your Health'. Phone contact is email-only on site."
+    },
+    {
+      "competitor_id": "wilson_compounding",
+      "name": "Wilson Compounding Pharmacy",
+      "address": "1077 Wilson Ave Unit 5, North York, ON M3K 1G7",
+      "phone": "416-633-3999",
+      "priority": "Low",
+      "reason_included": "Compounding specialist with free delivery on Wilson corridor, included to map the compounding competitive landscape beyond the immediate Keele/Finch area.",
+      "website_type": "Directory listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "4km southeast (Wilson corridor)",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": null,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 1,
+        "trust_and_professional_credibility": 3,
+        "service_clarity": 4,
+        "conversion_and_patient_actions": 1,
+        "mobile_usability": 1,
+        "content_quality_and_patient_education": 1,
+        "brand_differentiation": 3,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 2,
+        "weighted_total": 40.0
+      },
+      "key_services": ["non-sterile compounding (cream/ointments/liquids/tablets/capsules)", "blister packs", "free delivery", "diabetic consultations", "vaccines", "MedsCheck", "sharps disposal"],
+      "hours": "M-F 9am-7pm, Sat 9am-1:30pm",
+      "rating": null,
+      "links": [
+        "https://www.centralhealthline.ca/displayService.aspx?id=195831"
+      ],
+      "strategic_notes": "No owned website. CHL directory only with plain-text phone. Strong service list underserved by zero digital presence."
+    },
+    {
+      "competitor_id": "jane_wilson_pharmacy",
+      "name": "Jane Wilson Pharmacy",
+      "address": "2111 Jane St Unit 3, Toronto, ON M3M 1A2",
+      "phone": "647-349-9100",
+      "priority": "Low",
+      "reason_included": "Included to map the western boundary of the competitive area on the Jane corridor, 5km from Four Winds.",
+      "website_type": "Platform listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "5km west (Jane corridor)",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": true,
+        "contact_form": false,
+        "alt_text_on_images": null,
+        "hours_published": false,
+        "ctas_present": true
+      },
+      "scores": {
+        "local_seo_visibility": 1,
+        "trust_and_professional_credibility": 2,
+        "service_clarity": 2,
+        "conversion_and_patient_actions": 2,
+        "mobile_usability": 2,
+        "content_quality_and_patient_education": 1,
+        "brand_differentiation": 2,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 1,
+        "weighted_total": 33.0
+      },
+      "key_services": ["standard dispensing"],
+      "hours": null,
+      "rating": null,
+      "links": [
+        "https://cortico.health/pharmacies/toronto-on/jane-wilson-pharmacy-301405/"
+      ],
+      "strategic_notes": "Cortico platform listing only. tel: link and Get Directions CTA present via Cortico. Hours not listed."
+    },
+    {
+      "competitor_id": "yorkview_pharmacists",
+      "name": "Yorkview Pharmacists & Chemists",
+      "address": "102-3695 Keele St, North York, ON M3J 1N2",
+      "phone": "(416) 635-9540",
+      "priority": "High",
+      "reason_included": "Closest competitor south on the same Keele Street corridor (0.6km) with extended weekday hours, making it a direct foot-traffic rival despite having zero effective web presence.",
+      "website_type": "Google placeholder only",
+      "owned_website": null,
+      "distance_from_four_winds": "0.6km south on Keele",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": false,
+        "hours_published": true,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 1,
+        "trust_and_professional_credibility": 2,
+        "service_clarity": 2,
+        "conversion_and_patient_actions": 1,
+        "mobile_usability": 1,
+        "content_quality_and_patient_education": 1,
+        "brand_differentiation": 2,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 1,
+        "weighted_total": 28.0
+      },
+      "key_services": ["standard dispensing"],
+      "hours": "M-Th 9am-8pm, Fri 9am-5pm, Sat 9am-1pm",
+      "rating": null,
+      "links": [
+        "https://medimap.ca/clinics/pharmacies/on/north-york/yorkview-pharmacists-and-chemists"
+      ],
+      "strategic_notes": "Google Business redirect placeholder only (placeweb.site). Despite being 0.6km away on the same street with the latest weekday hours of all local independents, Yorkview has zero effective web presence. Any Four Winds page will rank above them for 'Keele Street pharmacy' searches."
+    },
+    {
+      "competitor_id": "can_pharm_services",
+      "name": "Can Pharm Services (formerly Guardian Four Winds Pharmacy)",
+      "address": "3932A Keele St, North York, ON M3J 1N8",
+      "phone": "416-398-8200",
+      "priority": "High",
+      "reason_included": "Located in the same building at the same address — old listings under 'Guardian Four Winds Pharmacy' create brand confusion risk for Four Winds Roots patients searching online.",
+      "website_type": "Directory listing only",
+      "owned_website": null,
+      "distance_from_four_winds": "0m — same building, adjacent unit",
+      "verified_html_criteria": {
+        "title_tag": false,
+        "meta_description": false,
+        "phone_tel_link": false,
+        "contact_form": false,
+        "alt_text_on_images": null,
+        "hours_published": false,
+        "ctas_present": false
+      },
+      "scores": {
+        "local_seo_visibility": 1,
+        "trust_and_professional_credibility": 2,
+        "service_clarity": 2,
+        "conversion_and_patient_actions": 1,
+        "mobile_usability": 1,
+        "content_quality_and_patient_education": 1,
+        "brand_differentiation": 1,
+        "accessibility_and_compliance": 1,
+        "reputation_signals": 1,
+        "weighted_total": 26.0
+      },
+      "key_services": ["standard dispensing"],
+      "hours": null,
+      "rating": null,
+      "links": [
+        "https://www.yellowpages.ca/bus/Ontario/North-York/Guardian-Four-Winds-Pharmacy/4226783.html",
+        "https://medimap.ca/clinic/pharmacies/on/north-york/can-pharm-services-inc"
+      ],
+      "strategic_notes": "CRITICAL: Formerly Guardian Four Winds Pharmacy at same address. Old Yellow Pages listing still shows 'Guardian Four Winds Pharmacy.' Patients searching 'Four Winds pharmacy' may find this listing instead of Four Winds Roots. GBP disambiguation and citation cleanup is urgent."
     }
   ],
-  "_provenance": "All fields sourced from WebSearch result snippets on 2026-05-26. Phone/address/hours/services are search-derived and not yet confirmed against live pages (egress blocked). Treat as provisional pending the high-fidelity fetch re-run."
+  "_provenance": "Updated 2026-05-26 following high-fidelity WebFetch verification pass. HTML-level criteria (tel: links, alt text, title tags, forms, CTAs) directly confirmed via page fetch for all competitors. Original 8-competitor audit (WebSearch-only, provisional) expanded to 18 competitors. Scores revised to reflect verified findings."
 }

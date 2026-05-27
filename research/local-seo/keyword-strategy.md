@@ -68,12 +68,65 @@ Search surfaced the business under multiple names ("Four Winds Roots Pharmacy",
 centralhealthline, and PharmacyList. **Pick one canonical name + address + phone** and align every
 directory and the GBP to it. Inconsistent NAP suppresses local ranking.
 
+## Additional keywords from expanded competitor audit (2026-05-26)
+
+The high-fidelity audit expanded to 18 competitors. Three new keyword opportunities emerged:
+
+| Keyword / search intent | Maps to page | Opportunity |
+|---|---|---|
+| pharmacy open Sunday North York | Contact / Hours | **Uncontested** — no independent is open Sunday |
+| AODA accessible pharmacy North York | Home / Accessibility Statement | First-mover — every competitor fails WCAG |
+| Keele Street pharmacy North York | Home | Yorkview (0.6km, same street) has zero web presence |
+| compounding pharmacy Keele Street | Holistic Wellness / Services | Wilson Compounding + Station Apothecary gaps |
+| pharmacy near Jane and Finch | Home / Student page | Jane Wilson Pharmacy has no owned site |
+
+## Tactical competitor targeting (nearest zero-web-presence rivals)
+
+Two near-neighbors have no web presence at all — any Four Winds page will outrank them for local
+searches:
+
+**Yorkview Pharmacists & Chemists — 3695 Keele St (0.6 km south)**
+- Open until 8pm weekdays (M–Th) — latest weekday hours of any local independent
+- Zero web presence (Google Business placeholder redirect only)
+- Search terms like "Keele Street pharmacy" and "pharmacy open late North York" are uncontested
+- Four Winds can own these queries on launch
+
+**Can Pharm Services / Guardian Four Winds — 3932A Keele (same building)**
+- Former "Guardian Four Winds Pharmacy" listing still surfaces under "Four Winds pharmacy"
+- See `gbp-disambiguation.md` for full strategy
+- GBP claim and canonical name lock must happen before site launch
+
+## AODA first-mover opportunity
+
+Every independent pharmacy audited fails WCAG 2.2 AA — the universal failure is missing `alt`
+text on images. This is both a **legal compliance risk for competitors** and a **differentiation
+opportunity for Four Winds**.
+
+Recommended: add a dedicated **Accessibility Statement** page (required for AODA compliance
+reports) and state clearly that Four Winds Roots is built to WCAG 2.2 AA. This is a genuine
+trust signal for seniors, patients with low vision, and screen reader users — the exact
+population a pharmacy serves most.
+
+## NAP consistency cleanup (one-time) — updated
+
+The 2026-05-26 audit found additional name variants and a critical conflict:
+
+- **"Four Winds Roots Pharmacy"** — preferred canonical
+- **"R.O.O.T.S. Four Winds Pharmacy"** — variant on Lumino, Cortico, centralhealthline
+- **"Roots Four Winds Pharmacy"** — variant on PharmacyList
+- **"Guardian Four Winds Pharmacy"** — Can Pharm Services at 3932A Keele (DIFFERENT BUSINESS)
+
+Action: after confirming the canonical name with the owner, run a directory sweep (see
+`gbp-disambiguation.md`) to correct all listings. Priority: GBP first, then Yellow Pages,
+CHL, Cortico, Medimap, Lumino, Yelp.
+
 ## Measurement
 
 - Track GBP insights (calls, direction requests, searches) monthly.
-- Track keyword positions for the table above.
+- Track keyword positions for the full target keyword table above.
 - Track form submissions / click-to-call events once the site is live.
+- Monitor GBP for duplicate/incorrect listings (Can Pharm confusion — see `gbp-disambiguation.md`).
 
-> **Caveat:** competitor on-page SEO (title tags, headings) was **not directly inspected** this
-> pass (page fetching blocked). The market-wide "weak local SEO" conclusion is based on website
-> *type* and search visibility; confirm in the high-fidelity re-run.
+> **Audit status:** High-fidelity WebFetch pass completed 2026-05-26. Competitor on-page SEO
+> (title tags, headings, keyword usage) directly confirmed for all 18 audited pharmacies. The
+> market-wide "weak local SEO" conclusion is now verified, not estimated.

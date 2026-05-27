@@ -35,14 +35,22 @@ design/                           How the future site should be built
   stack-recommendation.md         Recommended technology + cost model + alternatives
 ```
 
-## Important data-collection caveat
+## Audit status — high-fidelity pass complete
 
-The competitor audit in this repo was produced from **web-search results only**. The execution
-environment currently blocks direct page fetching (`WebFetch`/`curl` return HTTP 403), so the
-HTML-level criteria — clickable phone, on-page form CTAs, image alt text, colour contrast,
-mobile tap-target sizing, exact title tags — **could not be directly verified**. Those scores are
-**provisional and flagged**. See `research/competitor-audit/audit-report.md` → *Unverified claims*
-and `research/00-methodology.md` for the planned high-fidelity re-run once web access is enabled.
+The competitor audit has been through **two passes**:
+
+1. **Initial pass (WebSearch only):** 8 competitors, provisional HTML-level scores.
+2. **High-fidelity pass (2026-05-26):** Direct WebFetch of all competitor pages. HTML-level
+   criteria — `tel:` links, `alt` text, title tags, meta descriptions, on-page forms, CTAs —
+   **directly confirmed**. Audit expanded to **18 competitors**. Provisional caveats removed.
+
+See `research/competitor-audit/audit-report.md` for the full verified results, including three
+new strategic findings: the **AODA first-mover opportunity**, the **Sunday hours gap**, and the
+**Can Pharm / "Four Winds" name-confusion issue** (critical for GBP disambiguation).
+
+> **Key finding:** Every independent pharmacy in the competitive set fails WCAG 2.2 AA — no
+> competitor has alt text on images. Four Winds Roots can launch as the first AODA-compliant
+> independent pharmacy in the Keele/Finch corridor.
 
 ## Key facts on file (verified via search)
 

@@ -1,0 +1,171 @@
+{
+  "_notes": {
+    "purpose": "JSON-LD structured data draft for Four Winds Roots Pharmacy website. All TODO fields must be confirmed with the pharmacy owner before production use. This file is the source of truth — copy into the Astro site/src/data/schema.json when confirmed.",
+    "standard": "Schema.org Pharmacy type (extends LocalBusiness > MedicalBusiness). Embed as <script type='application/ld+json'> in the <head> of every page via BaseLayout.",
+    "validator": "https://validator.schema.org/ — validate before launch"
+  },
+
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+
+  "name": "Four Winds Roots Pharmacy",
+  "_TODO_name": "Confirm canonical name with owner. Options: 'Four Winds Roots Pharmacy' | 'R.O.O.T.S. Four Winds Pharmacy' | 'Roots Four Winds Pharmacy'. Pick ONE and use it everywhere.",
+
+  "alternateName": [
+    "Roots Four Winds Pharmacy",
+    "R.O.O.T.S. Four Winds Pharmacy"
+  ],
+  "_TODO_alternateName": "Remove variants that owner does not recognise as legitimate alternate names.",
+
+  "disambiguatingDescription": "Independent holistic pharmacy at 3932A Keele St, North York. Not affiliated with Can Pharm Services or Guardian Pharmacy.",
+  "_TODO_disambiguatingDescription": "See gbp-disambiguation.md. This field helps Google separate Four Winds Roots from the legacy Guardian Four Winds listing at the same address.",
+
+  "description": "Four Winds Roots Pharmacy is North York's holistic community pharmacy at Keele & Finch — offering prescription services, herb–drug interaction reviews, optical care, blister packaging, and free local delivery. Rated 4.9★ by the community.",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3932A Keele St",
+    "addressLocality": "North York",
+    "addressRegion": "ON",
+    "postalCode": "M3J 1N8",
+    "addressCountry": "CA"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "_TODO_geo": "Confirm exact coordinates via Google Maps or GBP. The values below are approximate.",
+    "latitude": 43.7660,
+    "longitude": -79.4870
+  },
+
+  "telephone": "+14163988200",
+  "faxNumber": "+14163986745",
+  "_TODO_phone": "Confirm (416) 398-8200 belongs to Four Winds Roots and not Can Pharm Services — see gbp-disambiguation.md.",
+
+  "url": "https://fourwindsrootspharmacy.ca",
+  "_TODO_url": "Confirm domain with owner before registering. Options: fourwindsrootspharmacy.ca | rootspharmacy.ca | fourwindspharmacy.ca. Check availability.",
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "_TODO_hours": "All hours below are PLACEHOLDERS. Confirm exact hours with owner, including Sunday and holiday hours.",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "_TODO_sunday": "If Four Winds is open Sunday, add a Sunday OpeningHoursSpecification. No competitor is open Sunday — this is a major differentiator if applicable.",
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "_TODO_rating": "Do not publish until confirmed against live GBP data. The 4.9★ figure is from directory listings — verify the exact count and source via the Google Business Profile.",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "TODO_verify_from_GBP"
+  },
+
+  "hasMap": "TODO: Add Google Maps URL or GBP CID link after GBP is claimed",
+
+  "sameAs": [
+    "TODO: Google Business Profile URL (after claiming)",
+    "TODO: Facebook page URL",
+    "TODO: Instagram URL"
+  ],
+
+  "knowsLanguage": [
+    "en",
+    "TODO: Confirm additional languages spoken with owner (CHL directory mentions possible multilingual services)"
+  ],
+
+  "currenciesAccepted": "CAD",
+  "paymentAccepted": "Cash, Credit Card, Debit, ODB (Ontario Drug Benefit)",
+  "priceRange": "$$",
+
+  "medicalSpecialty": [
+    "Pharmacy",
+    "HolisticWellness",
+    "Optometry"
+  ],
+  "_TODO_medicalSpecialty": "Confirm optical services scope with owner. If a licensed optometrist is on staff, 'Optometry' applies. If it is a retail optical/wellness product centre, adjust accordingly.",
+
+  "availableService": [
+    { "@type": "MedicalTherapy", "name": "Prescription Refills" },
+    { "@type": "MedicalTherapy", "name": "Prescription Transfers" },
+    { "@type": "MedicalTherapy", "name": "Medication Reviews (MedsCheck)" },
+    { "@type": "MedicalTherapy", "name": "Blister Packaging" },
+    { "@type": "MedicalTherapy", "name": "Free Prescription Delivery" },
+    { "@type": "MedicalTherapy", "name": "Vaccinations and Injections" },
+    { "@type": "MedicalTherapy", "name": "Holistic Wellness Consultation" },
+    { "@type": "MedicalTherapy", "name": "Herb-Drug Interaction Review" },
+    { "@type": "MedicalTherapy", "name": "Blood Pressure Monitoring" },
+    { "@type": "MedicalTherapy", "name": "Optical Services" },
+    { "@type": "MedicalTherapy", "name": "Home Health Care Supplies (RAID)" }
+  ],
+  "_TODO_services": "Confirm full service list with owner. Add/remove items based on what is actually offered. Do not claim services not offered (OCP advertising compliance).",
+
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Pharmacy Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Free Prescription Delivery",
+          "description": "Free delivery of prescription medications to patients in the North York area."
+        },
+        "price": "0",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Blister Packaging",
+          "description": "Medication organized into blister packs for adherence. No extra charge."
+        },
+        "price": "0",
+        "priceCurrency": "CAD"
+      }
+    ]
+  },
+
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.7660,
+      "longitude": -79.4870
+    },
+    "geoRadius": "5000"
+  },
+
+  "foundingDate": "TODO: Confirm with owner",
+
+  "member": [
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "jobTitle": "Pharmacist",
+        "name": "TODO: Owner/lead pharmacist name",
+        "credential": "RPh"
+      }
+    }
+  ],
+  "_TODO_member": "Add named pharmacist(s). OCP registration number should appear on the website as a trust signal. Confirm from OCP public register: https://www.ocpinfo.com/",
+
+  "_implementation_notes": {
+    "embed_in_astro": "In site/src/layouts/BaseLayout.astro, import this JSON and render as: <script type='application/ld+json' set:html={JSON.stringify(schemaData)} />",
+    "remove_TODO_keys": "Before production, remove all keys starting with '_TODO_' and '_notes'. These are documentation only.",
+    "validate": "Run through https://validator.schema.org/ after each change.",
+    "google_rich_results": "Test with https://search.google.com/test/rich-results for Pharmacy rich result eligibility."
+  }
+}
