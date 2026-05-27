@@ -52,8 +52,14 @@ import PhoneLink from '../components/PhoneLink.astro';
 
   <section class="section section--calm" aria-labelledby="home-reputation-heading">
     <div class="container">
-      <h2 id="home-reputation-heading">What Our Patients Say</h2>
-      <p>TODO: ReputationStrip — 4.9★ aggregate + 3 ReviewCard components + ReviewRequestLink</p>
+      <h2 id="home-reputation-heading">Rated by Our Community</h2>
+      <p class="reputation-badge">
+        <strong>4.9 / 5</strong> &mdash; 52 patient ratings on
+        <a href="https://luminohealth.sunlife.com" target="_blank" rel="noopener noreferrer">Lumino Health</a>
+        (Sun Life)
+      </p>
+      <!-- TODO: ReputationStrip — add 2–3 ReviewCard components once patient testimonials are collected with OCP-compliant consent (Task #29) -->
+      <!-- TODO: ReviewRequestLink — solicit post-visit reviews once GBP is claimed (Task #20) -->
     </div>
   </section>
 
@@ -75,9 +81,22 @@ import PhoneLink from '../components/PhoneLink.astro';
     <div class="container">
       <h2 id="home-location-heading">Find Us at Keele &amp; Finch</h2>
       <p>TODO: NapBlock + MapEmbed (Google Maps, lazy-loaded) + HoursTable</p>
-      <!-- NapBlock: 3932A Keele St, North York ON M3J 1N8 · (416) 398-8200 -->
+      <!-- NapBlock: 3932A Keele St (Centennial Plaza), North York ON M3J 1N8 · (416) 398-8200 -->
       <!-- MapEmbed: iframe pointing to address, loading="lazy" -->
       <!-- HoursTable: mirrors schema.json openingHoursSpecification -->
+      <!-- Accessibility note: partially wheelchair-accessible -->
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-fedex-heading">
+    <div class="container">
+      <h2 id="home-fedex-heading">FedEx Authorized ShipCentre — Also Under Our Roof</h2>
+      <p>
+        Need to ship a package? Four Winds Roots Pharmacy is also a
+        <strong>FedEx Authorized ShipCentre</strong> — FedEx Express and Ground drop-off,
+        label printing, Hold-at-Location, and QR-code returns, all in the same visit as your
+        pharmacy needs.
+      </p>
     </div>
   </section>
 </BaseLayout>

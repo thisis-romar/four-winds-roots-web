@@ -14,58 +14,46 @@ import PhoneLink from '../../components/PhoneLink.astro';
 
 <BaseLayout
   title="Minor Ailments Treatment — No Doctor Needed | Four Winds Roots Pharmacy, North York"
-  description="Ontario pharmacists can now treat 13 common minor ailments — no doctor or walk-in visit required. Four Winds Roots Pharmacy, Keele & Finch, North York. Call (416) 398-8200."
+  description="Your pharmacist at Four Winds Roots Pharmacy can assess and prescribe for skin rashes, pink eye, insect bites, acne, and uncomplicated UTIs — no doctor visit required. Keele & Finch, North York. Call (416) 398-8200."
   noAnalytics={true}
 >
   <div class="container section">
 
     <h1>Minor Ailments Treatment at Your Pharmacy</h1>
     <p class="lead">
-      Your Ontario pharmacist can now assess and prescribe for 13 common conditions —
+      Your pharmacist at Four Winds Roots can assess and prescribe for selected common conditions —
       no walk-in clinic, no doctor's referral required. Same-day care, right at Keele &amp; Finch.
     </p>
 
     <!--
       CONTENT TODOS — confirm with owner before publishing (OCP compliance):
-      1. Confirm which of the 13 authorized conditions the pharmacy actively treats
-      2. Confirm appointment vs. walk-in availability for minor ailments assessments
-      3. Confirm any fees (most are OHIP-covered or free — verify with owner)
-      4. Add booking/call CTA (Jane App or phone)
-      5. OCP compliance review before publishing any prescribing claims
+      1. Confirm appointment vs. walk-in availability for minor ailments assessments
+      2. Confirm any fees (most are OHIP-covered or free — verify with owner)
+      3. Add booking/call CTA (Jane App or phone)
+      4. OCP compliance review before publishing any prescribing claims
+      NOTE: The 5 conditions listed below are confirmed via Ontario Health atHome directory
+      (torontocentralhealthline.ca, March 2026). Ontario has 13 authorized categories
+      province-wide; only these 5 are confirmed for this specific pharmacy location.
     -->
 
     <section aria-labelledby="ailments-what">
-      <h2 id="ailments-what">What Can a Pharmacist Treat?</h2>
+      <h2 id="ailments-what">Conditions We Treat</h2>
       <p>
         Under Ontario's expanded pharmacist scope, your pharmacist at Four Winds Roots can
-        independently assess and treat the following minor ailments:
+        independently assess and prescribe for the following conditions at this location:
       </p>
-      <!--
-        Ontario's 13 authorized minor ailments (confirmed by OCP):
-        Tick the ones the owner confirms offering — do not publish the full list
-        without confirmation, as scope may expand and fee structures vary.
-      -->
       <ul class="ailments-list">
-        <li>Allergic rhinitis (seasonal allergies)</li>
-        <li>Candidal stomatitis (oral thrush)</li>
-        <li>Conjunctivitis (pink eye) — bacterial, allergic, or viral</li>
-        <li>Dermatitis — atopic, contact, or seborrheic</li>
-        <li>Dysmenorrhea (menstrual cramps)</li>
-        <li>Gastroesophageal reflux disease (GERD / heartburn)</li>
-        <li>Hemorrhoids</li>
-        <li>Herpes labialis (cold sores)</li>
-        <li>Impetigo</li>
-        <li>Insect bites and urticaria (hives)</li>
-        <li>Musculoskeletal sprains and strains</li>
-        <li>Tick bites — Lyme disease prophylaxis</li>
-        <li>Urinary tract infections (UTIs) — uncomplicated, in adults</li>
+        <li>Skin rashes (contact dermatitis)</li>
+        <li>Pink eye (conjunctivitis)</li>
+        <li>Insect bites</li>
+        <li>Acne</li>
+        <li>Uncomplicated urinary tract infections (UTIs) — adults</li>
       </ul>
       <p class="ailments-note">
         <em>
-          <!-- TODO: confirm with owner which of these are actively offered -->
-          TODO: Add "We offer [X] of these services — call to confirm availability"
-          or list only the confirmed subset. Do not publish this full list without
-          owner sign-off and OCP compliance review.
+          Conditions confirmed via Ontario Health atHome directory. Call us to confirm
+          current availability and whether your condition is in scope:
+          <PhoneLink />
         </em>
       </p>
     </section>
