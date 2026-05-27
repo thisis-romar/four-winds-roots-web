@@ -114,6 +114,29 @@ import PhoneLink from './PhoneLink.astro';
     <input type="text" id="refill-website" name="website" tabindex="-1" autocomplete="off" />
   </div>
 
+  <!-- PHIPA Privacy Notice — required visible disclosure -->
+  <div class="phipa-notice" role="note" aria-labelledby="refill-privacy-notice-heading">
+    <h3 id="refill-privacy-notice-heading">Privacy Notice</h3>
+    <p>
+      <strong>What we collect:</strong> Your name, contact information, and prescription
+      number(s) or medication name(s) for refill processing.
+    </p>
+    <p>
+      <strong>How it is used:</strong> Solely to prepare and dispense your prescription refill.
+      Your information is not used for marketing and is never sold or shared with third parties
+      outside of your direct care.
+    </p>
+    <p>
+      <strong>Storage:</strong> This website does not store your health information.
+      Your submission is transmitted securely to pharmacy staff and retained in dispensary records
+      per Ontario College of Pharmacists requirements (minimum 10 years).
+    </p>
+    <p>
+      <strong>Your rights:</strong> Under <em>PHIPA</em>, you may access or correct your records.
+      Contact us at <PhoneLink /> or see our <a href="/privacy-policy">Privacy Policy</a>.
+    </p>
+  </div>
+
   <!-- Explicit informed consent -->
   <div class="form-group form-group--consent">
     <label class="form-consent-label">

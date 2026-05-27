@@ -155,6 +155,32 @@ import PhoneLink from './PhoneLink.astro';
     <input type="text" id="transfer-website" name="website" tabindex="-1" autocomplete="off" />
   </div>
 
+  <!-- PHIPA Privacy Notice — required visible disclosure (OPC/OCP best practice) -->
+  <div class="phipa-notice" role="note" aria-labelledby="transfer-privacy-notice-heading">
+    <h3 id="transfer-privacy-notice-heading">Privacy Notice</h3>
+    <p>
+      <strong>What we collect:</strong> Your name, contact information, date of birth, current
+      pharmacy details, and a list of the prescriptions you wish to transfer.
+    </p>
+    <p>
+      <strong>How it is used:</strong> Solely to contact your current pharmacy and process your
+      transfer request. Your information is not used for marketing and is never sold or shared
+      with third parties outside of your direct care.
+    </p>
+    <p>
+      <strong>Storage:</strong> This website does not store your health information.
+      Your submission is transmitted securely to pharmacy staff and retained in our dispensary
+      records in accordance with Ontario College of Pharmacists record-keeping requirements
+      (minimum 10 years).
+    </p>
+    <p>
+      <strong>Your rights:</strong> Under the <em>Personal Health Information Protection Act
+      (PHIPA)</em>, you have the right to access or correct your records. Contact us at
+      <PhoneLink /> or in person at 3932A Keele St, North York.
+      See our <a href="/privacy-policy">Privacy Policy</a> for full details.
+    </p>
+  </div>
+
   <!-- Explicit informed consent — PHIPA requirement -->
   <div class="form-group form-group--consent">
     <label class="form-consent-label">

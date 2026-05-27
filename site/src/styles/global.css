@@ -280,3 +280,47 @@ th {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* ── PHIPA privacy notice ──────────────────────────────────────────────────── */
+
+.phipa-notice {
+  background-color: var(--color-calm-light, #f0f4f8);
+  border-left: 4px solid var(--color-primary, #2d6a4f);
+  border-radius: var(--radius-sm, 4px);
+  padding: var(--space-6, 1.5rem);
+  margin-block: var(--space-8, 2rem);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.phipa-notice h3 {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin-block-end: var(--space-3, 0.75rem);
+  color: var(--color-primary, #2d6a4f);
+}
+
+.phipa-notice p {
+  margin-block-end: var(--space-2, 0.5rem);
+  line-height: 1.6;
+}
+
+.phipa-notice p:last-child {
+  margin-block-end: 0;
+}
+
+/* ── Contact form ─────────────────────────────────────────────────────────── */
+
+.contact-form {
+  max-width: 540px;
+  margin-block-start: var(--space-6, 1.5rem);
+}
+
+.contact-form__honeypot {
+  display: none;
+}
+
+.form-hint {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-muted, #6b7280);
+  margin-block-start: var(--space-1, 0.25rem);
+}
