@@ -3,11 +3,11 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - claude/four-winds-pharmacy-audit-Yhxka   # default branch → production
-      - feature/astro-scaffold                    # active dev branch → deploy preview
+      - feature/astro-scaffold   # main dev branch → production deploy
+      - claude/four-winds-pharmacy-audit-Yhxka  # default branch → docs only, no deploy
   pull_request:
     branches:
-      - claude/four-winds-pharmacy-audit-Yhxka   # PRs get a deploy preview
+      - feature/astro-scaffold   # PRs into dev branch get a preview deploy
 
 jobs:
   build-and-deploy:
@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Netlify (production)
-        if: github.ref == 'refs/heads/claude/four-winds-pharmacy-audit-Yhxka'
+        if: github.ref == 'refs/heads/feature/astro-scaffold'
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: site/dist
@@ -48,7 +48,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Deploy to Netlify (preview)
-        if: github.ref != 'refs/heads/claude/four-winds-pharmacy-audit-Yhxka'
+        if: github.event_name == 'pull_request'
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: site/dist
