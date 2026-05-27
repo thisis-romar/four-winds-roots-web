@@ -1,3 +1,13 @@
+---
+title: "Competitor Digital-Presence Audit — Four Winds Roots Pharmacy"
+version: "1.1"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Ranked audit of 18 competitors in the Keele/Finch corridor with HTML-verified scores, strategic findings, and a priority action plan for the pharmacy website launch."
+---
+
 # Competitor Digital-Presence Audit — Four Winds Roots Pharmacy
 
 > **Verification status.** This audit was updated 2026-05-26 following a high-fidelity WebFetch

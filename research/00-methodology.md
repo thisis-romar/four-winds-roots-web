@@ -1,3 +1,13 @@
+---
+title: "Competitor Audit — Methodology"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Scoring methodology and pipeline description for the competitor digital-presence audit, including criteria weights and confidence guardrails."
+---
+
 # Competitor Audit — Methodology
 
 ## Purpose

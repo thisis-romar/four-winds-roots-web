@@ -1,3 +1,13 @@
+---
+title: "Information Architecture"
+version: "1.1"
+last_updated: "2026-05-27"
+status: active
+category: design
+owner: internal
+description: "Sitemap and page-by-page plan for the Four Winds Roots Pharmacy website, including the /about/ and /services/minor-ailments/ pages added in the latest update."
+---
+
 # Information Architecture
 
 The sitemap and page-by-page plan for the Four Winds Roots Pharmacy website. Organized around

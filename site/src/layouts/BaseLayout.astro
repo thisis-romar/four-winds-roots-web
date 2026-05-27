@@ -12,12 +12,19 @@ interface Props {
   title: string;
   description?: string;
   canonicalUrl?: string;
+  /**
+   * Set true on any page that collects health information (refills, transfers,
+   * delivery request, MedsCheck booking). PHIPA obligation: no analytics firing
+   * on pages where patients submit health data.
+   */
+  noAnalytics?: boolean;
 }
 
 const {
   title,
   description = 'Four Winds Roots Pharmacy — holistic pharmacy, optical & wellness centre at 3932A Keele St, North York. Prescription refills, transfers, free delivery, and more. Call (416) 398-8200.',
   canonicalUrl,
+  noAnalytics = false,
 } = Astro.props;
 
 const canonical = canonicalUrl ?? Astro.url.href;
@@ -64,6 +71,21 @@ const schemaJsonLd = JSON.stringify(
 
     <!-- JSON-LD structured data (Pharmacy schema) -->
     <script type="application/ld+json" set:html={schemaJsonLd}></script>
+
+    <!--
+      Privacy-friendly analytics — Plausible (no cookies, GDPR/PHIPA safe).
+      NOT loaded on health-data form pages (noAnalytics = true).
+      TODO: confirm data-domain matches final registered domain before go-live.
+      Font-src and style-src in netlify.toml CSP also need fonts.googleapis.com
+      and fonts.gstatic.com added before go-live.
+    -->
+    {!noAnalytics && (
+      <script
+        defer
+        data-domain="fourwindsrootspharmacy.ca"
+        src="https://plausible.io/js/script.js"
+      ></script>
+    )}
   </head>
 
   <body>
@@ -102,6 +124,9 @@ const schemaJsonLd = JSON.stringify(
               <a href="/optical-wellness" class="site-nav__link">Optical</a>
             </li>
             <li>
+              <a href="/about" class="site-nav__link">About</a>
+            </li>
+            <li>
               <a href="/contact" class="site-nav__link">Contact</a>
             </li>
           </ul>
@@ -109,7 +134,12 @@ const schemaJsonLd = JSON.stringify(
 
         <!-- Persistent header CTAs — the most important conversion actions -->
         <div class="site-header__ctas" role="group" aria-label="Quick actions">
-          <a href="tel:4163988200" class="btn btn-call">
+          <a
+            href="#"
+            class="btn btn-call tel-protected"
+            data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+            aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+          >
             <!-- Inline SVG phone icon -->
             <svg
               aria-hidden="true"
@@ -153,7 +183,12 @@ const schemaJsonLd = JSON.stringify(
               <span class="footer-nap__city">North York, ON M3J 1N8</span>
             </p>
             <p>
-              <a href="tel:4163988200" class="footer-nap__phone">(416) 398-8200</a>
+              <a
+                href="#"
+                class="footer-nap__phone tel-protected"
+                data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+                aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+              >(416) 398-8200</a>
             </p>
             <p>
               <span class="footer-nap__fax">Fax: (416) 398-6745</span>
@@ -195,7 +230,14 @@ const schemaJsonLd = JSON.stringify(
           </table>
           <!-- TODO: add statutory holiday hours once confirmed with owner -->
           <p class="footer-hours__holiday-note">
-            <em>Holiday hours may vary — call to confirm: <a href="tel:4163988200">(416) 398-8200</a></em>
+            <em>Holiday hours may vary — call to confirm:
+              <a
+                href="#"
+                class="tel-protected"
+                data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+                aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+              >(416) 398-8200</a>
+            </em>
           </p>
         </section>
 
@@ -241,7 +283,12 @@ const schemaJsonLd = JSON.stringify(
       This is the single most important conversion component for mobile users.
     -->
     <div class="mobile-action-bar" role="navigation" aria-label="Mobile quick actions">
-      <a href="tel:4163988200" class="mobile-action-bar__btn mobile-action-bar__btn--call">
+      <a
+        href="#"
+        class="mobile-action-bar__btn mobile-action-bar__btn--call tel-protected"
+        data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+        aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+      >
         <svg
           aria-hidden="true"
           focusable="false"
@@ -307,8 +354,20 @@ const schemaJsonLd = JSON.stringify(
       </a>
     </div>
 
-    <!-- ── Mobile nav toggle script (no framework dependency) ─────────── -->
+    <!-- ── Scripts ──────────────────────────────────────────────────────── -->
     <script>
+      // ── Phone protection: assemble tel: href at runtime from data attributes ──
+      // Scrapers reading the HTML source see href="#" — no harvestable phone number.
+      // Aria-label on each element spells digits for screen readers.
+      // Split: data-p0="4" + data-p1="163" + data-p2="98" + data-p3="8200" = 4163988200
+      document.querySelectorAll<HTMLAnchorElement>('.tel-protected').forEach((el) => {
+        const { p0, p1, p2, p3 } = el.dataset;
+        if (p0 && p1 && p2 && p3) {
+          el.href = 'tel:' + p0 + p1 + p2 + p3;
+        }
+      });
+
+      // ── Mobile nav toggle ─────────────────────────────────────────────────
       const toggle = document.querySelector('.site-nav__toggle') as HTMLButtonElement | null;
       const navList = document.getElementById('main-nav-list');
 

@@ -1,3 +1,13 @@
+---
+title: "PHIPA-Compliant Form & Booking Vendor Comparison"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: compliance
+owner: pending_owner_review
+description: "Comparison of ten form and booking vendors evaluated for PHIPA compliance, Canadian data residency, and fitness for the Astro static site, with OceanMD and Jane App as primary recommendations."
+---
+
 # PHIPA-Compliant Form & Booking Vendor Comparison
 ## Four Winds Roots Pharmacy — North York, Ontario
 

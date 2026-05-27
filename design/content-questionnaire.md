@@ -1,3 +1,13 @@
+---
+title: "Owner Content Questionnaire"
+version: "1.0"
+last_updated: "2026-05-27"
+status: draft
+category: content
+owner: pending_owner_review
+description: "Structured questionnaire to collect all owner-supplied information needed before website build can begin, covering brand identity, NAP, hours, services, and compliance."
+---
+
 # Owner Content Questionnaire
 
 > **Purpose:** Gather everything needed from the pharmacy owner before the website build begins.

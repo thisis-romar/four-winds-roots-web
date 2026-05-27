@@ -1,3 +1,13 @@
+---
+title: "Phone Number Protection: Spam Bot Resistance + AODA/WCAG 2.2 AA Compliance"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: seo
+owner: internal
+description: "Evaluation of techniques for obfuscating the pharmacy phone number against scrapers while maintaining WCAG 2.2 AA compliance, with a recommended Astro component implementation."
+---
+
 # Phone Number Protection: Spam Bot Resistance + AODA/WCAG 2.2 AA Compliance
 
 **Four Winds Roots Pharmacy — Astro Static Site**

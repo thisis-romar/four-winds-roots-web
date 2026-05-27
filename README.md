@@ -1,3 +1,13 @@
+---
+title: "Four Winds Roots Pharmacy — Project Overview"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: meta
+owner: internal
+description: "Monorepo index and project overview for the Four Winds Roots Pharmacy web architecture and design research initiative."
+---
+
 # Four Winds Roots Pharmacy — Web Architecture & Design Research
 
 A monorepo holding the **research** and **design / web-architecture** foundation for a future

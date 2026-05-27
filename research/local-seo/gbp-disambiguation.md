@@ -1,3 +1,13 @@
+---
+title: "Google Business Profile — Legacy Listing Cleanup"
+version: "2.0"
+last_updated: "2026-05-27"
+status: active
+category: seo
+owner: pending_owner_review
+description: "Action plan to claim and correct the GBP and all directory listings under stale legacy names, following the clarification that Can Pharm Service Inc is the pharmacy's legal operating entity."
+---
+
 # Google Business Profile — Legacy Listing Cleanup
 
 ## Clarification (2026-05-27)

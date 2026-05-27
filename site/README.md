@@ -1,3 +1,13 @@
+---
+title: "Four Winds Roots Pharmacy — Astro Site Scaffold"
+version: "1.0"
+last_updated: "2026-05-27"
+status: draft
+category: meta
+owner: internal
+description: "README for the Astro site scaffold: structure, setup instructions, and pre-launch owner confirmation checklist."
+---
+
 # Four Winds Roots Pharmacy — Astro Site Scaffold
 
 **Status: Owner review scaffold — not production-ready.**

@@ -1,3 +1,13 @@
+---
+title: "Competitor Services Comparison Matrix"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Side-by-side services comparison across all 18 competitors in the Keele/Finch corridor, identifying differentiation gaps, table-stakes minimums, and strategic priorities for Four Winds."
+---
+
 # Competitor Services Comparison Matrix
 
 > **Purpose:** Side-by-side comparison of services and products offered by all 18 competitors

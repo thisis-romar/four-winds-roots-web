@@ -1,3 +1,13 @@
+---
+title: "Content Model"
+version: "1.0"
+last_updated: "2026-05-27"
+status: draft
+category: design
+owner: pending_owner_review
+description: "Per-page content requirements, content sources and ownership, and open items needing owner confirmation before the website build begins."
+---
+
 # Content Model
 
 What content each page needs, where it comes from, and who owns it. This doubles as a **content

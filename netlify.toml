@@ -14,7 +14,8 @@
     Referrer-Policy           = "strict-origin-when-cross-origin"
     Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
     # CSP — tighten after confirming third-party embeds (Jane App, OceanMD, Maps)
-    Content-Security-Policy   = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://plausible.io; frame-src https://www.google.com https://*.janeapp.com; form-action 'self' https://*.oceanmd.com"
+    # Google Fonts: style-src needs fonts.googleapis.com; font-src needs fonts.gstatic.com
+    Content-Security-Policy   = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://www.google.com https://*.janeapp.com; form-action 'self' https://*.oceanmd.com"
 
 # Decap CMS admin — block indexing
 [[headers]]

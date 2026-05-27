@@ -1,3 +1,13 @@
+---
+title: "Local SEO & Keyword Strategy"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: seo
+owner: internal
+description: "Keyword-to-page mapping, on-page SEO checklist, GBP optimization checklist, and tactical competitor targeting strategy for the Four Winds Roots Pharmacy website."
+---
+
 # Local SEO & Keyword Strategy
 
 ## Goal

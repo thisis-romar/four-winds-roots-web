@@ -1,3 +1,13 @@
+---
+title: "Brand Direction"
+version: "1.0"
+last_updated: "2026-05-27"
+status: review
+category: design
+owner: pending_owner_review
+description: "Starting brand system for Four Winds Roots Pharmacy covering personality, colour palette, typography, logo direction, and imagery guidelines."
+---
+
 # Brand Direction
 
 A starting brand system for Four Winds Roots Pharmacy. The goal: **holistic-yet-clinical** — calm

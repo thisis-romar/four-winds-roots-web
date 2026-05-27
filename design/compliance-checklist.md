@@ -1,3 +1,13 @@
+---
+title: "Compliance Checklist — AODA / WCAG 2.2 AA + PHIPA + OCP"
+version: "1.0"
+last_updated: "2026-05-27"
+status: review
+category: compliance
+owner: pending_owner_review
+description: "Ontario-specific compliance checklist covering AODA/WCAG 2.2 AA accessibility, PHIPA health privacy, and OCP advertising standards for the pharmacy website."
+---
+
 # Compliance Checklist — AODA / WCAG 2.2 AA + PHIPA + OCP
 
 Ontario-specific compliance for a pharmacy website. This is **research guidance, not legal advice**

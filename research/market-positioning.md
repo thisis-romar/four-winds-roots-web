@@ -1,3 +1,13 @@
+---
+title: "Market Positioning — Independent & Community, Not Big-Box"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Positioning strategy for Four Winds Roots Pharmacy built around holistic differentiation, three brand pillars, and segment-specific messaging to avoid competing on chain terms."
+---
+
 # Market Positioning — Independent & Community, Not Big-Box
 
 ## The strategic problem
