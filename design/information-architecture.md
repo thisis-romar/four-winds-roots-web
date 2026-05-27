@@ -1,6 +1,6 @@
 ---
 title: "Information Architecture"
-version: "1.1"
+version: "1.2"
 last_updated: "2026-05-27"
 status: active
 category: design
@@ -124,3 +124,35 @@ two persistent action buttons: **Call** and **Transfer Rx**.
 
 > Every form that collects health information (refills, transfers, delivery, booking) must follow
 > the PHIPA rules in `compliance-checklist.md` — consent, secure transport, minimal data.
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList, Medimap.*
+
+### Trade names and address
+
+Both trade names are confirmed valid and co-exist across directories:
+- **"R.O.O.T.S. Four Winds Pharmacy"** — FedEx Authorized ShipCentre listing, PharmacyList
+- **"Four Winds Roots Pharmacy"** — Lumino Health, Ontario Health atHome
+
+Address confirmed: **3932A Keele St (Centennial Plaza), North York, ON M3J 1N8**. Phone: **416-398-8200**. Fax: 416-398-6745.
+
+### Personnel
+
+- **Winston Clarke** — Pharmacist (pharmacist voice for all clinical copy)
+- **Pamela Clarke** — Natural Health Practitioner; author of *Take Control Now: Your Health Is Your Responsibility* (FriesenPress, 2015, ISBN 978-1460258354). Use name + title + book citation only — see `compliance-checklist.md` for framing guardrails.
+
+### Confirmed services (8 + FedEx co-brand)
+
+Prescription dispensing ($12.99 dispensing fee), free local delivery, blister packaging (no extra cost), MedsCheck (ODB), minor ailments (5 conditions confirmed at this location: skin rashes, pink eye, insect bites, acne, uncomplicated UTIs — **not** all 13 Ontario-authorized conditions), ODB Smoking Cessation Program, Sharps Disposal Program, Medications Return Program. FedEx Authorized ShipCentre is co-located at the same address and phone.
+
+### Sitemap implications
+
+- Minor Ailments page copy must specify "5 confirmed conditions" — do not write "all minor ailments" without owner confirmation.
+- Holistic Wellness page should use atHome's confirmed descriptor: "holistic pharmacy that deals with herbs and drug interactions."
+- FedEx co-location is a useful Contact page detail (convenience signal for the community).
+- Compounding is **not confirmed** from public data — omit from sitemap until owner confirms.
+
+### Transit note
+
+The **Finch West LRT (Line 6)** opened December 7, 2025 — 18 stops, with Finch West Station at Keele St. Include in the Contact / Location / Hours page transit section as a confirmed landmark.

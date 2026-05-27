@@ -1,6 +1,6 @@
 ---
 title: "Owner Content Questionnaire"
-version: "1.0"
+version: "1.1"
 last_updated: "2026-05-27"
 status: draft
 category: content
@@ -293,3 +293,52 @@ The recommended build is Astro + Decap CMS + Netlify (free tier). Details in
 ---
 
 *Document version: 2026-05-26. Prepared as part of the Four Winds Roots Pharmacy web research monorepo.*
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList, Medimap, FriesenPress publisher database.*
+
+### Items Resolved by Primary-Source Research
+
+The following questionnaire items no longer require owner input — they have been confirmed from public primary sources:
+
+1. **Canonical address** — 3932A Keele St (Centennial Plaza), North York, ON M3J 1N8
+2. **Phone** — 416-398-8200 (confirmed across FedEx, Lumino, atHome)
+3. **Fax** — 416-398-6745
+4. **Trade name variants** — "R.O.O.T.S. Four Winds Pharmacy" (FedEx, PharmacyList) and "Four Winds Roots Pharmacy" (Lumino, atHome) are both live; primary preference still needed from owner (Q 1.1)
+5. **Operating entity** — Can Pharm Services Inc. (Medimap; variant of user-supplied "Can Pharm Service Inc")
+6. **Lead pharmacist** — Winston Clarke, Pharmacist
+7. **Natural health practitioner** — Pamela Clarke, Natural Health Practitioner (not RHPA-regulated)
+8. **Pamela Clarke book** — *Take Control Now: Your Health Is Your Responsibility*, FriesenPress, 2015, ISBN 978-1460258354
+9. **Languages** — English confirmed; additional languages unconfirmed (Q 1.5 still open)
+10. **Accessibility** — partially wheelchair-accessible (confirmed)
+11. **Prescription dispensing fee** — $12.99 per prescription
+12. **Free local delivery** — confirmed (coverage area still needed — Q 4 table)
+13. **Blister packaging** — confirmed, no extra cost
+14. **MedsCheck (ODB)** — confirmed
+15. **Minor ailments service** — confirmed at this location: 5 conditions (skin rashes, pink eye, insect bites, acne, uncomplicated UTIs)
+16. **ODB Smoking Cessation Program** — confirmed
+17. **Sharps Disposal Program** — confirmed
+18. **Medications Return Program** — confirmed
+19. **Holistic descriptor** — "registered holistic pharmacy that deals with herbs and drug interactions" (atHome directory)
+20. **FedEx Authorized ShipCentre** — co-located at same address and phone
+21. **Reputation** — 4.9/5, 52 patient ratings (Lumino Health, May 2026)
+22. **Finch West LRT** — Line 6 opened December 7, 2025; Finch West Station at Keele St
+
+### Remaining Open Items for Owner Call
+
+The following items could not be confirmed from public sources and must be collected directly from the owner before website content can be finalized:
+
+1. **Preferred canonical trade name** — which name to use as the single public-facing brand on GBP, website, and all directories
+2. **ROOTS acronym expansion** — does "R.O.O.T.S." stand for something? (brand storytelling opportunity)
+3. **Founding year / "serving since"** date
+4. **OCP pharmacy registration (accreditation) number**
+5. **Google Business Profile status** — claimed/verified/needs claiming; GBP access for updates
+6. **Pamela Clarke CNO/RN status** — whether she holds any active Ontario regulated health profession registration (determines what credential language is permissible in copy)
+7. **Full weekly hours** (Monday–Sunday) and holiday hours
+8. **Delivery coverage area and schedule**
+9. **Compounding services** — offered yes/no; if yes, non-sterile only or sterile; dosage forms
+10. **Optical services detail** — licensed optometrist, dispensing only, or wellness products only
+11. **Additional wellness services** beyond Pamela Clarke's consultations
+12. **Logo and brand assets** — existing logo files or need for new design
+13. **OCP advertising sign-off** — owner consent to have holistic/wellness copy and any testimonials reviewed against OCP advertising standards before launch

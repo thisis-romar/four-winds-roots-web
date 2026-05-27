@@ -1,6 +1,6 @@
 ---
 title: "Brand Direction"
-version: "1.0"
+version: "1.1"
 last_updated: "2026-05-27"
 status: review
 category: design
@@ -85,3 +85,28 @@ consistent and easy to adjust:
 - Big-box / discount-store aesthetics.
 - Tiny fonts, low contrast, dense walls of text.
 - Over-claiming holistic/health benefits.
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator.*
+
+### Holistic brand descriptor (confirmed)
+
+The Ontario Health atHome directory describes the pharmacy as a **"registered holistic pharmacy that deals with herbs and drug interactions."** This is the strongest confirmed brand differentiator available from primary sources. Safe usage: "holistic pharmacy" or "holistic philosophy." Do not write "OCP-registered holistic pharmacy" — "registered" in atHome's phrasing refers to OCP community pharmacy registration, not a separate holistic credential. See `compliance-checklist.md`.
+
+### Personnel voices
+
+- **Winston Clarke (Pharmacist)** — the pharmacist's voice: clinical credibility, prescription services, MedsCheck, minor ailments, ODB programs. All regulated healthcare claims must be attributed to him or the pharmacy in his capacity as pharmacist.
+- **Pamela Clarke (Natural Health Practitioner)** — the wellness voice: whole-person health, herbs, natural health products. Also author of *Take Control Now: Your Health Is Your Responsibility* (FriesenPress, 2015) — cite book + publisher for credibility. Do not list individual credentials or append "RN" — see `compliance-checklist.md`.
+
+### Reputation signal (for brand/social copy)
+
+Rated **4.9/5 based on 52 patient ratings on Lumino Health** (as of May 2026). Cite as: "Rated 4.9/5 on Lumino Health (52 patient ratings)" — not as a clinical quality endorsement. This is the highest rating among pharmacies surveyed in the Keele/Finch corridor and is a genuine brand asset.
+
+### Dispensing fee
+
+Confirmed dispensing fee: **$12.99 per prescription**. Suitable for transparent pricing copy (Trust section, FAQ) — a competitive signal vs. chain pharmacies.
+
+### FedEx co-brand
+
+**FedEx Authorized ShipCentre** is confirmed co-located at 3932A Keele St (same phone). Useful as a community convenience signal in brand narrative and Contact page copy.

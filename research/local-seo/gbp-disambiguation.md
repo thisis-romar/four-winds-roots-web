@@ -1,6 +1,6 @@
 ---
 title: "Google Business Profile — Legacy Listing Cleanup"
-version: "2.0"
+version: "2.1"
 last_updated: "2026-05-27"
 status: active
 category: seo
@@ -150,3 +150,31 @@ not a separate business at an adjacent unit. All directory cleanup below is for 
 **client's own listings**, not a competitor's.
 
 *Updated: 2026-05-27 — previous version incorrectly treated Can Pharm as a competitor.*
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList, Medimap.*
+
+### Confirmed trade name variants (with sources)
+
+All three variant names have confirmed primary-source citations and should be treated as pre-existing alternate names in `schema.json` under `alternateName`:
+
+| Name variant | Source(s) |
+|---|---|
+| R.O.O.T.S. Four Winds Pharmacy | FedEx Authorized ShipCentre locator; PharmacyList.ca |
+| Four Winds Roots Pharmacy | Lumino Health (Sun Life); Ontario Health atHome directory |
+| Roots Four Winds Pharmacy | Yelp listing (via FedEx locator cross-reference) |
+
+The **preferred canonical name** for all public-facing copy is still pending owner confirmation (see `content-questionnaire.md` — Remaining Open Items #1). Until confirmed, use "Four Winds Roots Pharmacy" as the working canonical (it appears in both Lumino and atHome).
+
+### Operating entity — confirmed spelling
+
+Medimap lists the operating entity as **"Can Pharm Services Inc."** (with a terminal "s" on Services). The user-supplied spelling was "Can Pharm Service Inc." Both variants are in use across directories. For `schema.json` `legalName`, use **"Can Pharm Services Inc."** (Medimap is the most authoritative public registry source for operating entities). Note the discrepancy if contacting Medimap for a listing update.
+
+### Schema implications
+
+Both variant names are pre-existing in `site/src/data/schema.json` under `alternateName`. No new entries are required — the confirmed sources above validate the existing data. Update `legalName` to "Can Pharm Services Inc." once the owner confirms the exact registered form.
+
+### GBP status
+
+GBP access and verification status remain unconfirmed from public data — owner action still required as the highest-priority item in this document.
