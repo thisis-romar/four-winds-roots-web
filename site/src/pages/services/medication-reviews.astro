@@ -1,0 +1,88 @@
+---
+/**
+ * Medication Reviews / MedsCheck — Four Winds Roots Pharmacy
+ * Primary keyword: medication review pharmacy Toronto / MedsCheck North York
+ * Source: design/information-architecture.md — Medication Reviews / MedsCheck
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="MedsCheck Medication Reviews | Four Winds Roots Pharmacy"
+  description="Free MedsCheck medication reviews with a registered pharmacist at Four Winds Roots Pharmacy, North York. Government-funded. Book your appointment today — (416) 398-8200."
+  noAnalytics={true}
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Medication Reviews / MedsCheck):
+    1. ServiceHero — "Free MedsCheck — understanding your meds" headline + book CTA
+    2. Who qualifies — EligibilityNote: Ontario residents taking 3+ prescriptions, diabetics, hospital discharge
+    3. What to expect — StepList: what happens in the session, how long, what you'll receive
+    4. Plain-language benefits — 3-4 bullet points without overclaiming
+    5. BookingCTA — link to booking flow (phone or embedded scheduler)
+    6. Call alternative — (416) 398-8200
+    Primary keyword: "medication review pharmacy Toronto", "MedsCheck North York"
+    Note: MedsCheck is a government-funded ODB program — do not overstate eligibility.
+    TODO: confirm exact eligibility criteria with owner / OCP guidelines before publishing.
+  -->
+
+  <div class="container section">
+    <h1>MedsCheck Medication Reviews in North York</h1>
+    <p>
+      MedsCheck is a <strong>free, government-funded medication review</strong> available
+      to eligible Ontario residents — no referral needed. Your pharmacist at Four Winds Roots
+      sits down with you privately to go through all your medications, catch interactions,
+      and make sure everything is working together safely.
+    </p>
+
+    <section aria-labelledby="medscheck-who-qualifies">
+      <h2 id="medscheck-who-qualifies">Who Qualifies</h2>
+      <p>MedsCheck is available under the Ontario Drug Benefit (ODB) program to:</p>
+      <ul>
+        <li>Ontario residents taking three or more prescription medications for a chronic condition</li>
+        <li>People living with diabetes (MedsCheck for Diabetes)</li>
+        <li>Patients recently discharged from hospital (MedsCheck at Home)</li>
+        <li>Residents of long-term care homes (MedsCheck in LTC)</li>
+      </ul>
+      <p>
+        <em>
+          Eligibility criteria are set by the Ontario Drug Benefit program.
+          <!-- TODO: confirm with owner whether they offer all MedsCheck program types -->
+          Call us to confirm which program applies to you: <PhoneLink />
+        </em>
+      </p>
+    </section>
+
+    <section aria-labelledby="medscheck-what-to-expect">
+      <h2 id="medscheck-what-to-expect">What to Expect</h2>
+      <ol>
+        <li>Call to schedule a convenient time — appointments typically take 30–60 minutes.</li>
+        <li>Bring all your medications (prescription and over-the-counter) and supplements.</li>
+        <li>Your pharmacist reviews everything together — looking for interactions, duplications, and timing issues.</li>
+        <li>You leave with a written medication plan you can take to your doctor.</li>
+      </ol>
+      <!-- TODO: confirm appointment length and booking method with owner -->
+    </section>
+
+    <section aria-labelledby="medscheck-benefits">
+      <h2 id="medscheck-benefits">Why a MedsCheck Helps</h2>
+      <ul>
+        <li>Catch drug-drug and drug-supplement interactions before they cause problems</li>
+        <li>Understand why you're taking each medication and what to watch for</li>
+        <li>Reduce side effects by reviewing timing, dosage, and food interactions</li>
+        <li>At Four Winds Roots, your pharmacist also considers herbs and natural supplements — whole-person care</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="medscheck-book">
+      <h2 id="medscheck-book">Book Your Free MedsCheck</h2>
+      <!-- TODO: add embedded booking once owner confirms scheduling platform (Jane App or phone-only) -->
+      <p>
+        <strong>Call to book your appointment:</strong>
+      </p>
+      <p>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+      </p>
+    </section>
+  </div>
+</BaseLayout>

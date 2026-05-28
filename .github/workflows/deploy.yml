@@ -1,0 +1,93 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - feature/astro-scaffold   # main dev branch → production deploy
+      - claude/four-winds-pharmacy-audit-Yhxka  # default branch → docs only, no deploy
+  pull_request:
+    branches:
+      - feature/astro-scaffold   # PRs into dev branch get a preview deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build & Deploy
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Build Astro site
+        working-directory: site
+        run: npm run build
+
+      - name: Deploy to Netlify (production)
+        id: netlify-prod
+        if: github.ref == 'refs/heads/feature/astro-scaffold'
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: site/dist
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions — ${{ github.sha }}"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      # Smoke-test: "deploy succeeded" is not the same as "site serves content".
+      # On 2026-05-27 the publish-dir was wrong, every route 404'd, and yet
+      # the Action exited 0 for five consecutive runs. This step fails the run
+      # if the homepage and a representative deep-link return anything other
+      # than 200, AND if the homepage doesn't contain a known string from the
+      # rendered Astro output.
+      - name: Verify production URL actually serves content
+        if: github.ref == 'refs/heads/feature/astro-scaffold' && steps.netlify-prod.outcome == 'success'
+        run: |
+          set -euo pipefail
+          URL="${{ steps.netlify-prod.outputs.deploy-url }}"
+          if [ -z "$URL" ]; then
+            URL="https://charming-zuccutto-52dc64.netlify.app"
+          fi
+          echo "Smoke-testing $URL"
+          for path in "/" "/about/" "/contact/" "/services/refills/"; do
+            code=$(curl -sS -o /tmp/page.html -w '%{http_code}' "$URL$path")
+            echo "  $path -> $code"
+            if [ "$code" != "200" ]; then
+              echo "::error::Smoke test failed: $URL$path returned $code"
+              exit 1
+            fi
+          done
+          if ! grep -qi "Four Winds Roots Pharmacy" /tmp/page.html; then
+            echo "::error::Last page did not contain expected title 'Four Winds Roots Pharmacy'"
+            head -50 /tmp/page.html
+            exit 1
+          fi
+          echo "Smoke test passed."
+
+      - name: Deploy to Netlify (preview)
+        if: github.event_name == 'pull_request'
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: site/dist
+          production-deploy: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Preview — ${{ github.ref }} — ${{ github.sha }}"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

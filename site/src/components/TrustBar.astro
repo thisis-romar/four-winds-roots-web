@@ -1,0 +1,40 @@
+---
+/**
+ * TrustBar — Four Winds Roots Pharmacy
+ * Displays: OCP registration badge, named pharmacist(s), accreditation/affiliation logos.
+ * TODO: Confirm OCP registration number with owner before publishing.
+ * TODO: Confirm pharmacist name(s) with owner before publishing.
+ * TODO: Confirm any accreditation or affiliation logos to display.
+ * Accessibility: logos need descriptive alt text; decorative elements get empty alt.
+ */
+---
+
+<!-- Trust signals — confirmed primary-source facts as of 2026-05-27 -->
+<div data-component="TrustBar" role="complementary" aria-label="Pharmacy credentials and trust signals">
+
+  <p>
+    Registered with the <strong>Ontario College of Pharmacists</strong>
+    <!-- TODO: add OCP registration number once confirmed with owner (Task #13) -->
+  </p>
+
+  <p>
+    Your Pharmacist: <strong>Winston Clarke</strong>
+    <!-- Confirmed: Ontario Health atHome directory (March 2026) -->
+    <!-- TODO: add OCP registration number for Winston Clarke (Task #13) -->
+  </p>
+
+  <p>
+    Rated <strong>4.9 / 5</strong> &mdash; 52 patient ratings on
+    <a href="https://luminohealth.sunlife.com" target="_blank" rel="noopener noreferrer">
+      Lumino Health
+    </a>
+    <!-- Confirmed: Lumino Health (Sun Life) directory, May 2026 audit. Rating count is time-sensitive. -->
+  </p>
+
+  <p>
+    Dispensing fee: <strong>$12.99</strong>
+    <!-- Confirmed: Lumino Health directory, May 2026 audit -->
+  </p>
+
+  <!-- TODO: Affiliation/accreditation logos — OCP logo, any other seals — confirm with owner (Task #13) -->
+</div>

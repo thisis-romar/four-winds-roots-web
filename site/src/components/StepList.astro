@@ -1,0 +1,40 @@
+---
+/**
+ * StepList — Four Winds Roots Pharmacy
+ * Numbered "How it works" steps (1-2-3). Used on Transfers, Refills, Blister Packaging.
+ * Keeps the process scannable and reduces patient anxiety.
+ * Accessibility: <ol> with real list semantics, step numbers visible + in markup.
+ *
+ * Props:
+ *   steps: Array<{ number?: number; title: string; description: string }>
+ *   heading?: string — optional section heading above the list
+ */
+
+interface Step {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  steps: Step[];
+  heading?: string;
+}
+
+const { steps, heading } = Astro.props;
+---
+
+<!-- TODO: Style StepList with design tokens; numbered step circles -->
+<div data-component="StepList" class="step-list-wrap">
+  {heading && <h2 class="step-list__heading">{heading}</h2>}
+  <ol class="step-list" role="list">
+    {steps.map((step, i) => (
+      <li class="step-list__item">
+        <span class="step-list__number" aria-hidden="true">{i + 1}</span>
+        <div class="step-list__content">
+          <h3 class="step-list__title">{step.title}</h3>
+          <p class="step-list__desc">{step.description}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>

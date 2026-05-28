@@ -1,0 +1,150 @@
+---
+/**
+ * About — Meet the Team at Four Winds Roots Pharmacy
+ * Route: /about/
+ * Purpose: Build trust, introduce the pharmacist(s), tell the R.O.O.T.S story.
+ * Content: ALL marked TODO — requires owner intake (Task #13).
+ * Source: design/information-architecture.md
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="About Us | Four Winds Roots Pharmacy, North York"
+  description="Meet the team at Four Winds Roots Pharmacy — your independent holistic pharmacy at Keele & Finch, North York. Personalized care, whole-person wellness, and optical services under one roof."
+>
+  <div class="container section">
+
+    <h1>About Four Winds Roots Pharmacy</h1>
+
+    <!--
+      CONTENT TODOS — still requires owner intake (Task #13):
+      1. What does "R.O.O.T.S" stand for? (potential brand story opener)
+      2. Founding year — "Serving the community since [year]"
+      3. OCP registration number(s) for Winston Clarke (OCP compliance)
+      4. Why independent + holistic? Owner's philosophy in their own words
+      5. The Guardian franchise history — how/why the pharmacy became independent
+      6. Team photos / headshots for trust signal
+      7. OCP registration badge display
+      CONFIRMED (as of 2026-05-27, Ontario Health atHome + publisher databases):
+      - Winston Clarke: Pharmacist
+      - Pamela Clarke: Natural Health Practitioner, author of Take Control Now (2015)
+      - Holistic pharmacy descriptor confirmed
+      - Centennial Plaza location confirmed
+      - English-language service confirmed
+    -->
+
+    <section aria-labelledby="about-story">
+      <h2 id="about-story">Our Story</h2>
+      <p>
+        Four Winds Roots Pharmacy is an independent community pharmacy in Centennial Plaza
+        at 3932A Keele Street, North York — at the intersection of Keele Street and Finch
+        Avenue West, in the heart of the York University Heights neighbourhood.
+      </p>
+      <p>
+        Unlike chain pharmacies, Four Winds Roots operates as a
+        <strong>registered holistic pharmacy</strong>, taking the time to understand your
+        full health picture — not just the prescription in front of you. That means reviewing
+        your medications alongside your herbs, supplements, and wellness goals.
+      </p>
+      <p>
+        <!-- TODO: add founding year, owner origin story, and Guardian franchise transition in owner's own words -->
+        <em>More of our story coming soon — we're putting the finishing touches on this page.</em>
+      </p>
+    </section>
+
+    <section aria-labelledby="about-pharmacist">
+      <h2 id="about-pharmacist">Meet Your Pharmacist</h2>
+      <!-- TODO: add photo of Winston Clarke with alt text; add OCP registration number once confirmed -->
+      <p>
+        <strong>Winston Clarke</strong> is the pharmacist at Four Winds Roots Pharmacy.
+        Winston brings a whole-person approach to pharmacy practice — taking the time to
+        talk through your medications, understand your health goals, and flag any interactions
+        between your prescriptions and the supplements or herbs you take.
+      </p>
+      <p>
+        <em>OCP registration number: to be confirmed with owner (Task #13).</em>
+      </p>
+    </section>
+
+    <section aria-labelledby="about-wellness">
+      <h2 id="about-wellness">Meet Our Wellness Practitioner</h2>
+      <!-- TODO: add photo of Pamela Clarke with alt text -->
+      <!--
+        COMPLIANCE NOTE: "Natural Health Practitioner" is NOT a regulated title under Ontario's
+        Regulated Health Professions Act. Pamela Clarke must be described exactly as her directory
+        listing states — do not use "RN", "Registered Nurse", or list private credentials.
+        Her private-accreditation affiliations are not regulated and must not be cited as
+        professional qualifications in marketing copy.
+      -->
+      <p>
+        <strong>Pamela Clarke</strong> is our Natural Health Practitioner and wellness author.
+        Pamela focuses on the intersection of natural health and conventional medicine —
+        helping patients understand how herbs, supplements, and whole-person wellness
+        practices fit alongside their pharmacy care.
+      </p>
+      <p>
+        Pamela is the author of <em>Take Control Now: Your Health Is Your Responsibility</em>
+        (FriesenPress, 2015) — a guide to taking an active role in your own health.
+      </p>
+      <p>
+        <a href="/holistic-wellness">Learn about our holistic wellness approach &rarr;</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="about-holistic">
+      <h2 id="about-holistic">A Different Kind of Pharmacy</h2>
+      <p>
+        Four Winds Roots is a registered holistic pharmacy that deals with herbs and drug
+        interactions — meaning we look at everything you put in your body, not just what's
+        on your prescription label. Whether you take herbal remedies, vitamins, or specialty
+        supplements alongside your medications, we review the full picture for safety.
+      </p>
+      <p>
+        And because optical care and wellness services are available alongside our dispensary,
+        you can take care of more of your health in one visit.
+      </p>
+      <p>
+        <!-- TODO: OCP advertising review before publishing this section (Task #29) -->
+      </p>
+    </section>
+
+    <section aria-labelledby="about-community">
+      <h2 id="about-community">Rooted in the Keele &amp; Finch Community</h2>
+      <p>
+        We're located in Centennial Plaza in the York University Heights neighbourhood of
+        North York — a short walk from transit on Keele Street, and well-connected to the
+        Keele and Finch West corridor.
+      </p>
+      <p>
+        We provide pharmacy services in English.
+        <!-- TODO: confirm with owner whether additional languages are spoken at the counter -->
+      </p>
+    </section>
+
+    <section aria-labelledby="about-contact">
+      <h2 id="about-contact">Visit Us</h2>
+      <p>
+        3932A Keele St, North York, ON M3J 1N8<br>
+        <PhoneLink />
+      </p>
+      <p>
+        <a href="/contact" class="btn btn-primary">Hours &amp; Directions</a>
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .container.section {
+    max-width: 70ch;
+  }
+
+  section + section {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

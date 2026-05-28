@@ -1,0 +1,168 @@
+---
+/**
+ * Privacy Policy — Four Winds Roots Pharmacy
+ * Route: /privacy-policy/
+ * Required by: PHIPA (Ontario), PIPEDA (federal), CASL
+ * Status: STUB — requires legal review and owner sign-off before publishing.
+ * All bracketed fields [PLACEHOLDER] must be completed by owner.
+ *
+ * Compliance notes:
+ * - PHIPA: Ontario's Personal Health Information Protection Act governs how
+ *   pharmacies collect, use, and disclose personal health information (PHI).
+ * - PIPEDA: Canada's federal private-sector privacy law applies to personal
+ *   information collected in commercial activity.
+ * - Effective date must be confirmed before go-live.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy | Four Winds Roots Pharmacy"
+  description="Privacy Policy for Four Winds Roots Pharmacy — how we collect, use, and protect your personal and health information under PHIPA and PIPEDA."
+  noAnalytics={true}
+>
+  <div class="container section privacy-policy">
+
+    <h1>Privacy Policy</h1>
+
+    <p class="privacy-policy__effective">
+      <strong>Effective date:</strong> [PLACEHOLDER — confirm with owner and legal counsel]<br />
+      <strong>Last reviewed:</strong> 2026-05-27
+    </p>
+
+    <!--
+      CONTENT TODOS (requires owner + legal review before publishing):
+      1. Confirm effective date
+      2. Confirm designated Privacy Officer name and contact
+      3. Confirm exact list of personal information types collected
+      4. Confirm third-party service names used (Jane App, OceanMD, Netlify, Plausible)
+      5. Confirm data retention periods per PHIPA requirements
+      6. Have a healthcare lawyer or PHIPA compliance consultant review before publishing
+      This stub uses plain-language structure recommended by the OPC and IPC Ontario.
+    -->
+
+    <section aria-labelledby="pp-who">
+      <h2 id="pp-who">Who We Are</h2>
+      <p>
+        Four Winds Roots Pharmacy (operated by Can Pharm Services Inc., also referred to as
+        Can Pharm Service Inc) is located at 3932A Keele St (Centennial Plaza),
+        North York, Ontario, M3J 1N8.
+        <!-- Note: "Can Pharm Services Inc." per Medimap directory; "Can Pharm Service Inc" per user-supplied
+             operating name. Ontario Business Registry not yet verified — confirm exact legal spelling with owner. --> We are a <strong>health information
+        custodian</strong> under Ontario's <em>Personal Health Information Protection Act</em>
+        (PHIPA) and a <strong>organization</strong> under the federal <em>Personal Information
+        Protection and Electronic Documents Act</em> (PIPEDA).
+      </p>
+      <p>
+        Questions about this policy may be directed to our Privacy Officer:<br />
+        <strong>[PLACEHOLDER: Privacy Officer Name]</strong><br />
+        <strong>[PLACEHOLDER: privacy@fourwindsrootspharmacy.ca or phone]</strong>
+      </p>
+    </section>
+
+    <section aria-labelledby="pp-what">
+      <h2 id="pp-what">What Information We Collect</h2>
+      <p>We may collect the following types of information when you use our services:</p>
+      <ul>
+        <li><strong>Personal health information:</strong> prescription details, medication history, health conditions, and allergies — collected when you request a prescription refill, transfer, or MedsCheck.</li>
+        <li><strong>Contact information:</strong> name, phone number, address, and email — used to fulfill your pharmacy requests and contact you about your prescriptions.</li>
+        <li><strong>Website usage data:</strong> anonymous visit counts and page views collected via Plausible Analytics (no cookies, no personal identifiers). Not collected on form pages.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-why">
+      <h2 id="pp-why">Why We Collect It</h2>
+      <p>We collect personal and health information only for purposes a reasonable person would consider appropriate given the circumstances, including:</p>
+      <ul>
+        <li>Dispensing prescriptions and managing your medication profile</li>
+        <li>Conducting MedsCheck reviews and holistic wellness consultations</li>
+        <li>Communicating with your prescriber or other healthcare providers as required</li>
+        <li>Responding to your questions and service requests</li>
+        <li>Complying with our obligations under Ontario's pharmacy regulations and the OCP</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-share">
+      <h2 id="pp-share">When We Share Information</h2>
+      <p>
+        We do <strong>not</strong> sell your personal information. We may share information with:
+      </p>
+      <ul>
+        <li>Your prescribing physician or healthcare team, when required for your care</li>
+        <li>Ontario Drug Benefit (ODB) and insurance providers, to process claims</li>
+        <li>Service providers who help us operate securely (e.g., [PLACEHOLDER: list verified vendors — Jane App, OceanMD]), bound by confidentiality agreements</li>
+        <li>Regulatory bodies (OCP, Ministry of Health) as required by law</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-rights">
+      <h2 id="pp-rights">Your Rights</h2>
+      <p>Under PHIPA and PIPEDA, you have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you</li>
+        <li>Request corrections to inaccurate information</li>
+        <li>Withdraw consent where applicable (subject to legal and regulatory limitations)</li>
+        <li>File a complaint with the <a href="https://www.ipc.on.ca" target="_blank" rel="noopener noreferrer">Information and Privacy Commissioner of Ontario</a></li>
+      </ul>
+      <p>To exercise these rights, contact our Privacy Officer at the address above.</p>
+    </section>
+
+    <section aria-labelledby="pp-security">
+      <h2 id="pp-security">How We Protect Your Information</h2>
+      <p>
+        We use reasonable physical, administrative, and technical safeguards to protect your
+        personal information against unauthorized access, disclosure, or misuse. This website
+        is served over HTTPS and our online forms use PHIPA-compliant encrypted transmission.
+      </p>
+    </section>
+
+    <section aria-labelledby="pp-retention">
+      <h2 id="pp-retention">How Long We Keep It</h2>
+      <p>
+        Prescription and health records are retained for a minimum of [PLACEHOLDER: confirm
+        years — OCP regulations require a minimum retention period] after the last professional
+        service, as required by Ontario pharmacy regulations. Anonymous website analytics are
+        not retained beyond [PLACEHOLDER: confirm Plausible data retention setting].
+      </p>
+    </section>
+
+    <section aria-labelledby="pp-contact">
+      <h2 id="pp-contact">Contact Us</h2>
+      <p>
+        Four Winds Roots Pharmacy<br />
+        3932A Keele St, North York, ON M3J 1N8<br />
+        Phone: <PhoneLink /><br />
+        Privacy Officer: [PLACEHOLDER]
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .privacy-policy {
+    max-width: 70ch;
+  }
+
+  .privacy-policy__effective {
+    background: var(--color-calm-light);
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-8);
+  }
+
+  section + section {
+    margin-top: var(--space-10);
+    padding-top: var(--space-10);
+    border-top: 1px solid var(--color-border);
+  }
+
+  ul {
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+/**
+ * Free Prescription Delivery — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy delivery North York / free prescription delivery North York
+ * Source: design/information-architecture.md — Free Delivery
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Free Prescription Delivery, North York | Four Winds Roots Pharmacy"
+  description="Free prescription delivery across North York from Four Winds Roots Pharmacy at Keele & Finch. Same-day and next-day options available. Call (416) 398-8200 to arrange delivery."
+  noAnalytics={true}
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Free Delivery):
+    1. ServiceHero — "Free delivery to your door" headline + delivery request CTA
+    2. Coverage area — where we deliver (North York + surrounding — TODO: confirm exact coverage with owner)
+    3. How to request — StepList: request via form / phone, we confirm, delivery arrives
+    4. DeliveryRequestForm — address, preferred time, consent checkbox (PHIPA-safe)
+    5. "Free" stated plainly — no minimum Rx count, no delivery charge (TODO: confirm with owner)
+    Primary keyword: "pharmacy delivery North York", "free prescription delivery North York"
+    TODO: confirm delivery coverage area and any conditions (e.g., minimum order) with owner.
+  -->
+
+  <div class="container section">
+    <h1>Free Prescription Delivery Across North York</h1>
+    <p>
+      Four Winds Roots Pharmacy delivers your prescriptions for free. No delivery charge,
+      no hidden fees — just your medications brought to your door.
+      <br />
+      <small><em>Free local delivery confirmed via Ontario Health atHome directory (March 2026).</em></small>
+    </p>
+
+    <section aria-labelledby="delivery-coverage">
+      <h2 id="delivery-coverage">Where We Deliver</h2>
+      <p>
+        We deliver to patients across the North York area.
+        <!-- TODO: confirm exact delivery coverage area with owner (postal codes, neighbourhoods) -->
+        Call us to confirm delivery is available to your address:
+        <PhoneLink />
+      </p>
+    </section>
+
+    <section aria-labelledby="delivery-how-it-works">
+      <h2 id="delivery-how-it-works">How to Request Delivery</h2>
+      <ol>
+        <li>Call us or ask at the counter — let us know you'd like your prescription delivered.</li>
+        <li>We confirm your delivery address and prepare your order.</li>
+        <li>Your medications arrive at your door — no charge, no fuss.</li>
+      </ol>
+      <!-- TODO: confirm delivery schedule and cut-off times with owner -->
+    </section>
+
+    <section aria-labelledby="delivery-form">
+      <h2 id="delivery-form">Request a Delivery</h2>
+      <!-- TODO: DeliveryRequestForm — PHIPA-safe delivery address + time window form (Task #26) -->
+      <p>
+        <strong>Call to arrange delivery:</strong>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+      </p>
+    </section>
+
+    <section aria-labelledby="delivery-blister">
+      <h2 id="delivery-blister">Blister Packs Delivered Too</h2>
+      <p>
+        We also deliver blister-packaged prescriptions — ideal for seniors managing
+        multiple medications. <a href="/services/blister-packaging">Learn about blister packaging &rarr;</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

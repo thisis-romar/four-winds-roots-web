@@ -1,3 +1,13 @@
+---
+title: "Local SEO & Keyword Strategy"
+version: "1.1"
+last_updated: "2026-05-27"
+status: active
+category: seo
+owner: internal
+description: "Keyword-to-page mapping, on-page SEO checklist, GBP optimization checklist, and tactical competitor targeting strategy for the Four Winds Roots Pharmacy website."
+---
+
 # Local SEO & Keyword Strategy
 
 ## Goal
@@ -111,10 +121,10 @@ population a pharmacy serves most.
 
 The 2026-05-26 audit found additional name variants and a critical conflict:
 
-- **"Four Winds Roots Pharmacy"** — preferred canonical
-- **"R.O.O.T.S. Four Winds Pharmacy"** — variant on Lumino, Cortico, centralhealthline
-- **"Roots Four Winds Pharmacy"** — variant on PharmacyList
-- **"Guardian Four Winds Pharmacy"** — Can Pharm Services at 3932A Keele (DIFFERENT BUSINESS)
+- **"Four Winds Roots Pharmacy"** — preferred canonical (confirmed by Lumino Health + Ontario Health atHome, 2026-05-27)
+- **"R.O.O.T.S. Four Winds Pharmacy"** — current variant on FedEx Authorized ShipCentre + PharmacyList
+- **"Roots Four Winds Pharmacy"** — current variant on Yelp
+- **"Guardian Four Winds Pharmacy"** — _historical_ Yellow Pages listing under the previous Guardian franchise. **Same pharmacy**, same address (3932A Keele), same legal entity (Can Pharm Services Inc.) — the operator has since left the Guardian franchise. The 2026-05-27 clarification in [`gbp-disambiguation.md`](./gbp-disambiguation.md) is authoritative. The earlier draft of this file labeled Guardian as a "DIFFERENT BUSINESS" — that was wrong and is now corrected.
 
 Action: after confirming the canonical name with the owner, run a directory sweep (see
 `gbp-disambiguation.md`) to correct all listings. Priority: GBP first, then Yellow Pages,
@@ -130,3 +140,23 @@ CHL, Cortico, Medimap, Lumino, Yelp.
 > **Audit status:** High-fidelity WebFetch pass completed 2026-05-26. Competitor on-page SEO
 > (title tags, headings, keyword usage) directly confirmed for all 18 audited pharmacies. The
 > market-wide "weak local SEO" conclusion is now verified, not estimated.
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList.*
+
+### New keyword opportunities from primary-source research
+
+| Keyword / search intent | Maps to page | Opportunity notes |
+|---|---|---|
+| Finch West LRT pharmacy | Home / Contact | Emerging local — LRT opened Dec 7, 2025; low competition window as indexed content is sparse for this new line. Target now before competitors adapt. |
+| holistic pharmacy North York | Holistic Wellness | Confirmed differentiator — atHome descriptor "holistic pharmacy that deals with herbs and drug interactions" is primary-source copy. Use verbatim in meta descriptions. |
+| herbs drug interactions North York | Holistic Wellness | Long-tail; directly maps to confirmed service; no competitor claims it. |
+| R.O.O.T.S. pharmacy Keele Finch | Home / About | Brand keyword to own — confirmed name variant on FedEx and PharmacyList. Owning this query prevents search interception by stale directory entries. |
+| Winston Clarke pharmacist North York | About / Team | E-E-A-T signal keyword — named pharmacist pages improve trust and authority scores; no local competitor has a named-pharmacist landing. |
+| pharmacy Centennial Plaza North York | Home / Contact | Hyper-local address keyword; Centennial Plaza confirmed as the mall/plaza name for 3932A Keele St. Useful for patients navigating by plaza name. |
+| FedEx pharmacy Keele North York | Contact | Low-volume but zero-competition; captures patients searching for the FedEx ShipCentre who could be converted to pharmacy patients. |
+
+### Notes on Finch West LRT opportunity
+
+The Finch West LRT (Line 6) is newly opened as of December 7, 2025. The "Finch West LRT pharmacy" keyword cluster has minimal indexed competition — most pharmacy directory pages were written before the LRT existed and have not been updated to reference it. A single paragraph on the Contact / Location / Hours page referencing Finch West Station at Keele St and walking directions from the platform would capture this emerging intent before competitors act.

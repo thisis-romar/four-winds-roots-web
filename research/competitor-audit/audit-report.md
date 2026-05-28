@@ -1,3 +1,13 @@
+---
+title: "Competitor Digital-Presence Audit — Four Winds Roots Pharmacy"
+version: "1.2"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Ranked audit of 18 competitors in the Keele/Finch corridor with HTML-verified scores, strategic findings, and a priority action plan for the pharmacy website launch."
+---
+
 # Competitor Digital-Presence Audit — Four Winds Roots Pharmacy
 
 > **Verification status.** This audit was updated 2026-05-26 following a high-fidelity WebFetch
@@ -812,3 +822,25 @@ information, or may not reflect the Four Winds Roots brand at all.
 The name-confusion issue is resolvable but time-sensitive: the longer Four Winds Roots operates
 without a claimed GBP and canonical schema, the more entrenched the old Guardian listing becomes
 in search engine entity graphs. This action should precede website launch, not follow it.
+
+---
+
+## Pass 3 — Primary-Source Verification (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList, Medimap, FriesenPress publisher database.*
+
+This pass verified facts about the subject pharmacy itself (not competitors). Key findings for the audit record:
+
+**Name variants confirmed.** Both "R.O.O.T.S. Four Winds Pharmacy" (FedEx, PharmacyList) and "Four Winds Roots Pharmacy" (Lumino, atHome) are live primary-source citations. A third variant, "Roots Four Winds Pharmacy," appears on Yelp. All three are pre-existing `alternateName` entries in `schema.json`. Canonical name preference still pending owner confirmation.
+
+**Operating entity.** Medimap confirms **Can Pharm Services Inc.** as the operating entity at 3932A Keele St — consistent with the v2.0 correction in `gbp-disambiguation.md`. Spelling varies slightly from the user-supplied "Can Pharm Service Inc."
+
+**Personnel.** Winston Clarke confirmed as pharmacist. Pamela Clarke confirmed as Natural Health Practitioner and author of *Take Control Now: Your Health Is Your Responsibility* (FriesenPress, 2015, ISBN 978-1460258354). See `compliance-checklist.md` for credential framing rules.
+
+**Services.** Eight services confirmed: prescription dispensing ($12.99 fee), free local delivery, blister packaging (no extra cost), MedsCheck (ODB), minor ailments (5 conditions: skin rashes, pink eye, insect bites, acne, uncomplicated UTIs), ODB Smoking Cessation Program, Sharps Disposal Program, Medications Return Program. Compounding is not confirmed from public data.
+
+**Reputation.** 4.9/5 from 52 patient ratings on Lumino Health (May 2026) — highest rating among pharmacies surveyed in the Keele/Finch corridor.
+
+**FedEx co-location.** FedEx Authorized ShipCentre confirmed at same address (3932A Keele St) and same phone (416-398-8200). Useful community convenience differentiator.
+
+**Finch West LRT.** Line 6 opened December 7, 2025 with 18 stops; Finch West Station at Keele St. Adds a new transit access point for patients and opens the keyword "Finch West LRT pharmacy" with low competition (new line, sparse indexed content).

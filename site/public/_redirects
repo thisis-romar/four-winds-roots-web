@@ -1,0 +1,207 @@
+# Netlify _redirects — Four Winds Roots Pharmacy
+#
+# Why this file exists:
+#   Astro copies everything under site/public/ verbatim to dist/, so this file
+#   lands at /_redirects in the deployed root — Netlify reads it on every
+#   deploy. See research/local-seo/redirect-strategy.md for the full rationale,
+#   directory targets, and validation plan.
+#
+# Syntax: <from-path>  <to-path>  <status>   (whitespace-separated)
+#   Use :splat to forward wildcard captures (e.g., /old/*  /new/:splat  301).
+#   301 = permanent (passes link equity, what we want for SEO consolidation).
+#
+# Category index:
+#   1. Legacy brand/name slugs       — stale directory backlinks under former
+#                                      names (Guardian, R.O.O.T.S, Roots, etc.)
+#   2. Service-name variants         — old service slugs that may appear in
+#                                      Lumino, atHome, PharmacyList listings
+#   3. Common typos & capitalization — defensive coverage for hand-typed URLs
+#   4. Stale index.html / .html      — directory-style URLs from old static
+#                                      hosts or scraped link archives
+#   5. Trailing-slash normalization  — Astro emits paths WITH trailing slash;
+#                                      strip-slash variants 301 to the canonical
+#   6. FedEx co-location intercept   — patients searching the FedEx ShipCentre
+#                                      who land on a stale page
+#
+# ---------------------------------------------------------------------------
+# 1. Legacy brand/name slugs
+#    Targets: Yellow Pages "Guardian Four Winds Pharmacy" listing,
+#             PharmacyList.ca / FedEx "R.O.O.T.S. Four Winds Pharmacy",
+#             Yelp "Roots Four Winds Pharmacy", Lumino / atHome
+#             "Four Winds Roots Pharmacy". All collapse to "/" (homepage owns
+#             the canonical brand name in the H1 + schema).
+# ---------------------------------------------------------------------------
+/guardian-four-winds-pharmacy           /                                 301
+/guardian-four-winds                    /                                 301
+/guardian-pharmacy                      /                                 301
+/four-winds-pharmacy                    /                                 301
+/four-winds                             /                                 301
+/fourwinds-pharmacy                     /                                 301
+/fourwindspharmacy                      /                                 301
+/four-winds-roots                       /                                 301
+/four-winds-roots-pharmacy              /                                 301
+/fourwindsroots                         /                                 301
+/roots-pharmacy                         /                                 301
+/roots-four-winds                       /                                 301
+/roots-four-winds-pharmacy              /                                 301
+/r-o-o-t-s                              /                                 301
+/r-o-o-t-s-pharmacy                     /                                 301
+/r-o-o-t-s-four-winds                   /                                 301
+/r-o-o-t-s-four-winds-pharmacy          /                                 301
+/roots                                  /                                 301
+/can-pharm                              /                                 301
+/can-pharm-services                     /                                 301
+/can-pharm-service-inc                  /                                 301
+/canpharm                               /                                 301
+
+# ---------------------------------------------------------------------------
+# 2. Service-name variants
+#    Targets: Lumino / atHome / Medimap service taxonomies that don't match
+#    our slugs (e.g., "vaccinations", "compounding", "medscheck") and old
+#    flat-URL conventions. Each lands on the closest current page.
+# ---------------------------------------------------------------------------
+/services                               /                                 301
+/refills                                /services/refills/                301
+/prescription-refills                   /services/refills/                301
+/refill                                 /services/refills/                301
+/transfers                              /services/transfers/              301
+/prescription-transfers                 /services/transfers/              301
+/transfer                               /services/transfers/              301
+/transfer-prescription                  /services/transfers/              301
+/medication-reviews                     /services/medication-reviews/     301
+/medscheck                              /services/medication-reviews/     301
+/meds-check                             /services/medication-reviews/     301
+/medication-review                      /services/medication-reviews/     301
+/blister-packaging                      /services/blister-packaging/      301
+/blister-packs                          /services/blister-packaging/      301
+/compliance-packaging                   /services/blister-packaging/      301
+/free-delivery                          /services/free-delivery/          301
+/delivery                               /services/free-delivery/          301
+/prescription-delivery                  /services/free-delivery/          301
+/preventive-care                        /services/preventive-care/        301
+/vaccinations                           /services/preventive-care/        301
+/vaccines                               /services/preventive-care/        301
+/immunizations                          /services/preventive-care/        301
+/flu-shot                               /services/preventive-care/        301
+/flu-shots                              /services/preventive-care/        301
+/travel-health                          /services/preventive-care/        301
+/minor-ailments                         /services/minor-ailments/         301
+/minor-ailment                          /services/minor-ailments/         301
+/holistic                               /holistic-wellness/               301
+/holistic-pharmacy                      /holistic-wellness/               301
+/wellness                               /holistic-wellness/               301
+/natural-health                         /holistic-wellness/               301
+/herbs                                  /holistic-wellness/               301
+/compounding                            /holistic-wellness/               301
+/optical                                /optical-wellness/                301
+/optical-centre                         /optical-wellness/                301
+/optical-center                         /optical-wellness/                301
+/optical-and-wellness                   /optical-wellness/                301
+/seniors                                /who-we-help/seniors/             301
+/family-care                            /who-we-help/seniors/             301
+/seniors-care                           /who-we-help/seniors/             301
+/students                               /who-we-help/students/            301
+/student-pharmacy                       /who-we-help/students/            301
+/york-university                        /who-we-help/students/            301
+/york-u                                 /who-we-help/students/            301
+/team                                   /about/                           301
+/meet-the-team                          /about/                           301
+/our-team                               /about/                           301
+/pharmacist                             /about/                           301
+/winston-clarke                         /about/                           301
+/pamela-clarke                          /about/                           301
+/location                               /contact/                         301
+/hours                                  /contact/                         301
+/directions                             /contact/                         301
+/find-us                                /contact/                         301
+/privacy                                /privacy-policy/                  301
+/accessibility-statement                /accessibility/                   301
+
+# Splat fallbacks for any nested legacy path under these old roots
+/services/*                             /services/:splat                  301
+/holistic/*                             /holistic-wellness/               301
+/wellness/*                             /holistic-wellness/               301
+/optical/*                              /optical-wellness/                301
+
+# ---------------------------------------------------------------------------
+# 3. Common typos & capitalization variants
+#    Netlify matches case-insensitively for the FROM path, but explicit rules
+#    here document what we expect to see in stale links (esp. directory
+#    listings that title-case slugs).
+# ---------------------------------------------------------------------------
+/Services                               /                                 301
+/Contact                                /contact/                         301
+/About                                  /about/                           301
+/Holistic-Wellness                      /holistic-wellness/               301
+/Optical-Wellness                       /optical-wellness/                301
+/holisitc-wellness                      /holistic-wellness/               301
+/holistic-welness                       /holistic-wellness/               301
+/pharamcy                               /                                 301
+/pharmcy                                /                                 301
+/prescritpion-refills                   /services/refills/                301
+/prescription-refils                    /services/refills/                301
+/blister-packageing                     /services/blister-packaging/      301
+/medscheck-meds-check                   /services/medication-reviews/     301
+
+# ---------------------------------------------------------------------------
+# 4. Stale index.html / .html patterns
+#    Old static-site exports and some directory scrapers append /index.html
+#    or .html. Strip them to the canonical trailing-slash form.
+# ---------------------------------------------------------------------------
+/index.html                             /                                 301
+/index.htm                              /                                 301
+/index.php                              /                                 301
+/home                                   /                                 301
+/home.html                              /                                 301
+/about.html                             /about/                           301
+/contact.html                           /contact/                         301
+/contact-us                             /contact/                         301
+/contact-us.html                        /contact/                         301
+/accessibility.html                     /accessibility/                   301
+/privacy.html                           /privacy-policy/                  301
+/privacy-policy.html                    /privacy-policy/                  301
+/holistic-wellness.html                 /holistic-wellness/               301
+/optical-wellness.html                  /optical-wellness/                301
+/services/refills.html                  /services/refills/                301
+/services/transfers.html                /services/transfers/              301
+/services/medication-reviews.html       /services/medication-reviews/     301
+/services/blister-packaging.html        /services/blister-packaging/      301
+/services/free-delivery.html            /services/free-delivery/          301
+/services/preventive-care.html          /services/preventive-care/        301
+/services/minor-ailments.html           /services/minor-ailments/         301
+/who-we-help/seniors.html               /who-we-help/seniors/             301
+/who-we-help/students.html              /who-we-help/students/            301
+
+# ---------------------------------------------------------------------------
+# 5. Trailing-slash normalization
+#    Astro's static build emits each route as /path/index.html, which serves
+#    canonically at /path/ with a trailing slash. Map the no-slash form to
+#    the canonical form so old links don't generate duplicate-content signals.
+# ---------------------------------------------------------------------------
+/about                                  /about/                           301
+/contact                                /contact/                         301
+/accessibility                          /accessibility/                   301
+/privacy-policy                         /privacy-policy/                  301
+/holistic-wellness                      /holistic-wellness/               301
+/optical-wellness                       /optical-wellness/                301
+/services/refills                       /services/refills/                301
+/services/transfers                     /services/transfers/              301
+/services/medication-reviews            /services/medication-reviews/     301
+/services/blister-packaging             /services/blister-packaging/      301
+/services/free-delivery                 /services/free-delivery/          301
+/services/preventive-care               /services/preventive-care/        301
+/services/minor-ailments                /services/minor-ailments/         301
+/who-we-help/seniors                    /who-we-help/seniors/             301
+/who-we-help/students                   /who-we-help/students/            301
+
+# ---------------------------------------------------------------------------
+# 6. FedEx co-location intercept
+#    The pharmacy is a FedEx Authorized ShipCentre at the same address +
+#    phone. Stale FedEx-locator slugs should land on Contact (where the
+#    co-location is described).
+# ---------------------------------------------------------------------------
+/fedex                                  /contact/                         301
+/fedex-shipcentre                       /contact/                         301
+/fedex-ship-centre                      /contact/                         301
+/shipping                               /contact/                         301
+/ship-centre                            /contact/                         301

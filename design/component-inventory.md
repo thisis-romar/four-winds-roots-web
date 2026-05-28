@@ -1,3 +1,13 @@
+---
+title: "Component Inventory"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: design
+owner: internal
+description: "Catalogue of all reusable Astro components for the site, including global layout, content/trust, service presentation, conversion, and form components."
+---
+
 # Component Inventory
 
 Reusable building blocks for the site. Designing in components keeps the build cost-conservative

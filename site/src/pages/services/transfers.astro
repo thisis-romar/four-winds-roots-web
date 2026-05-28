@@ -1,0 +1,95 @@
+---
+/**
+ * Prescription Transfers — Four Winds Roots Pharmacy
+ * Primary keyword: prescription transfer North York
+ * Source: design/information-architecture.md — Prescription Transfers
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+import TransferForm from '../../components/TransferForm.astro';
+---
+
+<BaseLayout
+  title="Prescription Transfers | Four Winds Roots Pharmacy, North York"
+  description="Transfer your prescriptions to Four Winds Roots Pharmacy, North York — we do all the work. Fast, free, and easy. Call (416) 398-8200 or fill out the form online."
+  noAnalytics={true}
+>
+  <div class="container section">
+    <h1>Transfer Your Prescription to Four Winds Roots Pharmacy</h1>
+    <p class="lead">
+      Switching pharmacies is easier than you think — we handle the call to your current
+      pharmacy for you. Just give us the details below and we take it from there.
+    </p>
+
+    <div class="transfer-ctas">
+      <a href="#transfers-form" class="btn btn-transfer">Start Transfer Online</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+    </div>
+
+    <section aria-labelledby="transfers-we-do-the-work">
+      <h2 id="transfers-we-do-the-work">We Do All the Work</h2>
+      <p>
+        You don't need to call your old pharmacy or pick up anything.
+        Once you submit this form (or call us), your pharmacist contacts your current pharmacy
+        directly, transfers your prescriptions, and lets you know when they're ready.
+        Most transfers are processed the same day.
+      </p>
+    </section>
+
+    <section aria-labelledby="transfers-how-it-works">
+      <h2 id="transfers-how-it-works">How a Transfer Works</h2>
+      <ol class="step-list">
+        <li>
+          <strong>Fill in the form below</strong> (or call us at <PhoneLink />) with your current
+          pharmacy's name and the medications you want to transfer.
+        </li>
+        <li>
+          <strong>We contact your current pharmacy</strong> — your pharmacist handles the call
+          and coordinates the transfer on your behalf.
+        </li>
+        <li>
+          <strong>Your prescription is ready</strong> — pick it up at 3932A Keele St or request
+          <a href="/services/free-delivery">free delivery</a> across North York.
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="transfers-form">
+      <h2 id="transfers-form">Start Your Transfer</h2>
+      <TransferForm />
+    </section>
+
+    <section aria-labelledby="transfers-delivery">
+      <h2 id="transfers-delivery">Free Delivery Available</h2>
+      <p>
+        Once your transfer is complete, we can deliver your prescriptions to you at no charge.
+        <a href="/services/free-delivery">Learn about free delivery →</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: var(--text-lg);
+    max-width: 65ch;
+    margin-block-end: var(--space-6);
+  }
+
+  .transfer-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-block-end: var(--space-12);
+  }
+
+  .step-list {
+    max-width: 65ch;
+    padding-inline-start: var(--space-6);
+  }
+
+  .step-list li {
+    margin-block-end: var(--space-4);
+    line-height: 1.7;
+  }
+</style>

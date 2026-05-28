@@ -1,0 +1,56 @@
+---
+/**
+ * CallButton — Four Winds Roots Pharmacy
+ * tel: link styled as a primary call-to-action button.
+ * TODO: add click-to-call event tracking (e.g., Google Analytics GA4 event) once analytics set up.
+ * Accessibility: descriptive aria-label, phone number in human-readable format in text.
+ *
+ * Props:
+ *   label?: string — visible button text (default: "Call (416) 398-8200")
+ *   size?: 'sm' | 'md' | 'lg' (default: 'md')
+ *   showIcon?: boolean (default: true)
+ */
+
+interface Props {
+  label?: string;
+  size?: 'sm' | 'md' | 'lg';
+  showIcon?: boolean;
+}
+
+const {
+  label = 'Call (416) 398-8200',
+  size = 'md',
+  showIcon = true,
+} = Astro.props;
+---
+
+<!-- TODO: Style CallButton size variants; wire up analytics event tracking -->
+<a
+  data-component="CallButton"
+  href="#"
+  class:list={['btn btn-call tel-protected', `btn--${size}`]}
+  data-p0="4" data-p1="163" data-p2="98" data-p3="8200"
+  aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+>
+  {showIcon && (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.6 4.38 2 2 0 0 1 3.57 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  )}
+  {label}
+</a><noscript><a
+  href="tel:4163988200"
+  class:list={['btn btn-call', `btn--${size}`]}
+  aria-label="Call 4 1 6 - 3 9 8 - 8 2 0 0"
+>{label}</a></noscript>

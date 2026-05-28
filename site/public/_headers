@@ -1,0 +1,26 @@
+# Why this file exists:
+# Headers configured in netlify.toml [[headers]] blocks have been silently
+# ignored on every deploy ("No header rules processed" in the build summary,
+# confirmed via `curl -I` on production showing only HSTS). Astro copies
+# everything under site/public/ to dist/, so this file lands at /_headers
+# in the deployed root — which Netlify always reads regardless of base/publish
+# behavior. See FOLLOWUPS.md for the diagnosis.
+#
+# Mirrors the [[headers]] blocks from /netlify.toml. When this file proves
+# itself in production, the netlify.toml blocks can be deleted.
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://www.google.com https://*.janeapp.com; form-action 'self' https://*.oceanmd.com
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+
+/services/refills/
+  Referrer-Policy: no-referrer
+
+/services/transfers/
+  Referrer-Policy: no-referrer

@@ -1,0 +1,44 @@
+---
+/**
+ * ServiceCard — Four Winds Roots Pharmacy
+ * Icon + service name + one-line "who it's for" description + link to service page.
+ * Used in the homepage service grid and the "Who We Help" segments.
+ * Accessibility: icon is aria-hidden, card link has descriptive text, no hover-only info.
+ *
+ * Props:
+ *   title: string — service name
+ *   description: string — one-line "who it's for"
+ *   href: string — link to service page
+ *   icon?: string — SVG string or icon name (TODO: decide icon system)
+ *   highlight?: boolean — secondary colour accent for holistic/optical differentiators
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon?: string;
+  highlight?: boolean;
+}
+
+const { title, description, href, icon, highlight = false } = Astro.props;
+---
+
+<!-- TODO: Style ServiceCard with design tokens; add icon system -->
+<article
+  data-component="ServiceCard"
+  class:list={['service-card', highlight && 'service-card--highlight']}
+>
+  {icon && (
+    <div class="service-card__icon" aria-hidden="true">
+      {/* TODO: inline SVG icon */}
+      <span>{icon}</span>
+    </div>
+  )}
+  <h3 class="service-card__title">{title}</h3>
+  <p class="service-card__desc">{description}</p>
+  <a href={href} class="service-card__link">
+    Learn more about {title}
+    <span class="sr-only"> at Four Winds Roots Pharmacy</span>
+  </a>
+</article>

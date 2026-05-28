@@ -1,0 +1,184 @@
+---
+/**
+ * Accessibility Statement — Four Winds Roots Pharmacy
+ * Route: /accessibility/
+ * Required by: AODA (Accessibility for Ontarians with Disabilities Act)
+ *   — Ontario Regulation 191/11, Integrated Accessibility Standards
+ *   — Multi-Year Accessibility Plan must be in place for Jan 1, 2025+
+ *   — WCAG 2.0 Level AA minimum (we target WCAG 2.2 AA)
+ * Deadline: Accessibility compliance reports due Dec 31, 2026 for private orgs
+ *
+ * Status: STUB — update with accurate WCAG audit results before go-live.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<BaseLayout
+  title="Accessibility Statement | Four Winds Roots Pharmacy"
+  description="Accessibility commitment and statement for Four Winds Roots Pharmacy. We are building this website to WCAG 2.2 AA standard under Ontario's AODA requirements."
+>
+  <div class="container section accessibility-statement">
+
+    <h1>Accessibility Statement</h1>
+
+    <p class="accessibility-statement__intro">
+      Four Winds Roots Pharmacy (operated by Can Pharm Service Inc) is committed to ensuring
+      this website is accessible to everyone, including people with disabilities. We are building
+      this site to conform to <strong>WCAG 2.2 Level AA</strong> standards in compliance with
+      Ontario's <em>Accessibility for Ontarians with Disabilities Act</em> (AODA).
+    </p>
+
+    <!--
+      CONTENT TODOS (required before publishing):
+      1. Complete a WCAG 2.2 AA audit (Task #30) and record actual conformance status
+      2. List any known non-conformances with remediation timeline
+      3. Add Multi-Year Accessibility Plan (MYAP) link or document
+      4. Confirm AODA compliance report filing deadline: Dec 31, 2026
+      5. Confirm feedback contact (email or phone for accessibility issues)
+      6. Have an accessibility specialist review this statement
+    -->
+
+    <section aria-labelledby="a11y-standard">
+      <h2 id="a11y-standard">Our Standard</h2>
+      <p>
+        This website is being designed and built from the ground up to conform with:
+      </p>
+      <ul>
+        <li><strong>WCAG 2.2 Level AA</strong> — Web Content Accessibility Guidelines</li>
+        <li><strong>AODA Integrated Accessibility Standards</strong> (Ontario Reg. 191/11)</li>
+        <li>Ontario's <strong>Customer Service Standard</strong> for people with disabilities</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="a11y-features">
+      <h2 id="a11y-features">Accessibility Features</h2>
+      <p>This site includes the following accessibility features:</p>
+      <ul>
+        <li><strong>Skip navigation link</strong> — keyboard users can jump directly to main content</li>
+        <li><strong>Keyboard navigable</strong> — all interactive elements are reachable by keyboard</li>
+        <li><strong>Screen reader friendly</strong> — semantic HTML, ARIA labels, and descriptive link text throughout</li>
+        <li><strong>Sufficient colour contrast</strong> — colour combinations meet WCAG 1.4.3 AA contrast ratio requirements</li>
+        <li><strong>Resizable text</strong> — text can be enlarged up to 200% without loss of functionality</li>
+        <li><strong>No seizure-triggering content</strong> — no flashing or strobing elements</li>
+        <li><strong>Descriptive alt text</strong> on all meaningful images</li>
+        <li><strong>Mobile-first responsive design</strong> — usable across screen sizes and devices</li>
+      </ul>
+      <h3>Physical Location Accessibility</h3>
+      <p>
+        The pharmacy at 3932A Keele St (Centennial Plaza), North York is
+        <strong>partially wheelchair-accessible</strong>.
+        <br />
+        <small><em>Confirmed: Ontario Health atHome directory (March 2026). Full accessibility details — ramp, door width, etc. — to be confirmed with owner.</em></small>
+      </p>
+    </section>
+
+    <section aria-labelledby="a11y-status">
+      <h2 id="a11y-status">Current Conformance Status</h2>
+      <p>
+        <!-- TODO: update this section after completing WCAG 2.2 AA audit (Task #30) -->
+        This website is currently in development. A formal WCAG 2.2 AA audit will be conducted
+        prior to public launch. We will update this statement with the audit results, including
+        any known non-conformances and our timeline to address them.
+      </p>
+      <p>
+        <strong>Target conformance:</strong> WCAG 2.2 Level AA<br />
+        <strong>Audit status:</strong> Pending (scheduled before go-live)<br />
+        <strong>Last reviewed:</strong> {currentYear}
+      </p>
+    </section>
+
+    <section aria-labelledby="a11y-feedback">
+      <h2 id="a11y-feedback">Feedback and Contact</h2>
+      <p>
+        We welcome your feedback on the accessibility of this website. If you encounter any
+        barriers or have suggestions for improvement, please contact us:
+      </p>
+      <address>
+        <p>
+          <strong>Four Winds Roots Pharmacy</strong><br />
+          3932A Keele St, North York, ON M3J 1N8
+        </p>
+        <p>
+          Phone: <PhoneLink />
+        </p>
+        <p>
+          <!-- TODO: add email address once confirmed with owner -->
+          Email: [PLACEHOLDER — confirm with owner]
+        </p>
+      </address>
+      <p>We aim to respond to accessibility feedback within <strong>2 business days</strong>.</p>
+    </section>
+
+    <section aria-labelledby="a11y-aoda">
+      <h2 id="a11y-aoda">AODA Compliance</h2>
+      <p>
+        Under the AODA, private-sector organizations in Ontario with one or more employees
+        must meet accessibility standards and file compliance reports. Our obligations include:
+      </p>
+      <ul>
+        <li>Meeting WCAG 2.0 Level AA for web content (we target WCAG 2.2 AA)</li>
+        <li>Providing accessible formats and communication supports upon request</li>
+        <li>Filing an accessibility compliance report by <strong>December 31, 2026</strong></li>
+        <li>Maintaining a Multi-Year Accessibility Plan</li>
+      </ul>
+      <p>
+        To request an accessible format of any content on this site, or to request
+        communication supports, please contact us using the information above.
+      </p>
+    </section>
+
+    <section aria-labelledby="a11y-enforcement">
+      <h2 id="a11y-enforcement">Enforcement</h2>
+      <p>
+        If you are not satisfied with our response, you may contact the
+        <a
+          href="https://www.ontario.ca/page/accessibility-directorate-ontario"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Accessibility Directorate of Ontario</a>.
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .accessibility-statement {
+    max-width: 70ch;
+  }
+
+  .accessibility-statement__intro {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+    color: var(--color-text-muted);
+  }
+
+  section + section {
+    margin-top: var(--space-10);
+    padding-top: var(--space-10);
+    border-top: 1px solid var(--color-border);
+  }
+
+  ul {
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+
+  address {
+    font-style: normal;
+    background: var(--color-calm-light);
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    margin-block: var(--space-4);
+  }
+
+  address p {
+    margin-bottom: var(--space-2);
+    max-width: none;
+  }
+</style>

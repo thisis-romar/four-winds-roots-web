@@ -1,3 +1,13 @@
+---
+title: "Four Winds Roots Pharmacy — Project Overview"
+version: "1.1"
+last_updated: "2026-05-28"
+status: active
+category: meta
+owner: internal
+description: "Monorepo index and project overview for the Four Winds Roots Pharmacy web architecture and design research initiative."
+---
+
 # Four Winds Roots Pharmacy — Web Architecture & Design Research
 
 A monorepo holding the **research** and **design / web-architecture** foundation for a future
@@ -60,3 +70,36 @@ new strategic findings: the **AODA first-mover opportunity**, the **Sunday hours
 - **Distinctive services:** holistic / herb–drug interaction review, blister packs, RAID home
   health supplies, blood-pressure kiosk, optical & wellness
 - **Website:** none yet (this is the greenfield opportunity)
+
+## Deployment
+
+The Astro site in `site/` deploys to Netlify on every push to `feature/astro-scaffold`.
+
+- **Live URL:** https://charming-zuccutto-52dc64.netlify.app
+- **Netlify site ID:** `1e8d8d8f-ff38-41a8-8c44-d4a1daf5ef8d` (account: `roots-4-winds-pharmacy`)
+- **Repo connection:** `https://github.com/thisis-romar/four-winds-roots-web` (the local folder is named `roots-4-winds-pharmacy` but the GitHub remote is `four-winds-roots-web` — same repo, two names)
+- **CI:** `.github/workflows/deploy.yml` runs on push and produces a Netlify deploy
+
+### Required Netlify build settings (not in `netlify.toml`)
+
+When (re-)creating the Netlify site, set these in **Site → Build & deploy → Build settings**. They are NOT reliably picked up from `netlify.toml` alone:
+
+| Setting | Value |
+|---|---|
+| Base directory | `site` |
+| Build command | `npm run build` |
+| **Publish directory** | **`dist`** |
+
+If publish directory is empty, Netlify publishes the *base* directory (i.e., `site/` itself), and every route returns 404 because there is no `index.html` at that root — even though the deploy status shows "ready". This bit us once; fixed on 2026-05-28 by setting `build_settings.dir = "dist"` via the Netlify API.
+
+### Local one-off deploy
+
+```powershell
+cd site
+netlify deploy --dir=dist                # preview (unique URL, doesn't touch production)
+netlify deploy --dir=dist --prod         # promote to charming-zuccutto-52dc64.netlify.app
+```
+
+### What we know is missing
+
+See [FOLLOWUPS.md](FOLLOWUPS.md) for the deploy-related and SEO gaps identified after the 2026-05-27 "Check if site is live" session.

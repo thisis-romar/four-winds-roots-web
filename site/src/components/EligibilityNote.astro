@@ -1,0 +1,33 @@
+---
+/**
+ * EligibilityNote — Four Winds Roots Pharmacy
+ * "Who this is for / what you need" callout block.
+ * Used on MedsCheck, Blister Packaging, Vaccinations, and any service with eligibility criteria.
+ * Renders as a visually distinct callout box (calm-light background, left border accent).
+ * Accessibility: <aside> with aria-label, or <section> with heading — choose per context.
+ *
+ * Props:
+ *   title?: string — callout heading (e.g., "Who Qualifies")
+ *   items: string[] — eligibility bullet points
+ *   note?: string — optional fine-print / disclaimer text
+ */
+
+interface Props {
+  title?: string;
+  items: string[];
+  note?: string;
+}
+
+const { title = 'Who This Is For', items, note } = Astro.props;
+---
+
+<!-- TODO: Style EligibilityNote with design tokens — calm-light bg, green left border -->
+<aside data-component="EligibilityNote" class="eligibility-note" aria-label={title}>
+  <h2 class="eligibility-note__title">{title}</h2>
+  <ul class="eligibility-note__list" role="list">
+    {items.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  {note && <p class="eligibility-note__footnote"><em>{note}</em></p>}
+</aside>

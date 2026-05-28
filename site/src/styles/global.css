@@ -1,0 +1,353 @@
+/**
+ * Global Styles — Four Winds Roots Pharmacy
+ * Imports design tokens, then applies site-wide base styles.
+ */
+
+@import './tokens.css';
+
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+/* Preconnect is handled in BaseLayout.astro head for performance.             */
+/* Import here for non-JS fallback; the layout preconnect is the perf path.   */
+
+/* ── Reset & box model ────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root & body ──────────────────────────────────────────────────────────── */
+
+html {
+  font-size: 100%; /* respects user browser preference; tokens use rem */
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);        /* 18px — AODA senior-friendly minimum */
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-base); }
+
+p {
+  max-width: var(--max-width-prose);
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+
+a {
+  color: var(--color-action);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+  opacity: 0.85;
+}
+
+/* Focus-visible — keyboard navigation indicator (AODA requirement) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-action);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove default outline when not keyboard-navigating */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Skip link (accessibility requirement — AODA/WCAG 2.4.1) ─────────────── */
+
+.skip-link {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: var(--z-modal);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-primary);
+  color: var(--color-paper);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-base);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  /* Off-screen until focused */
+  transform: translateY(-200%);
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ── Images ───────────────────────────────────────────────────────────────── */
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Lists ────────────────────────────────────────────────────────────────── */
+
+ul,
+ol {
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+/* ── Buttons (base) ───────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-action);
+  outline-offset: 3px;
+}
+
+/* Primary call-to-action — Call Us */
+.btn-call {
+  background-color: var(--color-action);
+  color: var(--color-paper);
+  border-color: var(--color-action);
+}
+
+.btn-call:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* Secondary CTA — Transfer Rx */
+.btn-transfer {
+  background-color: var(--color-secondary);
+  color: var(--color-paper);
+  border-color: var(--color-secondary);
+}
+
+.btn-transfer:hover {
+  background-color: #a5603d; /* slightly darker terracotta */
+  border-color: #a5603d;
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* Outline variant */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* btn-primary = solid primary colour (alias of btn-call semantics) */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-paper);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* btn-secondary = outlined primary (alias of btn-outline semantics) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-paper);
+  opacity: 1;
+}
+
+/* ── Layout helpers ───────────────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.section {
+  padding-block: var(--space-16);
+}
+
+.section--calm {
+  background-color: var(--color-calm-light);
+}
+
+/* ── Horizontal rule ──────────────────────────────────────────────────────── */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-calm);
+  margin-block: var(--space-8);
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+}
+
+th,
+td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-calm);
+}
+
+th {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+/* ── Responsive utilities ─────────────────────────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── PHIPA privacy notice ──────────────────────────────────────────────────── */
+
+.phipa-notice {
+  background-color: var(--color-calm-light, #f0f4f8);
+  border-left: 4px solid var(--color-primary, #2d6a4f);
+  border-radius: var(--radius-sm, 4px);
+  padding: var(--space-6, 1.5rem);
+  margin-block: var(--space-8, 2rem);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.phipa-notice h3 {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin-block-end: var(--space-3, 0.75rem);
+  color: var(--color-primary, #2d6a4f);
+}
+
+.phipa-notice p {
+  margin-block-end: var(--space-2, 0.5rem);
+  line-height: 1.6;
+}
+
+.phipa-notice p:last-child {
+  margin-block-end: 0;
+}
+
+/* ── Contact form ─────────────────────────────────────────────────────────── */
+
+.contact-form {
+  max-width: 540px;
+  margin-block-start: var(--space-6, 1.5rem);
+}
+
+.contact-form__honeypot {
+  display: none;
+}
+
+.form-hint {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-muted, #6b7280);
+  margin-block-start: var(--space-1, 0.25rem);
+}

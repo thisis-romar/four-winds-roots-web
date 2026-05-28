@@ -1,0 +1,50 @@
+---
+/**
+ * ServiceHero — Four Winds Roots Pharmacy
+ * Per-service page header: title, plain-language intro, primary CTA.
+ * Replaces a generic <h1>+<p> pattern across all service pages.
+ * Accessibility: h1 should be passed from the page; this renders intro + CTA below it.
+ *
+ * Props:
+ *   intro: string — plain-language description (1-2 sentences, no jargon)
+ *   ctaLabel: string — CTA button label (e.g., "Request a Refill")
+ *   ctaHref: string — CTA destination URL or "#form-id"
+ *   ctaVariant?: 'call' | 'transfer' | 'primary' (default: 'primary')
+ *   phoneAlternative?: boolean (default: true) — show "or call (416) 398-8200" below CTA
+ */
+
+interface Props {
+  intro: string;
+  ctaLabel: string;
+  ctaHref: string;
+  ctaVariant?: 'call' | 'transfer' | 'primary';
+  phoneAlternative?: boolean;
+}
+
+const {
+  intro,
+  ctaLabel,
+  ctaHref,
+  ctaVariant = 'primary',
+  phoneAlternative = true,
+} = Astro.props;
+import PhoneLink from './PhoneLink.astro';
+---
+
+<!-- TODO: Style ServiceHero with design tokens + calm-light background -->
+<div data-component="ServiceHero" class="service-hero">
+  <p class="service-hero__intro">{intro}</p>
+  <div class="service-hero__ctas">
+    <a
+      href={ctaHref}
+      class:list={['btn', ctaVariant === 'call' && 'btn-call', ctaVariant === 'transfer' && 'btn-transfer', ctaVariant === 'primary' && 'btn-call']}
+    >
+      {ctaLabel}
+    </a>
+    {phoneAlternative && (
+      <span class="service-hero__phone-alt">
+        or call <PhoneLink />
+      </span>
+    )}
+  </div>
+</div>

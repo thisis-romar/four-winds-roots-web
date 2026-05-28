@@ -1,0 +1,264 @@
+---
+/**
+ * Contact / Hours / Location — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy Keele and Finch hours / pharmacy open weekends North York
+ * Source: design/information-architecture.md — Contact / Location / Hours
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Contact, Hours & Location | Four Winds Roots Pharmacy, Keele & Finch"
+  description="Contact Four Winds Roots Pharmacy at Keele & Finch, North York. Phone: (416) 398-8200. Hours, Google Maps, parking, transit, and fax information. 3932A Keele St, M3J 1N8."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Contact / Location / Hours):
+    1. Click-to-call — very prominent, first thing on the page (the conversion backstop)
+    2. Google Maps embed — lazy-loaded iframe for 3932A Keele St, North York
+    3. Full NapBlock — address, phone, fax, consistent with GBP and schema
+    4. Full hours table — all days including weekends + holiday hours note
+       TODO: confirm all hours with owner, including holiday hours
+    5. Parking & transit note — how to get there (TTC on Keele, parking nearby)
+       TODO: add parking/transit details with owner input
+    6. After-hours / emergency instructions — what to do when the pharmacy is closed
+       TODO: confirm after-hours referral info with owner (Telehealth Ontario, 911, etc.)
+    7. Simple contact form — name, phone/email, message (not PHIPA-critical, no health data)
+    8. Fax number — for prescribers and healthcare providers
+    Primary keyword: "pharmacy Keele and Finch hours", "pharmacy open weekends North York"
+    NOTE: this is the conversion backstop — every visitor who doesn't convert elsewhere lands here.
+  -->
+
+  <div class="container section">
+    <h1>Contact &amp; Location — Four Winds Roots Pharmacy</h1>
+
+    <!-- Prominent call CTA — top of page, before anything else -->
+    <section aria-labelledby="contact-call-heading" class="contact-call-first">
+      <h2 id="contact-call-heading">Call Us Now</h2>
+      <PhoneLink class="btn btn-call contact-call-big" display="(416) 398-8200" />
+      <p>
+        <!-- TODO: confirm hours with owner -->
+        Mon–Fri 9 am–6 pm &nbsp;·&nbsp; Sat 9 am–2 pm
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-nap-heading">
+      <h2 id="contact-nap-heading">Find Us</h2>
+      <!-- NapBlock — canonical NAP, must match GBP and schema.json exactly -->
+      <address aria-label="Pharmacy address and contact">
+        <p>
+          <strong>Four Winds Roots Pharmacy</strong><br />
+          3932A Keele St (Centennial Plaza)<br />
+          North York, ON M3J 1N8
+        </p>
+        <p>
+          Phone: <PhoneLink />
+        </p>
+        <p>
+          Fax: (416) 398-6745
+        </p>
+      </address>
+      <a
+        href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+        class="btn btn-outline"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get directions on Google Maps (opens in new tab)"
+      >
+        Get Directions
+      </a>
+    </section>
+
+    <section aria-labelledby="contact-map-heading">
+      <h2 id="contact-map-heading">Map</h2>
+      <p>
+        <a
+          href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          aria-label="Get directions to Four Winds Roots Pharmacy on Google Maps (opens in new tab)"
+        >Open in Google Maps</a>
+      </p>
+      <!-- TODO: Replace with lazy-loaded Google Maps iframe once owner confirms map embed consent preference -->
+    </section>
+
+    <section aria-labelledby="contact-hours-heading">
+      <h2 id="contact-hours-heading">Hours of Operation</h2>
+      <!-- HoursTable component — TODO: confirm all hours with owner before publishing -->
+      <table aria-label="Pharmacy hours of operation">
+        <caption class="sr-only">Four Winds Roots Pharmacy hours of operation</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Tuesday</th>
+            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Thursday</th>
+            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td><!-- TODO: confirm -->9:00 am – 2:00 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Sunday</th>
+            <td><!-- TODO: confirm -->Closed</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <em>
+          <!-- TODO: add actual statutory holiday hours once confirmed with owner -->
+          Holiday hours may vary. Call to confirm: <PhoneLink />
+        </em>
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-transit-heading">
+      <h2 id="contact-transit-heading">Getting Here</h2>
+      <p>
+        We're in <strong>Centennial Plaza</strong> at 3932A Keele St, near the intersection
+        of Keele Street and Finch Avenue West, North York.
+      </p>
+      <p>
+        <strong>By transit:</strong> The <strong>Finch West LRT (Line 6)</strong> — opened
+        December 7, 2025 — stops at Finch West Station at Keele Street, steps from our door.
+        TTC bus routes also run on Keele Street.
+        <!-- TODO: confirm specific bus route numbers with owner or TTC trip planner -->
+      </p>
+      <p>
+        <strong>Accessibility:</strong> The pharmacy is <strong>partially wheelchair-accessible</strong>.
+        <!-- TODO: confirm specific accessibility details (ramp, door width, etc.) with owner -->
+      </p>
+      <p>
+        <!-- TODO: add parking availability note with owner input -->
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-afterhours-heading">
+      <h2 id="contact-afterhours-heading">After Hours</h2>
+      <p>
+        <!-- TODO: confirm after-hours guidance with owner before publishing — interim safe language below -->
+        For urgent health questions outside our hours, call
+        <strong>Telehealth Ontario: 1-866-797-0000</strong> (free, 24/7, registered nurses).
+        In an emergency, call <strong>911</strong>.
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-form-heading">
+      <h2 id="contact-form-heading">Send Us a Message</h2>
+      <p>
+        <strong>For prescriptions and health information, please call us directly:</strong>
+        <PhoneLink />
+      </p>
+      <!-- General enquiry form — no PHIPA-sensitive data (no health info, no Rx data) -->
+      <!-- TODO: wire form action to a backend (Formspree, Netlify Forms, or similar) before go-live -->
+      <form
+        class="contact-form"
+        method="POST"
+        action="#"
+        novalidate
+        aria-label="General enquiry form"
+      >
+        <!-- Honeypot — hidden from real users, catches most bots -->
+        <div class="contact-form__honeypot" aria-hidden="true">
+          <label for="contact-website">Website</label>
+          <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-name">Your Name <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            required
+            aria-required="true"
+            autocomplete="name"
+            placeholder="Jane Smith"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            required
+            aria-required="true"
+            autocomplete="email"
+            placeholder="you@example.com"
+          />
+          <p class="form-hint" id="contact-email-hint">Or include your phone number in your message if you prefer a call back.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="5"
+            required
+            aria-required="true"
+            aria-describedby="contact-message-hint"
+            placeholder="How can we help you?"
+          ></textarea>
+          <p class="form-hint" id="contact-message-hint">
+            Please do not include personal health or prescription information in this form.
+            For prescriptions, call us or use our
+            <a href="/services/transfers">Transfer</a> /
+            <a href="/services/refills">Refill</a> forms.
+          </p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+
+        <div role="status" aria-live="polite" class="form-status" id="contact-form-status"></div>
+      </form>
+    </section>
+
+    <section aria-labelledby="contact-fax-heading">
+      <h2 id="contact-fax-heading">For Healthcare Providers</h2>
+      <p>Send prescriptions and referrals by fax: <strong>(416) 398-6745</strong></p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-call-first {
+    background-color: var(--color-calm-light);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-8);
+    text-align: center;
+  }
+
+  .contact-call-big {
+    font-size: var(--text-2xl);
+    padding: var(--space-4) var(--space-10);
+    margin-block: var(--space-4);
+  }
+
+  address {
+    font-style: normal;
+    margin-bottom: var(--space-4);
+  }
+
+  address p {
+    margin-bottom: var(--space-2);
+  }
+</style>

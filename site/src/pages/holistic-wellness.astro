@@ -1,0 +1,150 @@
+---
+/**
+ * Holistic Wellness — Four Winds Roots Pharmacy
+ * Primary keyword: holistic pharmacy North York / compounding pharmacy North York
+ * Source: design/information-architecture.md — Holistic Wellness
+ * Brand note: This is a key differentiator — no competitor claims this space.
+ * Language: plain, warm, non-overclaiming. No unsubstantiated health claims.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Holistic Pharmacy & Wellness Consultation | Four Winds Roots Pharmacy, North York"
+  description="Holistic pharmacy care at Four Winds Roots, Keele & Finch, North York. Herb-drug interaction reviews, wellness consultations, and whole-person pharmacy support. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Holistic Wellness):
+    1. ServiceHero — "Whole-person care at your corner pharmacy" headline + consult CTA
+    2. What holistic care means here — plain language: herb-drug interaction review, wellness
+       guidance, listening to the whole picture. NOT medical advice, NOT disease treatment claims.
+    3. Who it's for — EligibilityNote: people managing complex regimens, supplements users,
+       anyone who wants more than a prescription hand-off
+    4. How to start — StepList: book a consult, bring your med/supplement list, private conversation
+    5. Compounding — if offered; TODO: confirm with owner whether compounding is available
+    6. Clear non-overclaiming language — legal/compliance note: "guidance, not medical diagnosis"
+    7. BookingCTA — phone or scheduler
+    Primary keyword: "holistic pharmacy North York", "herb drug interaction review"
+    BRAND NOTE: this page should feel warm and distinctive — not clinical, not new-age.
+    LEGAL: Do not publish any specific health claims without review by the owner/OCP.
+  -->
+
+  <!--
+    OCP COMPLIANCE NOTE (do not delete):
+    This page requires OCP advertising review before go-live (Task #29).
+    "Registered holistic pharmacy that deals with herbs and drug interactions" is
+    the confirmed directory descriptor (Ontario Health atHome, March 2026) and is
+    safe to use. Do NOT add disease treatment claims, clinical outcomes, or
+    patient testimonials without OCP review and explicit consent.
+    "Natural Health Practitioner" is not a regulated RHPA title — Pamela Clarke
+    must be described factually, not as a regulated health professional.
+  -->
+
+  <div class="container section">
+    <h1>Holistic Pharmacy &amp; Wellness at Keele &amp; Finch</h1>
+    <p>
+      Four Winds Roots is a <strong>registered holistic pharmacy that deals with herbs and
+      drug interactions</strong> — looking at the whole person, not just the prescription.
+      Bring us your full list: medications, herbs, vitamins, and supplements. We'll help
+      you understand how everything works together.
+    </p>
+    <p>
+      <PhoneLink class="btn btn-call" display="Call to Book a Consultation" />
+    </p>
+
+    <section aria-labelledby="holistic-what-it-means">
+      <h2 id="holistic-what-it-means">What Holistic Pharmacy Care Means Here</h2>
+      <p>
+        At most pharmacies, the conversation ends when you pick up your prescription.
+        At Four Winds Roots, it begins there. Our holistic approach means we consider
+        your full health picture before, during, and after dispensing:
+      </p>
+      <ul>
+        <li>Reviewing how your prescriptions interact with herbs and natural supplements</li>
+        <li>Flagging combinations that could reduce effectiveness or cause side effects</li>
+        <li>Discussing wellness goals alongside your medication plan</li>
+        <li>Giving you time — not just a hand-off</li>
+      </ul>
+      <p>
+        <em>
+          This complements your medical care — it does not replace your doctor or prescriber.
+          <!-- TODO: OCP advertising review of this section before publishing (Task #29) -->
+        </em>
+      </p>
+    </section>
+
+    <section aria-labelledby="holistic-who-its-for">
+      <h2 id="holistic-who-its-for">Who This Is For</h2>
+      <p>
+        Our holistic pharmacy care is especially valuable for anyone who:
+      </p>
+      <ul>
+        <li>Takes herbal remedies or natural supplements alongside prescriptions</li>
+        <li>Wants to understand what they're taking and why</li>
+        <li>Is managing multiple medications and seeking a fuller picture</li>
+        <li>Prefers a whole-person conversation rather than a transactional pharmacy visit</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="holistic-herb-drug">
+      <h2 id="holistic-herb-drug">Herb-Drug Interaction Review</h2>
+      <p>
+        Many common herbs and supplements can interact with prescription medications —
+        affecting how a drug is absorbed, how quickly it leaves your body, or whether
+        it reaches the right concentration to work. St. John's Wort, ginkgo, garlic
+        supplements, and many others have well-documented interactions with common
+        prescription drugs.
+      </p>
+      <p>
+        Bring your full list — prescription and over-the-counter — and we'll walk through
+        any potential interactions together. For a structured review, a
+        <a href="/services/medication-reviews">free MedsCheck medication review</a>
+        covers this in detail.
+      </p>
+    </section>
+
+    <section aria-labelledby="holistic-wellness-practitioner">
+      <h2 id="holistic-wellness-practitioner">Our Wellness Practitioner</h2>
+      <!--
+        COMPLIANCE NOTE: Pamela Clarke is described exactly as listed in the Ontario Health
+        atHome directory — "Natural Health Practitioner". This is NOT a regulated title.
+        Do not add credentials, clinical claims, or RN designation.
+      -->
+      <p>
+        <strong>Pamela Clarke</strong>, our Natural Health Practitioner, brings a whole-person
+        perspective to the wellness side of our practice. Pamela focuses on natural health,
+        herb safety, and helping patients take an active role in their wellbeing — the philosophy
+        behind her book, <em>Take Control Now: Your Health Is Your Responsibility</em>
+        (FriesenPress, 2015).
+      </p>
+      <p>
+        <!-- TODO: confirm with owner the specific wellness services Pamela offers at this location -->
+        <!-- TODO: OCP advertising review of this section before publishing (Task #29) -->
+        <em>Speak with our team about wellness consultations — call or visit us.</em>
+      </p>
+    </section>
+
+    <section aria-labelledby="holistic-compounding">
+      <h2 id="holistic-compounding">Compounding</h2>
+      <p>
+        <!-- TODO: confirm whether compounding is offered at this location and to what scope with owner.
+             Note: compounding is NOT confirmed at Four Winds Roots from public directory data.
+             Do not publish this section until confirmed. -->
+        <em>Compounding services — details coming soon. Call us to ask about availability.</em>
+      </p>
+    </section>
+
+    <section aria-labelledby="holistic-how-to-start">
+      <h2 id="holistic-how-to-start">How to Start</h2>
+      <ol>
+        <li>Call us or stop by — let us know you'd like a holistic wellness consultation.</li>
+        <li>Bring your complete medication and supplement list (or a photo of your bottles).</li>
+        <li>We'll sit down in private and work through everything together.</li>
+      </ol>
+      <p>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,39 @@
+[build]
+  base    = "site"
+  command = "npm run build"
+  # `publish` is resolved relative to repo root, not to `base` — so it must be
+  # the full path. Earlier "dist" pointed at <repo>/dist/ (nonexistent), causing
+  # Netlify to publish <repo>/site/ as a fallback and 404 every route.
+  publish = "site/dist"
+
+# ---------------------------------------------------------------------------
+# Security headers — applied to every page
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options           = "DENY"
+    X-Content-Type-Options    = "nosniff"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
+    # CSP — tighten after confirming third-party embeds (Jane App, OceanMD, Maps)
+    # Google Fonts: style-src needs fonts.googleapis.com; font-src needs fonts.gstatic.com
+    Content-Security-Policy   = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://www.google.com https://*.janeapp.com; form-action 'self' https://*.oceanmd.com"
+
+# Decap CMS admin — block indexing
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Health-data form pages — no analytics, aggressive referrer lockdown
+# TODO: add exact form page paths once OceanMD/Jane App widgets are integrated
+[[headers]]
+  for = "/services/refills/"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+
+[[headers]]
+  for = "/services/transfers/"
+  [headers.values]
+    Referrer-Policy = "no-referrer"

@@ -1,0 +1,113 @@
+---
+/**
+ * Preventive Care & Holistic Immunizations — Four Winds Roots Pharmacy
+ * Primary keyword: preventive care pharmacy North York / holistic health pharmacy Keele Finch
+ * Secondary (SEO body only): flu shot North York / immunization pharmacy North York / Paxlovid pharmacy North York
+ * Route: /services/preventive-care/
+ * Renamed from vaccinations.astro — brand direction: holistic-first, clinical second
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Preventive Care & Holistic Wellness | Four Winds Roots Pharmacy, North York"
+  description="Preventive health and holistic wellness at Four Winds Roots Pharmacy, Keele & Finch, North York — flu immunizations, travel health, Paxlovid, and whole-person preventive care. Call (416) 398-8200."
+  noAnalytics={true}
+>
+  <!--
+    IA KEY BLOCKS:
+    1. ServiceHero — "Your whole-person health starts with prevention" headline + book CTA
+       Framing: prevention as part of the holistic philosophy, not a clinical procedure counter
+    2. Preventive services list — what is offered (flu, COVID, travel, Paxlovid, injections)
+       TODO: confirm full list with owner — include only services currently offered
+       Language: "immunizations" and "protective care" preferred over "vaccinations" in headings
+    3. Holistic connection — short paragraph tying preventive care to herb-drug awareness,
+       wellness consultations, and the whole-person philosophy
+    4. Who can come — EligibilityNote: no referral needed, walk-in welcome, OHIP coverage note
+    5. Walk-in vs booked — which services are walk-in vs appointment (TODO: confirm with owner)
+    6. BookingCTA — phone or scheduler
+
+    Primary keyword: "preventive care pharmacy North York", "holistic health North York"
+    SEO body keywords (do not use as headings): flu shot, immunization, vaccine, Paxlovid
+    IMPORTANT: Do not list specific immunizations without owner confirmation — OCP compliance.
+  -->
+
+  <div class="container section">
+    <h1>Preventive Care &amp; Holistic Health at Keele &amp; Finch</h1>
+    <p class="lead">
+      Prevention is the foundation of whole-person health. Our pharmacist works with you
+      proactively — not just when you're sick. Walk in or call to discuss your options.
+    </p>
+
+    <section aria-labelledby="preventive-services">
+      <h2 id="preventive-services">Protective Health Services</h2>
+
+      <h3>ODB Smoking Cessation Program</h3>
+      <p>
+        Four Winds Roots Pharmacy participates in the
+        <strong>Ontario Drug Benefit (ODB) Smoking Cessation Program</strong>.
+        Your pharmacist can counsel you on quitting and, where eligible, help you access
+        ODB-funded cessation medications — nicotine replacement therapies and prescription
+        cessation aids — at reduced or no cost.
+        <br />
+        <small><em>Confirmed: Ontario Health atHome directory (March 2026).</em></small>
+      </p>
+
+      <!-- TODO: confirm and add the following once confirmed with owner (OCP compliance required): -->
+      <!-- - Flu immunization (seasonal) -->
+      <!-- - COVID-19 protective care -->
+      <!-- - Travel health preparation -->
+      <!-- - Other injectable services -->
+      <!-- Do not publish immunization/injection services without owner sign-off. -->
+      <p>
+        <em>
+          Additional preventive services — including immunizations and travel health — are
+          being confirmed with our pharmacy team. Call us for current availability:
+          <PhoneLink />
+        </em>
+      </p>
+    </section>
+
+    <section aria-labelledby="preventive-holistic">
+      <h2 id="preventive-holistic">Prevention as Part of Whole-Person Wellness</h2>
+      <p>
+        At Four Winds Roots Pharmacy, preventive care is part of a whole-person approach.
+        Your pharmacist considers your full health picture — including any herbs, supplements,
+        or chronic conditions — before any service. That's what makes us a different kind of pharmacy.
+        <a href="/holistic-wellness">Learn about our holistic wellness approach →</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="preventive-eligibility">
+      <h2 id="preventive-eligibility">No Referral Needed</h2>
+      <p>
+        Most of our preventive services are available to Ontario residents without a referral.
+        Walk in during our regular hours or call ahead at <PhoneLink /> to confirm
+        availability and any coverage details for your specific situation.
+        <!-- TODO: confirm walk-in vs appointment policy and specific OHIP/ODB coverage details with owner -->
+      </p>
+    </section>
+
+    <section aria-labelledby="preventive-walkin">
+      <h2 id="preventive-walkin">Walk-In or By Appointment</h2>
+      <p>
+        <!-- TODO: confirm specific walk-in vs appointment breakdown with owner -->
+        Many services are available same day — call us at <PhoneLink /> to confirm
+        availability before you come in.
+      </p>
+    </section>
+
+    <section aria-labelledby="preventive-book">
+      <h2 id="preventive-book">Book Your Preventive Care Visit</h2>
+      <p>
+        Call us to book or ask about same-day availability. A Jane App online scheduler
+        will be available here soon.
+        <!-- TODO: embed Jane App scheduler once confirmed with owner (Task #26) -->
+      </p>
+      <p>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+      </p>
+    </section>
+  </div>
+</BaseLayout>

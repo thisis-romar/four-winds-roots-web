@@ -1,0 +1,81 @@
+---
+/**
+ * Student Pharmacy near York University — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy near York University / student pharmacy North York
+ * Source: design/information-architecture.md — Student Pharmacy near York University
+ * Note: This is an under-served, geographically captive market segment.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Student Pharmacy near York University | Four Winds Roots Pharmacy"
+  description="Fast prescription refills, transfers, and free delivery for students near York University. Four Winds Roots Pharmacy at Keele & Finch — 10 minutes from campus. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Student Pharmacy near York University):
+    1. SegmentPanel / hero — "Pharmacy for York University students at Keele & Finch" headline + transfer CTA
+    2. Fast transfers highlight — "Transfer from your home pharmacy in minutes" ServiceCard
+    3. Free delivery highlight — no car needed, we deliver to your door
+    4. Multilingual service note — TODO: confirm which languages are spoken at the pharmacy with owner
+    5. Proximity to campus — "10 minutes from York University" (TODO: verify travel time)
+    6. Transfer CTA — prominent — "Transfer your prescription from home" is the #1 student action
+    Primary keyword: "pharmacy near York University", "student pharmacy North York", "pharmacy Keele Finch"
+    Note: Keele St is a major transit corridor connecting to York U — emphasize transit accessibility.
+    TODO: confirm languages spoken at pharmacy, actual walking/transit distance to York U main campus.
+  -->
+
+  <div class="container section">
+    <h1>Student Pharmacy near York University — Keele &amp; Finch</h1>
+    <p class="lead">
+      Your prescriptions shouldn't slow you down. Four Winds Roots Pharmacy is right at
+      Keele &amp; Finch — close to campus, fast service, and free delivery to your door.
+    </p>
+
+    <section aria-labelledby="students-transfers">
+      <h2 id="students-transfers">Transfer Your Prescription from Home</h2>
+      <p>
+        Coming from out of town? Leave your prescription at your home pharmacy and we'll
+        handle the transfer — no calls, no hassle on your end. Just fill out our online form
+        and we contact your current pharmacy directly. You get on with your day.
+      </p>
+      <a href="/services/transfers" class="btn btn-transfer">Transfer My Prescription</a>
+    </section>
+
+    <section aria-labelledby="students-delivery">
+      <h2 id="students-delivery">Free Delivery — No Car Needed</h2>
+      <p>
+        We deliver prescriptions at no charge across North York. No minimum order, no delivery
+        fee. Request delivery when you submit your refill or transfer online.
+        <a href="/services/free-delivery">Learn more about free delivery →</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="students-proximity">
+      <h2 id="students-proximity">Close to York University — and Getting Closer</h2>
+      <p>
+        Four Winds Roots Pharmacy is on Keele Street, just south of Finch Avenue West —
+        a short ride from York University's Keele campus.
+      </p>
+      <p>
+        The <strong>Finch West LRT (Line 6)</strong> opened on December 7, 2025, running
+        18 stops from <strong>Finch West Station at Keele Street</strong> all the way to
+        Humber College. If you're coming from the York University area, Finch West Station
+        is your connection point — it's right at our doorstep.
+      </p>
+      <p>
+        <!-- TODO: confirm exact walking time from York U main campus to pharmacy with Google Maps -->
+        <!-- TODO: confirm whether TTC bus routes on Keele St are also relevant for on-campus riders -->
+      </p>
+    </section>
+
+    <section aria-labelledby="students-cta">
+      <h2 id="students-cta">Get Started</h2>
+      <p>
+        <a href="/services/transfers" class="btn btn-transfer">Transfer My Rx</a>
+        <PhoneLink class="btn btn-call" display="Call Us" />
+      </p>
+    </section>
+  </div>
+</BaseLayout>

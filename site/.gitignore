@@ -1,0 +1,10 @@
+dist/
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Playwright + Astro local artifacts (added 2026-05-28)
+test-results/
+playwright-report/
+.astro/

@@ -1,3 +1,13 @@
+---
+title: "Wireframes — Overview"
+version: "1.0"
+last_updated: "2026-05-27"
+status: draft
+category: design
+owner: internal
+description: "Index of low-fidelity clickable HTML wireframes for the pharmacy site, covering homepage, prescription transfer, and contact pages."
+---
+
 # Wireframes
 
 Low-fidelity, **clickable HTML mockups** to show structure, hierarchy, and conversion flow — not

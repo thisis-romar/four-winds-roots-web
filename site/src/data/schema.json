@@ -1,0 +1,220 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+
+  "@comment_name": "Canonical business name — align with GBP and all directories (NAP consistency). Both trade names are in active use; 'Four Winds Roots Pharmacy' matches Lumino Health and Ontario Health atHome. 'R.O.O.T.S. Four Winds Pharmacy' is used by PharmacyList, FedEx, and Cortico. Owner to confirm preferred primary for website.",
+  "name": "Four Winds Roots Pharmacy",
+
+  "@comment_legalName": "Operating entity per Medimap directory listing ('Can Pharm Services Inc.'). User-supplied variant is 'Can Pharm Service Inc'. Ontario Business Registry not yet verified — confirm exact spelling with owner.",
+  "legalName": "Can Pharm Services Inc.",
+
+  "description": "A holistic community pharmacy at Keele and Finch in North York, specialising in herbs, supplements, and drug interactions alongside full prescription dispensing, blister packaging, free delivery, and MedsCheck services.",
+
+  "disambiguatingDescription": "Independent holistic pharmacy at 3932A Keele St (Centennial Plaza), North York — formerly listed as Guardian Four Winds Pharmacy under a previous franchise arrangement. Currently operating as Four Winds Roots Pharmacy / R.O.O.T.S. Four Winds Pharmacy, with holistic wellness, optical, and full dispensary services.",
+
+  "alternateName": [
+    "R.O.O.T.S. Four Winds Pharmacy",
+    "Roots Four Winds Pharmacy",
+    "ROOTS Four Winds Pharmacy",
+    "Guardian Four Winds Pharmacy"
+  ],
+
+  "@comment_url": "TODO: confirm final domain before go-live (currently placeholder)",
+  "url": "https://fourwindsrootspharmacy.ca",
+
+  "logo": "https://fourwindsrootspharmacy.ca/images/logo.png",
+
+  "image": [
+    "https://fourwindsrootspharmacy.ca/images/storefront.jpg"
+  ],
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3932A Keele St",
+    "addressLocality": "North York",
+    "addressRegion": "ON",
+    "postalCode": "M3J 1N8",
+    "addressCountry": "CA"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "@comment_geo": "TODO: verify exact lat/lon from Google Maps for this address",
+    "latitude": 43.766,
+    "longitude": -79.476
+  },
+
+  "telephone": "+14163988200",
+  "faxNumber": "+14163986745",
+
+  "@comment_openingHours": "TODO: confirm exact hours with owner — placeholders based on directory data (Mon–Fri 9–6, Sat 9–2, Sun closed). Holiday hours unknown.",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "@comment_ratingCount": "52 patient ratings per Lumino Health (Sun Life) as of May 2026 audit. Time-sensitive — verify before publishing.",
+    "ratingCount": "52"
+  },
+
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Winston Clarke",
+      "jobTitle": "Pharmacist",
+      "@comment": "Confirmed: Ontario Health atHome directory (torontocentralhealthline.ca, last updated 2026-03-10). OCP registration number not yet retrieved — TODO confirm with owner or live OCP register lookup."
+    },
+    {
+      "@type": "Person",
+      "name": "Pamela Clarke",
+      "jobTitle": "Natural Health Practitioner",
+      "@comment": "Confirmed: Ontario Health atHome directory. 'Natural Health Practitioner' is NOT a regulated title under Ontario's RHPA — describe exactly as listed. Author of Take Control Now (FriesenPress, 2015, ISBN 978-1460258354). Do NOT describe as RN or list private credentials in marketing copy.",
+      "author": {
+        "@type": "Book",
+        "name": "Take Control Now: Your Health Is Your Responsibility",
+        "publisher": "FriesenPress",
+        "datePublished": "2015-11-13",
+        "isbn": "978-1460258354"
+      }
+    }
+  ],
+
+  "@comment_OCP": "TODO: confirm OCP registration number with owner — required for schema and compliance. Look up at members.ocpinfo.com or call OCP at 416-962-4861.",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Ontario College of Pharmacists Registration",
+    "credentialCategory": "Professional Registration",
+    "@comment_identifier": "TODO: enter OCP registration number once confirmed",
+    "identifier": "TODO_OCP_REG_NUMBER"
+  },
+
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wheelchair accessible",
+      "value": "Partial",
+      "@comment": "Confirmed: Ontario Health atHome directory — 'partially wheelchair-accessible'."
+    }
+  ],
+
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Prescription Dispensing",
+      "description": "Full-service prescription dispensing at $12.99 dispensing fee."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Prescription Refills",
+      "description": "Fast, easy prescription refills with free delivery available across North York."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Prescription Transfers",
+      "description": "Transfer your prescriptions from any pharmacy — we handle the paperwork."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "MedsCheck Medication Reviews",
+      "description": "Free government-funded MedsCheck medication reviews under the Ontario Drug Benefit program, conducted by a licensed pharmacist."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Blister Packaging",
+      "description": "Customized blister packs for seniors and patients managing complex medication regimens, provided at no additional cost with your prescriptions.",
+      "@comment": "Confirmed no-extra-cost: Ontario Health atHome directory."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Free Prescription Delivery",
+      "description": "Free local delivery of prescription medications across North York.",
+      "@comment": "Confirmed: Ontario Health atHome directory — 'free local delivery of prescription medication'."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Minor Ailments Assessment and Treatment",
+      "description": "Ontario pharmacist expanded-scope assessment and prescribing for minor ailments confirmed at this location: skin rashes, pink eye (conjunctivitis), insect bites, acne, and uncomplicated urinary tract infections.",
+      "@comment": "Confirmed conditions: Ontario Health atHome directory. Ontario has 13 authorized conditions province-wide; only these 5 are confirmed for this pharmacy."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "ODB Smoking Cessation Program",
+      "description": "Pharmacist support for smoking cessation under the Ontario Drug Benefit Smoking Cessation Program.",
+      "@comment": "Confirmed: Ontario Health atHome directory."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Holistic Wellness Consultation",
+      "description": "Holistic pharmacy practice including herb-drug interaction review, supplement guidance, and whole-person care.",
+      "@comment": "Confirmed descriptor: 'registered holistic pharmacy that deals with herbs and drug interactions' — Ontario Health atHome directory. 'Registered' refers to OCP community pharmacy registration, not a separate holistic credential."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Sharps Disposal Program",
+      "description": "Safe sharps (needle) disposal for patients managing injectable medications at home.",
+      "@comment": "Confirmed: Ontario Health atHome directory."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Medications Return Program",
+      "description": "Safe return and disposal of unused or expired medications.",
+      "@comment": "Confirmed: Ontario Health atHome directory."
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "FedEx Authorized ShipCentre",
+      "description": "Co-located FedEx Authorized ShipCentre offering shipping-label purchase, FedEx Express and Ground drop-off, Hold-at-Location, and QR-code returns.",
+      "@comment": "Confirmed: FedEx locator (local.fedex.com/en-ca/on/north-york/yrlfl). Co-located at same address, uses same phone number 416-398-8200."
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Optical and Wellness Centre",
+      "description": "Optical and wellness services under one roof at Keele and Finch.",
+      "@comment": "TODO: confirm exact optical and wellness services with owner before publishing detail."
+    }
+  ],
+
+  "@comment_priceRange": "Dispensing fee confirmed at $12.99 per Lumino Health audit.",
+  "priceRange": "$12.99 dispensing fee",
+
+  "currenciesAccepted": "CAD",
+
+  "paymentAccepted": "Cash, Credit Card, Debit Card",
+
+  "@comment_languages": "English confirmed via Ontario Health atHome directory. No other languages documented in any public directory. Confirm with owner if additional languages are spoken.",
+  "knowsLanguage": ["English"],
+
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "North York"
+    },
+    {
+      "@type": "City",
+      "name": "Toronto"
+    }
+  ],
+
+  "hasMap": "https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8",
+
+  "@comment_sameAs": "TODO: add GBP URL once claimed and verified (Task #20). Lumino Health profile: https://luminohealth.sunlife.com — confirm exact URL.",
+  "sameAs": [
+    "TODO_GOOGLE_BUSINESS_PROFILE_URL",
+    "TODO_LUMINO_HEALTH_PROFILE_URL"
+  ]
+}

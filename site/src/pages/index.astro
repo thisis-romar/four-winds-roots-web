@@ -1,0 +1,288 @@
+---
+/**
+ * Home — Four Winds Roots Pharmacy
+ * Primary keyword: pharmacy Keele and Finch / holistic pharmacy North York
+ * Source: design/information-architecture.md — Home
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Holistic Pharmacy at Keele & Finch, North York | Four Winds Roots Pharmacy"
+  description="Four Winds Roots Pharmacy — holistic pharmacy, optical & wellness centre at Keele & Finch, North York. 4.9★ rating. Prescription refills, free delivery, MedsCheck, preventive care. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Home):
+    1. Hero — positioning headline + Call/Transfer CTAs
+    2. Reputation strip — 4.9★ rating + selected review quotes + "leave a review" link
+    3. Service grid — ServiceCard for each of the 6 core services + Holistic + Optical
+    4. Holistic wellness highlight — differentiator panel with secondary CTA
+    5. Optical & Wellness Centre highlight — differentiator panel with CTA
+    6. Free delivery banner — "free across North York" value prop
+    7. "Who we help" segments — Seniors & Families / Students near York U
+    8. NAP block + Google Maps embed + hours — contact conversion backstop
+    9. Review prompt / ReviewRequestLink — solicit 5-star reviews post-service
+    Primary keyword: "pharmacy Keele and Finch", "holistic pharmacy North York"
+  -->
+
+  <section class="hero" aria-labelledby="home-hero-heading">
+    <div class="container">
+      <h1 id="home-hero-heading">
+        Your holistic pharmacy at Keele &amp; Finch, North York
+      </h1>
+      <p class="hero__sub">
+        Prescriptions, wellness, and optical care — under one roof at 3932A Keele St.
+        Rated 4.9★ by our community.
+      </p>
+      <div class="hero__ctas">
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+        <a href="/services/transfers" class="btn btn-transfer">Transfer My Prescription</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-services-heading">
+    <div class="container">
+      <h2 id="home-services-heading">Our Services</h2>
+      <ul class="service-grid" role="list">
+        <li><a href="/services/refills" class="service-card">
+          <strong>Prescription Refills</strong>
+          <span>Online, by phone, or in person — ready same day.</span>
+        </a></li>
+        <li><a href="/services/transfers" class="service-card">
+          <strong>Prescription Transfers</strong>
+          <span>We call your old pharmacy — you do nothing.</span>
+        </a></li>
+        <li><a href="/services/medication-reviews" class="service-card">
+          <strong>Medication Reviews (MedsCheck)</strong>
+          <span>Free one-on-one review — ODB-covered for eligible patients.</span>
+        </a></li>
+        <li><a href="/services/blister-packaging" class="service-card">
+          <strong>Blister Packaging</strong>
+          <span>Organized weekly packs — no extra charge.</span>
+        </a></li>
+        <li><a href="/services/free-delivery" class="service-card">
+          <strong>Free Delivery</strong>
+          <span>Free prescription delivery across North York.</span>
+        </a></li>
+        <li><a href="/services/preventive-care" class="service-card">
+          <strong>Preventive Care</strong>
+          <span>ODB Smoking Cessation and more.</span>
+        </a></li>
+        <li><a href="/holistic-wellness" class="service-card">
+          <strong>Holistic Wellness</strong>
+          <span>Natural health, herb–drug interactions, wellness support.</span>
+        </a></li>
+        <li><a href="/optical-wellness" class="service-card">
+          <strong>Optical &amp; Wellness Centre</strong>
+          <span>Eye care and wellness — under the same roof.</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-reputation-heading">
+    <div class="container">
+      <h2 id="home-reputation-heading">Rated by Our Community</h2>
+      <p class="reputation-badge">
+        <strong>4.9 / 5</strong> &mdash; 52 patient ratings on
+        <a href="https://luminohealth.sunlife.com" target="_blank" rel="noopener noreferrer">Lumino Health</a>
+        (Sun Life)
+      </p>
+      <!-- TODO: ReputationStrip — add 2–3 ReviewCard components once patient testimonials are collected with OCP-compliant consent (Task #29) -->
+      <!-- TODO: ReviewRequestLink — solicit post-visit reviews once GBP is claimed (Task #20) -->
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-delivery-heading">
+    <div class="container">
+      <h2 id="home-delivery-heading">Free Prescription Delivery Across North York</h2>
+      <p>
+        We deliver prescriptions at no charge — no minimum order, no delivery fee.
+        Call us or request delivery when you submit your refill online.
+        <a href="/services/free-delivery">Learn more about free delivery →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-segments-heading">
+    <div class="container">
+      <h2 id="home-segments-heading">We Help Every Member of Your Family</h2>
+      <ul class="segment-list" role="list">
+        <li>
+          <a href="/who-we-help/seniors" class="segment-card">
+            <strong>Seniors &amp; Family Care</strong>
+            <span>Blister packs, MedsCheck, free delivery, caregiver support.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/who-we-help/students" class="segment-card">
+            <strong>Students near York University</strong>
+            <span>Steps from the Finch West LRT. Fast transfers, free delivery on campus.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-location-heading">
+    <div class="container">
+      <h2 id="home-location-heading">Find Us at Keele &amp; Finch</h2>
+      <address class="location-nap">
+        <p><strong>Four Winds Roots Pharmacy</strong></p>
+        <p>3932A Keele St (Centennial Plaza)<br />North York, ON M3J 1N8</p>
+        <p>Phone: <PhoneLink /> &nbsp;|&nbsp; Fax: (416) 398-6745</p>
+        <p>Partially wheelchair-accessible.</p>
+      </address>
+      <p>
+        <a
+          href="https://maps.google.com/?q=3932A+Keele+St+North+York+ON+M3J+1N8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          aria-label="Get directions to Four Winds Roots Pharmacy on Google Maps (opens in new tab)"
+        >Get Directions</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--calm" aria-labelledby="home-fedex-heading">
+    <div class="container">
+      <h2 id="home-fedex-heading">FedEx Authorized ShipCentre — Also Under Our Roof</h2>
+      <p>
+        Need to ship a package? Four Winds Roots Pharmacy is also a
+        <strong>FedEx Authorized ShipCentre</strong> — FedEx Express and Ground drop-off,
+        label printing, Hold-at-Location, and QR-code returns, all in the same visit as your
+        pharmacy needs.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background-color: var(--color-calm-light);
+    padding-block: var(--space-20);
+    text-align: center;
+  }
+
+  .hero h1 {
+    max-width: 22ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__sub {
+    font-size: var(--text-lg);
+    max-width: 55ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-8);
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── Service grid ─────────────────────────────────────────────────────── */
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    margin-block-start: var(--space-6);
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-6);
+    background-color: var(--color-paper);
+    border: 1.5px solid var(--color-calm-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 150ms ease, border-color 150ms ease, transform 150ms ease;
+  }
+
+  .service-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .service-card strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
+  }
+
+  .service-card span {
+    display: block;
+    color: var(--color-text-muted, #6b7280);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+
+  /* ── Segment cards (Seniors / Students) ──────────────────────────────── */
+
+  .segment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    margin-block-start: var(--space-6);
+  }
+
+  .segment-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-6) var(--space-8);
+    background-color: var(--color-paper);
+    border: 1.5px solid var(--color-calm-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 150ms ease, border-color 150ms ease;
+  }
+
+  .segment-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+  }
+
+  .segment-card strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .segment-card span {
+    color: var(--color-text-muted, #6b7280);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  /* ── Location NAP block ───────────────────────────────────────────────── */
+
+  .location-nap {
+    font-style: normal;
+    line-height: 1.8;
+    margin-block-end: var(--space-4);
+  }
+
+  .location-nap p {
+    margin: 0;
+  }
+</style>

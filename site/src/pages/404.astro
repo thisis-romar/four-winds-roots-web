@@ -1,0 +1,88 @@
+---
+/**
+ * 404 — Page Not Found
+ * Four Winds Roots Pharmacy
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Four Winds Roots Pharmacy"
+  description="The page you're looking for doesn't exist. Return to Four Winds Roots Pharmacy — holistic pharmacy at Keele & Finch, North York."
+>
+  <div class="container section not-found">
+    <h1>Page Not Found</h1>
+    <p class="not-found__sub">
+      We couldn't find what you were looking for — but your pharmacy is right here.
+    </p>
+
+    <div class="not-found__actions">
+      <a href="/" class="btn btn-primary">Go to Homepage</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+    </div>
+
+    <nav class="not-found__links" aria-label="Helpful links">
+      <h2>Looking for something specific?</h2>
+      <ul>
+        <li><a href="/services/refills">Prescription Refills</a></li>
+        <li><a href="/services/transfers">Transfer a Prescription</a></li>
+        <li><a href="/services/free-delivery">Free Delivery</a></li>
+        <li><a href="/holistic-wellness">Holistic Wellness</a></li>
+        <li><a href="/optical-wellness">Optical &amp; Wellness Centre</a></li>
+        <li><a href="/contact">Contact &amp; Hours</a></li>
+      </ul>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding-block: var(--space-20);
+  }
+
+  .not-found h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .not-found__sub {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 50ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-8);
+  }
+
+  .not-found__actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-12);
+  }
+
+  .not-found__links {
+    text-align: left;
+    max-width: 28rem;
+    margin-inline: auto;
+  }
+
+  .not-found__links h2 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+  }
+
+  .not-found__links ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .not-found__links a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>

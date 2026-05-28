@@ -1,3 +1,13 @@
+---
+title: "Compliance Checklist — AODA / WCAG 2.2 AA + PHIPA + OCP"
+version: "1.1"
+last_updated: "2026-05-27"
+status: review
+category: compliance
+owner: pending_owner_review
+description: "Ontario-specific compliance checklist covering AODA/WCAG 2.2 AA accessibility, PHIPA health privacy, and OCP advertising standards for the pharmacy website."
+---
+
 # Compliance Checklist — AODA / WCAG 2.2 AA + PHIPA + OCP
 
 Ontario-specific compliance for a pharmacy website. This is **research guidance, not legal advice**
@@ -79,3 +89,27 @@ consultations) is in scope. Penalties are significant (up to **$200,000** indivi
 2. Privacy advisor review of every form + the privacy policy (PHIPA).
 3. OCP/advertising review of holistic and testimonial content.
 4. Confirm the form/booking vendor's PHIPA compliance in writing.
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+Three specific compliance risks were identified during primary-source research. Treat these as hard guardrails — do not publish content that violates them.
+
+### (a) Pamela Clarke framing risk
+
+Pamela Clarke's confirmed title from public sources is **"Natural Health Practitioner."** This is NOT a regulated title under Ontario's *Regulated Health Professions Act* (RHPA). Her private credentials include a Clayton College of Natural Health (CCNH) background — that institution closed in July 2010 and was not accredited. Her Ontario CNO/RN registration status is unverified from public data.
+
+**Required framing in all website copy:** use only her name + "Natural Health Practitioner" + citation of her book (*Take Control Now*, FriesenPress, 2015). Do not append "RN", "BSN", or any credential strings that imply RHPA-regulated status. Do not publish a credential list without owner-supplied verification. Do not make clinical treatment claims on her behalf.
+
+### (b) "Registered holistic pharmacy" claim guardrail
+
+The Ontario Health atHome directory describes the pharmacy as a "registered holistic pharmacy that deals with herbs and drug interactions." In this context, **"registered" means OCP community pharmacy registration** — not a separate or additional holistic accreditation.
+
+**Safe copy:** "holistic pharmacy," "holistic philosophy," "herbs and drug interactions."
+**Unsafe copy:** "OCP-registered holistic pharmacy" (implies OCP endorses the holistic practice specifically, which is not the case and risks misleading patients per OCP advertising standards). The holistic/wellness copy must be reviewed against OCP advertising standards before launch — confirm with owner (see `content-questionnaire.md` — Remaining Open Items #13).
+
+### (c) Patient rating citation policy
+
+The pharmacy holds a confirmed **4.9/5 rating from 52 patient ratings on Lumino Health** (May 2026). This is a citable trust signal.
+
+**Required citation format:** "Rated 4.9/5 on Lumino Health (52 patient ratings)" with date or "as of [month year]."
+**Prohibited framing:** Do not present the Lumino rating as a clinical quality assessment, an independent audit, or an endorsement by Lumino/Sun Life. Do not round up or alter the rating. The rating is time-sensitive — update the citation when the underlying data changes. Do not use the rating in the same sentence as a therapeutic claim.

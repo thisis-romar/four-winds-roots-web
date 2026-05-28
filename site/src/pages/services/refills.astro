@@ -1,0 +1,101 @@
+---
+/**
+ * Prescription Refills — Four Winds Roots Pharmacy
+ * Primary keyword: prescription refills North York
+ * Source: design/information-architecture.md — Prescription Refills
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+import RefillForm from '../../components/RefillForm.astro';
+---
+
+<BaseLayout
+  title="Prescription Refills | Four Winds Roots Pharmacy, North York"
+  description="Request a prescription refill online or by phone at Four Winds Roots Pharmacy, 3932A Keele St, North York. Fast turnaround. Free delivery available. Call (416) 398-8200."
+  noAnalytics={true}
+>
+  <div class="container section">
+    <h1>Prescription Refills in North York</h1>
+    <p class="lead">
+      Refill your prescriptions online or give us a call — we'll have them ready for pick-up
+      or free delivery across North York.
+    </p>
+
+    <div class="refill-ctas">
+      <a href="#refills-form" class="btn btn-transfer">Request Refill Online</a>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+    </div>
+
+    <section aria-labelledby="refills-what-you-need">
+      <h2 id="refills-what-you-need">What You Need</h2>
+      <ul class="needs-list">
+        <li>Your prescription number <em>(on the label of your current bottle)</em></li>
+        <li>Your name and date of birth</li>
+        <li>A phone number or email so we can confirm when it's ready</li>
+      </ul>
+      <p>
+        Don't have your Rx number? No problem — give us a call at <PhoneLink /> and we can look
+        it up for you, or come in to the pharmacy at 3932A Keele St.
+      </p>
+    </section>
+
+    <section aria-labelledby="refills-how-it-works">
+      <h2 id="refills-how-it-works">How It Works</h2>
+      <ol class="step-list">
+        <li>
+          <strong>Submit your request</strong> using the form below, call us at <PhoneLink />,
+          or drop off your prescription bottle in person.
+        </li>
+        <li>
+          <strong>We prepare your prescription</strong> — our pharmacist reviews your refill
+          and dispenses it, usually same day.
+        </li>
+        <li>
+          <strong>Pick up or get it delivered</strong> — collect your refill at 3932A Keele St
+          or request <a href="/services/free-delivery">free delivery</a> across North York.
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="refills-form">
+      <h2 id="refills-form">Request a Refill</h2>
+      <RefillForm />
+    </section>
+
+    <section aria-labelledby="refills-delivery">
+      <h2 id="refills-delivery">Free Delivery Across North York</h2>
+      <p>
+        We offer free prescription delivery — no minimum, no extra charge.
+        <a href="/services/free-delivery">Learn about free delivery →</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: var(--text-lg);
+    max-width: 65ch;
+    margin-block-end: var(--space-6);
+  }
+
+  .refill-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-block-end: var(--space-12);
+  }
+
+  .needs-list,
+  .step-list {
+    max-width: 65ch;
+    padding-inline-start: var(--space-6);
+    margin-block-end: var(--space-4);
+  }
+
+  .needs-list li,
+  .step-list li {
+    margin-block-end: var(--space-3);
+    line-height: 1.7;
+  }
+</style>

@@ -1,3 +1,13 @@
+---
+title: "Competitor Audit — Raw Evidence"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "Raw WebSearch evidence notes for each audited competitor, captured 2026-05-26, used as the sourcing basis for the competitor audit report."
+---
+
 # Raw evidence
 
 This folder will hold **one fetched-evidence file per competitor** after web access is enabled and

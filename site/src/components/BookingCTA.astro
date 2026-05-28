@@ -1,0 +1,55 @@
+---
+/**
+ * BookingCTA — Four Winds Roots Pharmacy
+ * Call-to-action for booking a consultation or vaccination appointment.
+ * Used on: MedsCheck / Medication Reviews, Vaccinations, Holistic Wellness.
+ * TODO: Confirm booking method with owner — phone booking only, or embedded scheduler?
+ * If embedded scheduler: confirm which platform (Calendly, Jane App, etc.) is used.
+ *
+ * Props:
+ *   heading?: string — section heading (e.g., "Book a Free MedsCheck")
+ *   description?: string — supporting text
+ *   variant?: 'medscheck' | 'vaccine' | 'wellness' | 'generic' (default: 'generic')
+ *   schedulerUrl?: string — optional URL to embed scheduler or booking page
+ */
+
+interface Props {
+  heading?: string;
+  description?: string;
+  variant?: 'medscheck' | 'vaccine' | 'wellness' | 'generic';
+  schedulerUrl?: string;
+}
+
+const {
+  heading = 'Book Your Appointment',
+  description,
+  variant = 'generic',
+  schedulerUrl,
+} = Astro.props;
+import PhoneLink from './PhoneLink.astro';
+---
+
+<!-- TODO: Style BookingCTA; wire up real scheduler URL if available -->
+<section
+  data-component="BookingCTA"
+  data-variant={variant}
+  class="booking-cta"
+  aria-labelledby="booking-cta-heading"
+>
+  <h2 id="booking-cta-heading">{heading}</h2>
+  {description && <p>{description}</p>}
+
+  {schedulerUrl ? (
+    <!-- TODO: Embed scheduler iframe or link — confirm platform with owner -->
+    <a href={schedulerUrl} class="btn btn-call" target="_blank" rel="noopener noreferrer">
+      Book Online
+    </a>
+  ) : (
+    <!-- Phone booking fallback — always available -->
+    <p>
+      <PhoneLink class="btn btn-call" display="Call to Book: (416) 398-8200" />
+    </p>
+  )}
+
+  <!-- TODO: Add availability note once confirmed with owner (e.g., "Available Mon-Fri") -->
+</section>

@@ -1,3 +1,13 @@
+---
+title: "Wireframe Audit — Four Winds Roots Pharmacy"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: design
+owner: internal
+description: "Detailed audit of the three wireframe HTML files against IA, compliance, and brand documents, listing critical issues and prioritised fixes before developer handoff."
+---
+
 # Wireframe Audit — Four Winds Roots Pharmacy
 
 **Audited:** 2026-05-26

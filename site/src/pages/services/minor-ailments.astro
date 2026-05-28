@@ -1,0 +1,148 @@
+---
+/**
+ * Minor Ailments — Ontario Pharmacist Expanded Scope
+ * Route: /services/minor-ailments/
+ * Purpose: capture patients who'd otherwise go to a walk-in clinic for 13 common conditions.
+ * Ontario pharmacists can now independently assess and prescribe for 13 minor ailments.
+ * Source: Ontario Regulation 202/94 (as amended) — Pharmacy Act
+ * OCP compliance note: list only conditions explicitly authorized under ON regulation;
+ *   do not imply unlimited prescribing authority.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Minor Ailments Treatment — No Doctor Needed | Four Winds Roots Pharmacy, North York"
+  description="Your pharmacist at Four Winds Roots Pharmacy can assess and prescribe for skin rashes, pink eye, insect bites, acne, and uncomplicated UTIs — no doctor visit required. Keele & Finch, North York. Call (416) 398-8200."
+  noAnalytics={true}
+>
+  <div class="container section">
+
+    <h1>Minor Ailments Treatment at Your Pharmacy</h1>
+    <p class="lead">
+      Your pharmacist at Four Winds Roots can assess and prescribe for selected common conditions —
+      no walk-in clinic, no doctor's referral required. Same-day care, right at Keele &amp; Finch.
+    </p>
+
+    <!--
+      CONTENT TODOS — confirm with owner before publishing (OCP compliance):
+      1. Confirm appointment vs. walk-in availability for minor ailments assessments
+      2. Confirm any fees (most are OHIP-covered or free — verify with owner)
+      3. Add booking/call CTA (Jane App or phone)
+      4. OCP compliance review before publishing any prescribing claims
+      NOTE: The 5 conditions listed below are confirmed via Ontario Health atHome directory
+      (torontocentralhealthline.ca, March 2026). Ontario has 13 authorized categories
+      province-wide; only these 5 are confirmed for this specific pharmacy location.
+    -->
+
+    <section aria-labelledby="ailments-what">
+      <h2 id="ailments-what">Conditions We Treat</h2>
+      <p>
+        Under Ontario's expanded pharmacist scope, your pharmacist at Four Winds Roots can
+        independently assess and prescribe for the following conditions at this location:
+      </p>
+      <ul class="ailments-list">
+        <li>Skin rashes (contact dermatitis)</li>
+        <li>Pink eye (conjunctivitis)</li>
+        <li>Insect bites</li>
+        <li>Acne</li>
+        <li>Uncomplicated urinary tract infections (UTIs) — adults</li>
+      </ul>
+      <p class="ailments-note">
+        <em>
+          Conditions confirmed via Ontario Health atHome directory. Call us to confirm
+          current availability and whether your condition is in scope:
+          <PhoneLink />
+        </em>
+      </p>
+    </section>
+
+    <section aria-labelledby="ailments-how">
+      <h2 id="ailments-how">How It Works</h2>
+      <ol>
+        <li>Call us or walk in — no appointment needed for most conditions.</li>
+        <li>Your pharmacist conducts a brief private assessment.</li>
+        <li>
+          If appropriate, they prescribe a treatment on the spot — no wait, no referral.
+        </li>
+        <li>
+          If the condition is outside pharmacist scope, we refer you to the right provider.
+        </li>
+      </ol>
+      <!-- TODO: confirm walk-in vs. appointment policy with owner -->
+    </section>
+
+    <section aria-labelledby="ailments-holistic">
+      <h2 id="ailments-holistic">Whole-Person Care, Not Just a Prescription</h2>
+      <p>
+        At Four Winds Roots, minor ailment assessments are part of our holistic care model.
+        Your pharmacist reviews your full medication and supplement profile before prescribing,
+        so your treatment fits your whole health picture — not just the symptom in front of them.
+      </p>
+      <p>
+        <a href="/holistic-wellness">Learn about our holistic wellness approach &rarr;</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="ailments-book">
+      <h2 id="ailments-book">Get Seen Today</h2>
+      <p>Walk in or call — most minor ailment assessments are same-day.</p>
+      <div class="ailments-ctas">
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+        <a href="/contact" class="btn btn-secondary">Hours &amp; Location</a>
+      </div>
+      <!-- TODO: add Jane App booking widget once confirmed with owner -->
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: var(--text-lg);
+    max-width: 60ch;
+    margin-bottom: var(--space-10);
+    color: var(--color-text-muted);
+  }
+
+  section + section {
+    margin-top: var(--space-10);
+    padding-top: var(--space-10);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .ailments-list {
+    columns: 2;
+    column-gap: var(--space-8);
+    margin-block: var(--space-4);
+  }
+
+  @media (max-width: 600px) {
+    .ailments-list { columns: 1; }
+  }
+
+  .ailments-list li {
+    margin-bottom: var(--space-2);
+    break-inside: avoid;
+  }
+
+  .ailments-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-3);
+  }
+
+  ol {
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .ailments-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-top: var(--space-4);
+  }
+</style>

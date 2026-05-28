@@ -1,0 +1,31 @@
+---
+/**
+ * SchemaJsonLd — Four Winds Roots Pharmacy
+ * Injects the LocalBusiness/Pharmacy JSON-LD structured data into the <head>.
+ * Data source: src/data/schema.json
+ * Usage: <SchemaJsonLd /> in BaseLayout.astro <head>
+ * Note: @comment_ fields are stripped at render time (see BaseLayout.astro).
+ * TODO: Currently rendered inline in BaseLayout.astro — extract here for reuse.
+ *
+ * Props: accepts an optional `schema` prop to override the default schema.json,
+ * useful for page-specific schema additions (e.g., FAQPage, BreadcrumbList).
+ */
+
+import type { Props } from '../layouts/BaseLayout.astro';
+import defaultSchema from '../data/schema.json';
+
+interface SchemaProps {
+  schema?: Record<string, unknown>;
+}
+
+const { schema = defaultSchema } = Astro.props as SchemaProps;
+
+// Strip @comment_ annotation fields — they are developer notes, not valid JSON-LD
+const cleanSchema = JSON.stringify(
+  schema,
+  (key, value) => (key.startsWith('@comment') ? undefined : value),
+  2
+);
+---
+
+<script type="application/ld+json" set:html={cleanSchema}></script>

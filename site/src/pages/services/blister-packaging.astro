@@ -1,0 +1,76 @@
+---
+/**
+ * Blister Packaging — Four Winds Roots Pharmacy
+ * Primary keyword: blister packaging pharmacy Toronto / seniors medication packaging North York
+ * Source: design/information-architecture.md — Blister Packaging
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneLink from '../../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Blister Packaging | Four Winds Roots Pharmacy, North York"
+  description="Blister packaging for seniors, caregivers, and complex medication schedules at Four Winds Roots Pharmacy, North York. Free with your prescriptions. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Blister Packaging):
+    1. ServiceHero — "Never miss a dose" headline + request CTA
+    2. How it works — StepList: we organize your meds by date/time in sealed blister packs
+    3. Who it helps — EligibilityNote: seniors, caregivers, complex regimens, post-hospital patients
+    4. No-extra-cost note — prominently stated, removes a key objection
+    5. Request CTA — call or contact form link
+    6. Free delivery tie-in — blister packs delivered free across North York
+    Primary keyword: "blister packaging pharmacy Toronto", "seniors medication packaging North York"
+    TODO: confirm whether blister packaging is truly included at no extra charge with owner.
+  -->
+
+  <div class="container section">
+    <h1>Blister Packaging in North York — Never Miss a Dose</h1>
+    <p>
+      Managing multiple medications is hard. Blister packaging makes it simple — every dose
+      labelled by day and time, sealed and ready. At Four Winds Roots Pharmacy, blister packaging
+      is included at no extra cost with your prescriptions.
+    </p>
+
+    <section aria-labelledby="blister-how-it-works">
+      <h2 id="blister-how-it-works">How Blister Packaging Works</h2>
+      <ol>
+        <li>Tell us you'd like blister packaging — when you call, drop in, or at your next refill.</li>
+        <li>We organise all your prescriptions into individual sealed packs, labelled by day and time.</li>
+        <li>Pick up your packs or have them delivered — you always know exactly what to take and when.</li>
+      </ol>
+      <!-- TODO: confirm whether packaging is weekly or monthly with owner -->
+    </section>
+
+    <section aria-labelledby="blister-who-it-helps">
+      <h2 id="blister-who-it-helps">Who It Helps</h2>
+      <p>
+        Blister packaging is especially valuable for seniors managing several medications,
+        caregivers coordinating prescriptions for a family member, and anyone recovering
+        from a hospital stay or managing a complex medication schedule.
+      </p>
+    </section>
+
+    <section aria-labelledby="blister-no-cost">
+      <h2 id="blister-no-cost">Included at No Extra Cost</h2>
+      <p>
+        Blister packaging is provided at <strong>no additional charge</strong> with your
+        prescriptions at Four Winds Roots Pharmacy.
+        <br />
+        <small><em>Confirmed via Ontario Health atHome directory (March 2026).</em></small>
+      </p>
+    </section>
+
+    <section aria-labelledby="blister-request">
+      <h2 id="blister-request">Request Blister Packaging</h2>
+      <p>Just ask at your next visit or call us — we'll set it up for your next refill.</p>
+      <p>
+        <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+      </p>
+      <p>
+        Prefer delivery? Blister packs can be delivered free across North York —
+        <a href="/services/free-delivery">learn about free delivery &rarr;</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

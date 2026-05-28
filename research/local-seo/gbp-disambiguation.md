@@ -1,127 +1,180 @@
-# Google Business Profile Disambiguation Strategy
+---
+title: "Google Business Profile — Legacy Listing Cleanup"
+version: "2.1"
+last_updated: "2026-05-27"
+status: active
+category: seo
+owner: pending_owner_review
+description: "Action plan to claim and correct the GBP and all directory listings under stale legacy names, following the clarification that Can Pharm Service Inc is the pharmacy's legal operating entity."
+---
 
-## The problem: "Four Winds pharmacy" search confusion
+# Google Business Profile — Legacy Listing Cleanup
 
-**Can Pharm Services Inc** occupies the adjacent unit at **3932A Keele St** — the same street
-address as Four Winds Roots Pharmacy. Directory evidence (Yellow Pages, Tiendeo) confirms that
-Can Pharm was formerly listed under the name **"Guardian Four Winds Pharmacy"** at this exact
-address.
+## Clarification (2026-05-27)
 
-This means patients searching for "Four Winds pharmacy" or "Four Winds Keele" may find:
-- The old Guardian Four Winds / Can Pharm listing (a different business)
-- Potentially misattributed reviews, phone numbers, or hours
-- Confusion about which "Four Winds" pharmacy they are contacting
+**Can Pharm Service Inc is the legal operating entity for R.O.O.T.S Four Winds Pharmacy.**
+The pharmacy at 3932A Keele Street, Toronto ON M3J 1N8, phone (416) 398-8200 is the client.
 
-This is a **launch-blocking issue** for local search and must be resolved before the website goes live.
+This supersedes the earlier "adjacent competitor" theory. The previous version of this document
+treated Can Pharm as a separate competitor at the same address — that was incorrect. Can Pharm
+Service Inc *is* the pharmacy operator.
 
-## Evidence
+---
 
-| Source | Listing found | Name used |
+## The problem: stale legacy listings under old brand names
+
+The pharmacy has operated under different names and directory entries over time. These old
+listings still surface in search results and intercept patients:
+
+| Directory | Listed name | Status |
 |---|---|---|
-| Yellow Pages | 3932A Keele St, North York | "Guardian Four Winds Pharmacy" |
-| Tiendeo | 3932A Keele St, North York | "Guardian Pharmacy — A Keele Street" |
-| Medimap | 3932A Keele St, North York | "Can Pharm Services Inc" |
-| Central Health Line | 3932 Keele St (possibly same) | Varies |
+| Yellow Pages | "Guardian Four Winds Pharmacy" | Old Guardian franchise name — needs updating |
+| Medimap | "Can Pharm Services Inc" | Legal entity name only — no patient-facing brand |
+| Lumino / Cortico | "R.O.O.T.S. Four Winds Pharmacy" | Variant spelling — needs alignment |
+| CHL / PharmacyList | "Roots Four Winds Pharmacy" | Variant — needs alignment |
+| Google Business Profile | Unknown / unverified | **Must be claimed and verified immediately** |
 
-**Phone overlap risk:** Some directories list Can Pharm with phone (416) 398-8200 — the same
-number used for Four Winds Roots. Owner must confirm which phone belongs to which entity and
-ensure directories are separated.
+The core risk: a patient searching "Four Winds pharmacy" or "R.O.O.T.S pharmacy Keele" may land
+on a stale Yellow Pages listing that shows "Guardian Four Winds Pharmacy" with no hours, no
+website, and possibly wrong information. That is a lost patient.
+
+---
+
+## Canonical name decision (confirm with owner)
+
+Pick **one** name and use it identically everywhere — GBP, website, all directories, schema.json.
+
+**Recommended:** `R.O.O.T.S Four Winds Pharmacy` or `Four Winds Roots Pharmacy`
+- Avoid "Guardian Four Winds" — Guardian was a franchise brand the pharmacy has left
+- Avoid "Can Pharm Services Inc" as the public-facing name — it's the corporate entity, not the
+  patient-facing brand
+- The "R.O.O.T.S" acronym is distinctive; confirm with owner whether to expand it or keep it
+
+---
 
 ## Action plan
 
-### 1. Claim and verify the Google Business Profile (GBP) — highest priority
+### 1. Claim the Google Business Profile (highest priority — owner action)
 
-- Navigate to [business.google.com](https://business.google.com) and claim/verify the listing
-  for **Four Winds Roots Pharmacy**.
-- Ensure the **canonical business name** used in the GBP matches the chosen brand name exactly
-  (confirm with owner — see `design/content-questionnaire.md`).
-- Set the correct **primary category**: `Pharmacy`. Add secondary categories if applicable:
-  `Optician`, `Holistic medicine practitioner`, or `Wellness center`.
-- Publish the correct **phone, address, hours, website URL, and photos** immediately.
-- If the old "Guardian Four Winds" listing appears in Google, use the GBP dashboard to request
-  removal of duplicate listings or flag them as closed/incorrect.
+The GBP for this pharmacy may exist under "Guardian Four Winds Pharmacy" or "R.O.O.T.S Four
+Winds Pharmacy." Because Can Pharm Service Inc is the operating entity:
 
-### 2. Canonical name — pick one and lock it
+1. Go to [business.google.com](https://business.google.com) and search for the pharmacy
+2. If a listing exists under any variant name at 3932A Keele St — **claim it as the owner**
+   (Can Pharm Service Inc / the pharmacist's Google account)
+3. Once claimed, update:
+   - **Name** → confirmed canonical name
+   - **Primary category** → Pharmacy
+   - **Secondary categories** → Optician, Holistic medicine practitioner (if applicable)
+   - **Phone** → (416) 398-8200
+   - **Address** → 3932A Keele St, Toronto ON M3J 1N8
+   - **Hours** → confirmed weekly hours
+   - **Website** → the new website URL once live
+   - **Photos** → storefront, interior, optical area, team
+4. If multiple listings exist for the same address under different names, request removal of
+   duplicates from within the GBP dashboard
 
-The pharmacy has appeared under at least four variants across directories:
-- "Four Winds Roots Pharmacy"
-- "R.O.O.T.S. Four Winds Pharmacy"
-- "Roots Four Winds Pharmacy"
-- (via Can Pharm) "Guardian Four Winds Pharmacy"
+### 2. Canonical name sweep — one-time update across all directories
 
-**Choose one canonical form** (confirm with owner), then:
-- Use it identically in the GBP, the website, all JSON-LD schema, and all directories.
-- Inconsistent NAP (Name, Address, Phone) suppresses local ranking; Google uses exact-match signals.
+After confirming the canonical name with the owner, update every directory:
 
-Recommendation: **"Four Winds Roots Pharmacy"** — most distinctive, avoids the "Guardian" / 
-Can Pharm legacy association.
+| Directory | Current name | Action |
+|---|---|---|
+| Google Business Profile | Unknown | Claim + update (Step 1 above) |
+| Yellow Pages | "Guardian Four Winds Pharmacy" | Claim and update to canonical name |
+| Medimap | "Can Pharm Services Inc" | Update to patient-facing brand name |
+| Lumino Health (Sun Life) | "R.O.O.T.S. Four Winds Pharmacy" | Align spelling to canonical |
+| Cortico | Variant | Update |
+| Central Health Line | Variant | Update |
+| PharmacyList.ca | "Roots Four Winds Pharmacy" | Align to canonical |
+| Yelp | Any listing found | Update |
+| Facebook | Any page | Update name + link to website |
 
-### 3. NAP consistency cleanup — one-time sweep
+### 3. JSON-LD schema — canonical name + disambiguating description
 
-Update the business name and address on every major directory to the canonical form. Priority
-directories to correct:
-
-| Directory | Action |
-|---|---|
-| Google Business Profile | Claim + verify + correct name |
-| Yellow Pages (yellowpages.ca) | Separate Can Pharm listing; ensure Four Winds has correct entry |
-| Central Health Line | Update name + hours |
-| Cortico | Claim listing if available |
-| Medimap | Update or claim |
-| Lumino Health (Sun Life) | Correct name |
-| Yelp | Update |
-| PharmacyList.ca | Update |
-| Facebook | Ensure correct name and address |
-
-### 4. JSON-LD schema disambiguation
-
-In the website's LocalBusiness/Pharmacy schema (see `research/local-seo/schema-draft.json`),
-include:
+In `site/src/data/schema.json`, the `disambiguatingDescription` field clarifies the entity
+for search engines, especially given the name history:
 
 ```json
 {
   "@type": "Pharmacy",
-  "name": "Four Winds Roots Pharmacy",
-  "disambiguatingDescription": "Independent holistic pharmacy at 3932A Keele St, North York. Not affiliated with Can Pharm Services or Guardian Pharmacy.",
+  "name": "[confirmed canonical name]",
+  "legalName": "Can Pharm Service Inc",
+  "disambiguatingDescription": "Independent holistic pharmacy at 3932A Keele St, North York —
+    formerly listed as Guardian Four Winds Pharmacy. Now operating as [canonical name] with
+    holistic wellness, optical, and full pharmacy services.",
   "address": {
     "streetAddress": "3932A Keele St",
-    "addressLocality": "North York",
+    "addressLocality": "Toronto",
     "addressRegion": "ON",
     "postalCode": "M3J 1N8"
   }
 }
 ```
 
-The `disambiguatingDescription` field is specifically designed for this use case — it helps
-search engines distinguish between co-located entities.
+Adding `legalName: "Can Pharm Service Inc"` helps Google connect the corporate entity to the
+patient-facing brand — resolving any entity ambiguity from the directory name variants.
 
-### 5. Homepage copy — soft disambiguation
+### 4. Homepage copy — soft brand anchoring
 
-Without being adversarial, include language on the homepage that clearly anchors the brand:
+The homepage copy should clearly anchor the current brand name, especially for patients who
+knew the pharmacy as "Guardian Four Winds" or "R.O.O.T.S.":
 
-> "Four Winds Roots Pharmacy — your independent holistic pharmacy at 3932A Keele Street,
-> North York. Serving the Keele & Finch community with personalized care since [year]."
+> "[Canonical name] — your independent holistic pharmacy at 3932A Keele Street, North York.
+> Serving the Keele & Finch community with personalized care since [year]."
 
-This kind of explicit, location-anchored copy helps Google resolve entity ambiguity.
+This helps Google resolve entity identity when crawling the new site.
 
-### 6. Monitor for confusion after launch
+### 5. Monitor after launch
 
-- Set up a Google Alert for "Four Winds pharmacy" to catch incorrect listings or reviews
-  appearing on the wrong profile.
-- Periodically check the old "Guardian Four Winds" / Can Pharm listing to confirm it does
-  not resurface with Four Winds Roots contact info.
+- Set a Google Alert for "Four Winds pharmacy Keele" and "R.O.O.T.S pharmacy" to catch any
+  new or resurfaced stale listings
+- Check Yellow Pages 30 days post-launch to confirm the Guardian listing has been updated
 
-## Owner action items (cannot be done without owner)
+---
 
-- [ ] Confirm canonical business name
-- [ ] Confirm phone number ownership (is (416) 398-8200 Four Winds Roots' number, separate from Can Pharm?)
-- [ ] Provide Google account credentials to claim GBP (or claim it yourself — agent cannot do this)
-- [ ] Provide founding year / "serving since" date for homepage copy
-- [ ] Confirm whether any formal relationship with Can Pharm / Guardian exists
+## Owner action items
 
-## Timeline
+- [ ] Confirm the canonical public-facing brand name to use everywhere
+- [ ] Claim the GBP (requires owner's Google account)
+- [ ] Confirm founding year / "serving since" date for homepage copy
+- [ ] Confirm whether "R.O.O.T.S" is an acronym and if so what it stands for
+  (this is valuable brand storytelling for the About page)
 
-This must be completed **before the site launches**. If the GBP is claimed and the canonical
-name is locked before launch, the website's internal links + JSON-LD will reinforce the correct
-entity immediately upon indexing. Launching without GBP disambiguation risks sending patients
-to the wrong listing.
+---
+
+## What this is NOT
+
+This is not a competitor issue. Can Pharm Service Inc is the pharmacy operator —
+not a separate business at an adjacent unit. All directory cleanup below is for the
+**client's own listings**, not a competitor's.
+
+*Updated: 2026-05-27 — previous version incorrectly treated Can Pharm as a competitor.*
+
+## Pass 3 — Confirmed Primary-Source Facts (2026-05-27)
+
+*Sources: Ontario Health atHome directory March 2026, Lumino Health May 2026, FedEx locator, PharmacyList, Medimap.*
+
+### Confirmed trade name variants (with sources)
+
+All three variant names have confirmed primary-source citations and should be treated as pre-existing alternate names in `schema.json` under `alternateName`:
+
+| Name variant | Source(s) |
+|---|---|
+| R.O.O.T.S. Four Winds Pharmacy | FedEx Authorized ShipCentre locator; PharmacyList.ca |
+| Four Winds Roots Pharmacy | Lumino Health (Sun Life); Ontario Health atHome directory |
+| Roots Four Winds Pharmacy | Yelp listing (via FedEx locator cross-reference) |
+
+The **preferred canonical name** for all public-facing copy is still pending owner confirmation (see `content-questionnaire.md` — Remaining Open Items #1). Until confirmed, use "Four Winds Roots Pharmacy" as the working canonical (it appears in both Lumino and atHome).
+
+### Operating entity — confirmed spelling
+
+Medimap lists the operating entity as **"Can Pharm Services Inc."** (with a terminal "s" on Services). The user-supplied spelling was "Can Pharm Service Inc." Both variants are in use across directories. For `schema.json` `legalName`, use **"Can Pharm Services Inc."** (Medimap is the most authoritative public registry source for operating entities). Note the discrepancy if contacting Medimap for a listing update.
+
+### Schema implications
+
+Both variant names are pre-existing in `site/src/data/schema.json` under `alternateName`. No new entries are required — the confirmed sources above validate the existing data. Update `legalName` to "Can Pharm Services Inc." once the owner confirms the exact registered form.
+
+### GBP status
+
+GBP access and verification status remain unconfirmed from public data — owner action still required as the highest-priority item in this document.

@@ -1,0 +1,61 @@
+---
+/**
+ * HoursTable — Four Winds Roots Pharmacy
+ * Structured weekly hours + holiday note. Mirrors the schema.json openingHoursSpecification.
+ * IMPORTANT: Hours here must be kept in sync with schema.json and the GBP listing.
+ * TODO: Confirm all hours (including Saturday, Sunday, holidays) with owner before publishing.
+ *
+ * Props:
+ *   showHolidayNote?: boolean (default: true)
+ *   compact?: boolean (default: false)
+ */
+
+interface Props {
+  showHolidayNote?: boolean;
+  compact?: boolean;
+}
+
+const { showHolidayNote = true, compact = false } = Astro.props;
+
+// TODO: Replace with data imported from a shared hours data file (keep in sync with schema.json)
+const hours = [
+  { day: 'Monday',    open: '9:00 am', close: '6:00 pm', closed: false },
+  { day: 'Tuesday',   open: '9:00 am', close: '6:00 pm', closed: false },
+  { day: 'Wednesday', open: '9:00 am', close: '6:00 pm', closed: false },
+  { day: 'Thursday',  open: '9:00 am', close: '6:00 pm', closed: false },
+  { day: 'Friday',    open: '9:00 am', close: '6:00 pm', closed: false },
+  { day: 'Saturday',  open: '9:00 am', close: '2:00 pm', closed: false },
+  { day: 'Sunday',    open: null,      close: null,       closed: true  },
+];
+import PhoneLink from './PhoneLink.astro';
+---
+
+<!-- TODO: Confirm all hours with owner — these are placeholders only -->
+<div data-component="HoursTable" class:list={['hours-table-wrap', compact && 'hours-table-wrap--compact']}>
+  <table class="hours-table" aria-label="Pharmacy hours of operation">
+    <caption class="sr-only">Four Winds Roots Pharmacy hours of operation</caption>
+    <tbody>
+      {hours.map(({ day, open, close, closed }) => (
+        <tr>
+          <th scope="row">{day}</th>
+          <td>
+            {closed
+              ? <span>Closed</span>
+              : <span>{open} – {close}</span>
+            }
+            {/* TODO: confirm each day's hours with owner */}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  {showHolidayNote && (
+    <p class="hours-table__holiday">
+      <em>
+        <!-- TODO: add statutory holiday schedule once confirmed with owner -->
+        Holiday hours may vary. Call to confirm: <PhoneLink />
+      </em>
+    </p>
+  )}
+</div>

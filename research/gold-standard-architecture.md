@@ -1,3 +1,13 @@
+---
+title: "Industry Gold Standard — Independent Pharmacy Web Architecture"
+version: "1.0"
+last_updated: "2026-05-27"
+status: active
+category: research
+owner: internal
+description: "2026 industry gold-standard criteria for independent pharmacy websites, platform landscape overview, and the recommended six-layer architecture for Four Winds Roots."
+---
+
 # Industry Gold Standard — Independent Pharmacy Web Architecture
 
 This answers the owner's direct question: *what is the industry gold standard for independent

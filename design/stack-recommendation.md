@@ -1,3 +1,13 @@
+---
+title: "Stack Recommendation"
+version: "1.0"
+last_updated: "2026-05-27"
+status: review
+category: design
+owner: pending_owner_review
+description: "Technology stack recommendation (Astro + git-based CMS + Netlify) with cost model, trade-offs, alternatives, and recommended build sequence for the pharmacy website."
+---
+
 # Stack Recommendation
 
 **Recommendation: build a static-first site with Astro, edited through a free git-based CMS, hosted

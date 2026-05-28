@@ -1,0 +1,65 @@
+---
+/**
+ * Optical & Wellness Centre — Four Winds Roots Pharmacy
+ * Primary keyword: optical and wellness centre Keele Finch
+ * Source: design/information-architecture.md — Optical & Wellness Centre
+ * Brand note: "Under one roof" is the key differentiator — no competitor claims this.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneLink from '../components/PhoneLink.astro';
+---
+
+<BaseLayout
+  title="Optical & Wellness Centre, Keele & Finch | Four Winds Roots Pharmacy"
+  description="Optical and wellness centre at Four Winds Roots Pharmacy, Keele & Finch, North York. Eye care and wellness services alongside your pharmacy — all under one roof. Call (416) 398-8200."
+>
+  <!--
+    IA KEY BLOCKS (from information-architecture.md — Optical & Wellness Centre):
+    1. ServiceHero — "Pharmacy, optical, and wellness — all under one roof at Keele & Finch"
+    2. Optical services — what's available: glasses, contact lenses, eye exams, etc.
+       TODO: confirm exact optical services offered with owner before publishing
+    3. Wellness services — what wellness services complement the pharmacy/optical offering
+       TODO: confirm exact wellness services with owner before publishing
+    4. "Under one roof" value prop — convenience narrative: one stop for pharmacy + eye health + wellness
+    5. CTA — call or visit (no transfer/refill form here — different intent)
+    Primary keyword: "optical and wellness centre Keele Finch", "optical pharmacy North York"
+    IMPORTANT: All service listings need owner confirmation before publishing.
+  -->
+
+  <div class="container section">
+    <h1>Optical &amp; Wellness Centre at Keele &amp; Finch, North York</h1>
+    <p>TODO: ServiceHero — "Your pharmacy, optical, and wellness care all in one place" headline + CTA</p>
+
+    <section aria-labelledby="optical-services">
+      <h2 id="optical-services">Optical Services</h2>
+      <p>
+        <!-- TODO: confirm full optical service list with owner before publishing -->
+        TODO: Optical services list — eyeglasses, contact lenses, eye exams, optometrist referrals.
+        Only publish services that are actually offered on-site.
+      </p>
+    </section>
+
+    <section aria-labelledby="wellness-services">
+      <h2 id="wellness-services">Wellness Services</h2>
+      <p>
+        <!-- TODO: confirm wellness service list with owner before publishing -->
+        TODO: Wellness services — what wellness offerings are available at this location.
+      </p>
+    </section>
+
+    <section aria-labelledby="optical-under-one-roof">
+      <h2 id="optical-under-one-roof">Everything Under One Roof</h2>
+      <p>TODO: Convenience narrative — pharmacy + optical + wellness at 3932A Keele St, no need to travel
+        to multiple locations for different health needs.</p>
+    </section>
+
+    <section aria-labelledby="optical-cta">
+      <h2 id="optical-cta">Visit Us or Call to Learn More</h2>
+      <address>
+        <p>3932A Keele St, North York, ON M3J 1N8</p>
+        <p><PhoneLink /></p>
+      </address>
+      <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+    </section>
+  </div>
+</BaseLayout>
