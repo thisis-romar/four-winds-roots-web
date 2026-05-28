@@ -34,6 +34,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Netlify (production)
+        id: netlify-prod
         if: github.ref == 'refs/heads/feature/astro-scaffold'
         uses: nwtgck/actions-netlify@v3
         with:
@@ -46,6 +47,36 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      # Smoke-test: "deploy succeeded" is not the same as "site serves content".
+      # On 2026-05-27 the publish-dir was wrong, every route 404'd, and yet
+      # the Action exited 0 for five consecutive runs. This step fails the run
+      # if the homepage and a representative deep-link return anything other
+      # than 200, AND if the homepage doesn't contain a known string from the
+      # rendered Astro output.
+      - name: Verify production URL actually serves content
+        if: github.ref == 'refs/heads/feature/astro-scaffold' && steps.netlify-prod.outcome == 'success'
+        run: |
+          set -euo pipefail
+          URL="${{ steps.netlify-prod.outputs.deploy-url }}"
+          if [ -z "$URL" ]; then
+            URL="https://charming-zuccutto-52dc64.netlify.app"
+          fi
+          echo "Smoke-testing $URL"
+          for path in "/" "/about/" "/contact/" "/services/refills/"; do
+            code=$(curl -sS -o /tmp/page.html -w '%{http_code}' "$URL$path")
+            echo "  $path -> $code"
+            if [ "$code" != "200" ]; then
+              echo "::error::Smoke test failed: $URL$path returned $code"
+              exit 1
+            fi
+          done
+          if ! grep -qi "Four Winds Roots Pharmacy" /tmp/page.html; then
+            echo "::error::Last page did not contain expected title 'Four Winds Roots Pharmacy'"
+            head -50 /tmp/page.html
+            exit 1
+          fi
+          echo "Smoke test passed."
 
       - name: Deploy to Netlify (preview)
         if: github.event_name == 'pull_request'
