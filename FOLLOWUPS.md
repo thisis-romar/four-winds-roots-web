@@ -54,7 +54,7 @@ The site is live at `https://charming-zuccutto-52dc64.netlify.app/` but every UR
 
 The aspirational domain is **not registered**. Effect: Google sees the canonical pointing at a URL that doesn't resolve, refuses to index the actual served URL, and the site never enters Search results despite being fully crawlable. Until either (a) the domain is registered + pointed at Netlify, or (b) the schema/canonical is rewritten to the current Netlify URL, the site is functionally invisible to organic search.
 
-**Recommended next step:** decide on the production domain (`fourwindsrootspharmacy.ca` looks like the intended one), register it, configure Netlify DNS or external DNS pointing the apex + www to Netlify, then verify both canonical and JSON-LD `url` resolve. Search Console verification is the same form.
+**Recommended next step:** decide on the production domain. **`fourwindsrootspharmacy.ca` is verified available** as of 2026-05-28 (DNS NXDOMAIN against authoritative `.ca` servers) and is what the existing schema/canonical/og:url already point at — registering it = zero migration. See [`research/local-seo/domain-shortlist.md`](research/local-seo/domain-shortlist.md) for the ranked 12-domain shortlist + recommended bundles. Then configure Netlify custom domain (apex + www), Let's Encrypt provisions automatically, verify in Google Search Console.
 
 ## Non-implementation gaps the session raised but didn't resolve
 

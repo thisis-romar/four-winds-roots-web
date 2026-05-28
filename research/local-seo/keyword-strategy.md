@@ -121,10 +121,10 @@ population a pharmacy serves most.
 
 The 2026-05-26 audit found additional name variants and a critical conflict:
 
-- **"Four Winds Roots Pharmacy"** — preferred canonical
-- **"R.O.O.T.S. Four Winds Pharmacy"** — variant on Lumino, Cortico, centralhealthline
-- **"Roots Four Winds Pharmacy"** — variant on PharmacyList
-- **"Guardian Four Winds Pharmacy"** — Can Pharm Services at 3932A Keele (DIFFERENT BUSINESS)
+- **"Four Winds Roots Pharmacy"** — preferred canonical (confirmed by Lumino Health + Ontario Health atHome, 2026-05-27)
+- **"R.O.O.T.S. Four Winds Pharmacy"** — current variant on FedEx Authorized ShipCentre + PharmacyList
+- **"Roots Four Winds Pharmacy"** — current variant on Yelp
+- **"Guardian Four Winds Pharmacy"** — _historical_ Yellow Pages listing under the previous Guardian franchise. **Same pharmacy**, same address (3932A Keele), same legal entity (Can Pharm Services Inc.) — the operator has since left the Guardian franchise. The 2026-05-27 clarification in [`gbp-disambiguation.md`](./gbp-disambiguation.md) is authoritative. The earlier draft of this file labeled Guardian as a "DIFFERENT BUSINESS" — that was wrong and is now corrected.
 
 Action: after confirming the canonical name with the owner, run a directory sweep (see
 `gbp-disambiguation.md`) to correct all listings. Priority: GBP first, then Yellow Pages,
