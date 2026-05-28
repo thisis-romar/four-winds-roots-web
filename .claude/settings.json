@@ -1,4 +1,29 @@
 {
   "model": "claude-sonnet-4-5",
-  "cleanupPeriodDays": 7
+  "cleanupPeriodDays": 7,
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .githooks/stop-git-check.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .githooks/post-edit-update.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
 }
