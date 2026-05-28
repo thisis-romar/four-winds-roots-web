@@ -34,7 +34,7 @@ The session `session_01QzYcqzdPke6WKiBkyg1d8W` ("Check if site is live") ran 13 
 | Gap | SQLite mentions | Why it matters |
 |---|---|---|
 | **301 redirects** | **0** | A pharmacy on GBP / Yelp / Yellow Pages will have backlinks pointing at old listings. Need a `_redirects` file or `netlify.toml` `[[redirects]]` block. Even just `/old-services/* → /services/:splat 301`. |
-| **`schema.org` LocalBusiness JSON-LD** | 0 (jsonld: 2) | The single highest-leverage local-SEO move for a brick-and-mortar pharmacy. Should be on the homepage with full NAP (name, address, phone), opening hours, `@type: Pharmacy`. |
+| **~~`schema.org` LocalBusiness JSON-LD~~** | ~~0 (jsonld: 2)~~ | ✅ **Already implemented** — discovered 2026-05-28 at `site/src/data/schema.json` (220 lines, `@type: Pharmacy`, 12 services, 2 named employees, geo, hours, aggregate rating, alternate names, payment methods, areaServed, FedEx co-tenant listing). Rendered into `<head>` by `BaseLayout.astro` with `@comment_*` fields stripped. **Real issue:** the schema's `url`, `<link rel="canonical">`, and `og:url` all point at the unregistered `fourwindsrootspharmacy.ca`. Google will refuse to index the current Netlify URL because canonical points elsewhere that doesn't resolve. See "Canonical mismatch" below. |
 | **Open Graph / Twitter card defaults** | 0 (OG image: 6) | Default OG image and metadata for every page. Without it, social shares render broken. |
 | **HSTS preload** | 0 | `netlify.toml` already sets `X-Frame-Options` etc. but not HSTS. `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload` and submit to `hstspreload.org`. |
 | **`robots.txt` content review** | 2 | Astro generates one but content unverified. Confirm it allows indexing of pages we want indexed and blocks `/admin/`. |
@@ -43,6 +43,18 @@ The session `session_01QzYcqzdPke6WKiBkyg1d8W` ("Check if site is live") ran 13 
 | **PWA / manifest** | 0 | Not required, but `manifest.webmanifest` + offline shell would polish the mobile experience. Low priority. |
 | **Branch strategy** | merge: 5 | Currently deploying off `feature/astro-scaffold` directly. Production should be `main`. Plan a merge + retarget the Netlify production branch. |
 | **GitHub Action vs Netlify-native build** | — | Both fired on the same push (we saw two `ready` deploys 2 seconds apart for commit `4e6e7c1`). Pick one. The Netlify-native build is simpler; the Action lets you pin Node version. Recommend deleting `.github/workflows/deploy.yml` once happy with Netlify-native. |
+
+## Critical SEO issue discovered 2026-05-28 — Canonical mismatch
+
+The site is live at `https://charming-zuccutto-52dc64.netlify.app/` but every URL-bearing piece of metadata claims it lives at `https://fourwindsrootspharmacy.ca`:
+
+- `<link rel="canonical">` → `fourwindsrootspharmacy.ca`
+- `<meta property="og:url">` → `fourwindsrootspharmacy.ca`
+- JSON-LD `url`, `logo`, `image` → `fourwindsrootspharmacy.ca`
+
+The aspirational domain is **not registered**. Effect: Google sees the canonical pointing at a URL that doesn't resolve, refuses to index the actual served URL, and the site never enters Search results despite being fully crawlable. Until either (a) the domain is registered + pointed at Netlify, or (b) the schema/canonical is rewritten to the current Netlify URL, the site is functionally invisible to organic search.
+
+**Recommended next step:** decide on the production domain (`fourwindsrootspharmacy.ca` looks like the intended one), register it, configure Netlify DNS or external DNS pointing the apex + www to Netlify, then verify both canonical and JSON-LD `url` resolve. Search Console verification is the same form.
 
 ## Non-implementation gaps the session raised but didn't resolve
 
