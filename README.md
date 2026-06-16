@@ -15,8 +15,10 @@ A single repository holding the **website** for **Four Winds Roots Pharmacy**
 foundation it was built from.
 
 > Status: **Site built — pre-launch cleanup in progress.** The Astro site in `site/` is built
-> and deploys to Netlify. A short go-live to-do list remains (real opening hours, domain
-> registration, owner content). See **[docs/GUIDANCE.md](docs/GUIDANCE.md)** for the prioritized
+> and deploys to Netlify from `main`. Two interim measures are in place until the owner supplies
+> facts: opening hours show a **"call to confirm"** message instead of unverified times, and SEO
+> config (canonical, sitemap, analytics) **temporarily points at the Netlify URL** until the
+> `.ca` domain is registered. See **[docs/GUIDANCE.md](docs/GUIDANCE.md)** for the full go-live
 > plan and **[FOLLOWUPS.md](FOLLOWUPS.md)** for deploy/SEO gaps.
 
 ## Repository layout
@@ -76,11 +78,11 @@ Node 20+ recommended. The build output (`site/dist/`) and `node_modules/` are gi
 
 The Astro site in `site/` deploys to **Netlify**. The trunk branch is **`main`**.
 
-- **Live (preview) URL:** https://charming-zuccutto-52dc64.netlify.app
-- **Intended production domain:** `fourwindsrootspharmacy.ca` *(registration pending — set as the
-  canonical `site:` in `site/astro.config.mjs`; until registered, search visibility is limited)*
+- **Live URL:** https://charming-zuccutto-52dc64.netlify.app — also the **current canonical**
+  (temporary; see SEO & launch status below)
+- **Intended production domain:** `fourwindsrootspharmacy.ca` *(registration pending)*
 - **Netlify site ID:** `1e8d8d8f-ff38-41a8-8c44-d4a1daf5ef8d` (account: `roots-4-winds-pharmacy`)
-- **CI:** `.github/workflows/deploy.yml` runs on push and produces a Netlify deploy
+- **CI:** `.github/workflows/deploy.yml` runs on push to `main` → build, production deploy, smoke test
 
 > **Note:** confirm Netlify's *Production branch* is set to **`main`** (Site → Build & deploy →
 > Continuous deployment) now that `main` is the repository's trunk.
@@ -107,6 +109,30 @@ netlify deploy --dir=dist            # preview (unique URL, doesn't touch produc
 netlify deploy --dir=dist --prod     # promote to production
 ```
 
+## SEO & launch status
+
+A quick snapshot of the interim measures and what unblocks each. Full detail lives in
+[docs/GUIDANCE.md](docs/GUIDANCE.md).
+
+| Item | Current state | Unblocked by |
+|---|---|---|
+| **Canonical / sitemap / analytics** | ⏳ Temporarily point at the Netlify URL so Google can crawl the live site. Each spot carries a "revert once registered" note. | Owner registers `fourwindsrootspharmacy.ca`, then revert `site/astro.config.mjs`, `schema.json`, `robots.txt`, `admin/config.yml`, and the Plausible `data-domain`. |
+| **Opening hours** | ⏳ "Call to confirm" message shown instead of unverified times (contact page, footer, JSON-LD). Prior values kept in HTML comments. | Owner confirms real hours by phone → restore the hours table + `openingHoursSpecification`. |
+| **Optical / About / privacy / accessibility content** | ⏳ General copy; owner-specific details pending. | Owner intake (+ lawyer for privacy). |
+| **Doctor-title handling** | ✅ Correct — neither pharmacist presented as a physician. | Keep as-is (see Contributor rules). |
+
+## Architecture
+
+Single repository (lightweight monorepo), one Astro app, no build orchestrator. Full rationale:
+[docs/decisions/ADR-0001](docs/decisions/ADR-0001-repository-architecture.md).
+
+## See also
+
+- **[docs/GUIDANCE.md](docs/GUIDANCE.md)** — the prioritized go-live plan (URGENT/FIX SOON/MINOR, owner vs dev).
+- **[FOLLOWUPS.md](FOLLOWUPS.md)** — deploy/SEO gaps captured after the 2026-05-28 deploy session.
+- **[docs/decisions/ADR-0001](docs/decisions/ADR-0001-repository-architecture.md)** — repository-architecture decision.
+- **[HOOKS.md](HOOKS.md)** — Claude Code git-hook automation in this repo.
+
 ## Key facts on file (verified)
 
 - **Name / address:** Four Winds Roots Pharmacy, 3932A Keele St, North York, ON M3J 1N8
@@ -114,4 +140,4 @@ netlify deploy --dir=dist --prod     # promote to production
 - **Rating:** 4.9★ (highest among nearby pharmacies surveyed)
 - **Distinctive services:** holistic / herb–drug interaction review, blister packs, free delivery,
   medication reviews, optical & wellness
-- **Opening hours:** ⚠️ **unconfirmed** — must be verified by phone before launch
+- **Opening hours:** ⚠️ **unconfirmed** — showing "call to confirm" until verified by phone

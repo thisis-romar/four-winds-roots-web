@@ -37,8 +37,9 @@ import PhoneLink from '../components/PhoneLink.astro';
       <h2 id="contact-call-heading">Call Us Now</h2>
       <PhoneLink class="btn btn-call contact-call-big" display="(416) 398-8200" />
       <p>
-        <!-- TODO: confirm hours with owner -->
-        Mon–Fri 9 am–6 pm &nbsp;·&nbsp; Sat 9 am–2 pm
+        <!-- INTERIM: opening hours unverified — showing call-to-confirm until owner confirms.
+             Previous placeholder values: Mon–Fri 9 am–6 pm · Sat 9 am–2 pm (Sun closed). -->
+        Please call to confirm our current opening hours.
       </p>
     </section>
 
@@ -85,40 +86,18 @@ import PhoneLink from '../components/PhoneLink.astro';
 
     <section aria-labelledby="contact-hours-heading">
       <h2 id="contact-hours-heading">Hours of Operation</h2>
-      <!-- HoursTable component — TODO: confirm all hours with owner before publishing -->
-      <table aria-label="Pharmacy hours of operation">
-        <caption class="sr-only">Four Winds Roots Pharmacy hours of operation</caption>
-        <tbody>
-          <tr>
-            <th scope="row">Monday</th>
-            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Tuesday</th>
-            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Wednesday</th>
-            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Thursday</th>
-            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Friday</th>
-            <td><!-- TODO: confirm -->9:00 am – 6:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Saturday</th>
-            <td><!-- TODO: confirm -->9:00 am – 2:00 pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Sunday</th>
-            <td><!-- TODO: confirm -->Closed</td>
-          </tr>
-        </tbody>
-      </table>
+      <!--
+        INTERIM: opening hours are being confirmed with the owner. The specific hours below were
+        unverified directory placeholders and have been replaced with a call-to-confirm message so
+        the site does not publish wrong hours. RESTORE the table once the real hours are confirmed.
+        Previous placeholder values:
+          Mon 9:00 am – 6:00 pm | Tue 9:00 am – 6:00 pm | Wed 9:00 am – 6:00 pm
+          Thu 9:00 am – 6:00 pm | Fri 9:00 am – 6:00 pm | Sat 9:00 am – 2:00 pm | Sun Closed
+      -->
+      <p class="contact-hours-pending">
+        Our opening hours are currently being confirmed. Please call
+        <PhoneLink display="(416) 398-8200" /> for today's hours before visiting.
+      </p>
       <p>
         <em>
           <!-- TODO: add actual statutory holiday hours once confirmed with owner -->

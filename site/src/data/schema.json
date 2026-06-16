@@ -19,13 +19,13 @@
     "Guardian Four Winds Pharmacy"
   ],
 
-  "@comment_url": "TODO: confirm final domain before go-live (currently placeholder)",
-  "url": "https://fourwindsrootspharmacy.ca",
+  "@comment_url": "TEMPORARY: pointed at the live Netlify URL so search engines can index the site now. REVERT all three URLs below to https://fourwindsrootspharmacy.ca once that domain is registered.",
+  "url": "https://charming-zuccutto-52dc64.netlify.app",
 
-  "logo": "https://fourwindsrootspharmacy.ca/images/logo.png",
+  "logo": "https://charming-zuccutto-52dc64.netlify.app/images/logo.png",
 
   "image": [
-    "https://fourwindsrootspharmacy.ca/images/storefront.jpg"
+    "https://charming-zuccutto-52dc64.netlify.app/images/storefront.jpg"
   ],
 
   "address": {
@@ -47,21 +47,7 @@
   "telephone": "+14163988200",
   "faxNumber": "+14163986745",
 
-  "@comment_openingHours": "TODO: confirm exact hours with owner — placeholders based on directory data (Mon–Fri 9–6, Sat 9–2, Sun closed). Holiday hours unknown.",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "14:00"
-    }
-  ],
+  "@comment_openingHours": "Opening hours intentionally OMITTED until confirmed with owner. Do not assert hours in structured data that we cannot verify. RESTORE an openingHoursSpecification once confirmed (prior placeholder: Mon–Fri 09:00–18:00, Sat 09:00–14:00, Sun closed).",
 
   "aggregateRating": {
     "@type": "AggregateRating",

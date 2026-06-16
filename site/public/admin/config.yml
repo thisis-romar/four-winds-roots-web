@@ -18,8 +18,8 @@ public_folder: "/images/uploads"
 # Enable editorial workflow (draft → review → publish) — recommended for a single owner
 publish_mode: editorial_workflow
 
-site_url: https://fourwindsrootspharmacy.ca
-# TODO: confirm final domain with owner
+# TEMPORARY: Netlify URL; revert to https://fourwindsrootspharmacy.ca once the domain is registered.
+site_url: https://charming-zuccutto-52dc64.netlify.app
 
 collections:
   # Pages collection — allows owner to edit page content without touching code
