@@ -3,11 +3,10 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - feature/astro-scaffold   # main dev branch → production deploy
-      - claude/four-winds-pharmacy-audit-Yhxka  # default branch → docs only, no deploy
+      - main   # trunk → production deploy
   pull_request:
     branches:
-      - feature/astro-scaffold   # PRs into dev branch get a preview deploy
+      - main   # PRs into trunk get a preview deploy
 
 jobs:
   build-and-deploy:
@@ -35,7 +34,7 @@ jobs:
 
       - name: Deploy to Netlify (production)
         id: netlify-prod
-        if: github.ref == 'refs/heads/feature/astro-scaffold'
+        if: github.ref == 'refs/heads/main'
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: site/dist
@@ -55,7 +54,7 @@ jobs:
       # than 200, AND if the homepage doesn't contain a known string from the
       # rendered Astro output.
       - name: Verify production URL actually serves content
-        if: github.ref == 'refs/heads/feature/astro-scaffold' && steps.netlify-prod.outcome == 'success'
+        if: github.ref == 'refs/heads/main' && steps.netlify-prod.outcome == 'success'
         run: |
           set -euo pipefail
           URL="${{ steps.netlify-prod.outputs.deploy-url }}"
