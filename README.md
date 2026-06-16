@@ -1,88 +1,93 @@
 ---
 title: "Four Winds Roots Pharmacy — Project Overview"
-version: "1.1"
-last_updated: "2026-05-28"
+version: "2.0"
+last_updated: "2026-06-16"
 status: active
 category: meta
 owner: internal
-description: "Monorepo index and project overview for the Four Winds Roots Pharmacy web architecture and design research initiative."
+description: "Monorepo index and onboarding guide for the Four Winds Roots Pharmacy website (Astro site) plus its research and design foundation."
 ---
 
-# Four Winds Roots Pharmacy — Web Architecture & Design Research
+# Four Winds Roots Pharmacy — Website Monorepo
 
-A monorepo holding the **research** and **design / web-architecture** foundation for a future
-website for **Four Winds Roots Pharmacy** (3932A Keele St, North York, ON M3J 1N8).
+A single repository holding the **website** for **Four Winds Roots Pharmacy**
+(3932A Keele St, North York, ON M3J 1N8) together with the **research** and **design**
+foundation it was built from.
 
-The pharmacy currently has **no dedicated website** — only third-party directory listings —
-despite a strong **4.9★** local reputation. This repo gathers the competitive research and
-design groundwork needed to launch a site that is **cost-conservative, distinctly branded, and
-deliberately positioned away from big-box chains.**
+> Status: **Site built — pre-launch cleanup in progress.** The Astro site in `site/` is built
+> and deploys to Netlify. A short go-live to-do list remains (real opening hours, domain
+> registration, owner content). See **[docs/GUIDANCE.md](docs/GUIDANCE.md)** for the prioritized
+> plan and **[FOLLOWUPS.md](FOLLOWUPS.md)** for deploy/SEO gaps.
 
-> Status: **Research + planning phase.** No production site code yet. Everything here is meant
-> to be reviewed and approved by the pharmacy owner before any build begins.
-
-## How to navigate
+## Repository layout
 
 ```
-research/                         What the market looks like and where the opportunity is
-  00-methodology.md               How the competitor audit was run + scoring formula
-  competitor-audit/
-    competitors.json              The 8 audited competitors (structured data)
-    scoring-criteria.json         The 9 weighted scoring criteria (weights sum to 100)
-    audit-report.md               ★ Main deliverable: ranked audit + recommendations
-    raw/                          Per-competitor evidence notes (one file each)
-  local-seo/keyword-strategy.md   Keywords to target + which page each maps to
-  market-positioning.md           The "independent & community, not big-box" strategy
-  gold-standard-architecture.md   Industry gold standard for independent pharmacy sites
+site/                             The website — an Astro static site (the deployable app)
+  src/pages/                      File-based routes (~17 pages)
+  src/components/                 Reusable UI (CallButton, HoursTable, SchemaJsonLd, forms…)
+  src/layouts/BaseLayout.astro    Accessible site shell (head, header, footer, mobile bar)
+  src/data/schema.json            LocalBusiness/Pharmacy JSON-LD source data
+  astro.config.mjs                Canonical site URL + integrations
+  netlify.toml                    Build + security headers (see Deployment below)
 
-design/                           How the future site should be built
-  information-architecture.md     Sitemap + page-by-page plan (12 pages)
-  wireframes/                     Clickable HTML mockups (open in a browser)
+research/                         Market research the site is positioned on
+  competitor-audit/audit-report.md  ★ Ranked 18-competitor audit + recommendations
+  local-seo/                      Keyword strategy + GBP disambiguation + schema draft
+  market-positioning.md           "Independent & community, not big-box" strategy
+  phipa-vendor-comparison.md      PHIPA-safe form/booking vendor comparison (for site forms)
+
+design/                          How the site is built
+  information-architecture.md     Sitemap + page-by-page plan
   brand-direction.md              Colour, type, voice, logo direction
-  component-inventory.md          Reusable building blocks for the site
-  content-model.md                What content each page needs and who owns it
   compliance-checklist.md         AODA / WCAG 2.2 AA + PHIPA (Ontario) + OCP trust
-  stack-recommendation.md         Recommended technology + cost model + alternatives
+  component-inventory.md          Reusable building blocks
+
+docs/                            Decisions & guidance
+  GUIDANCE.md                     Go-live action plan (URGENT/FIX SOON/MINOR, owner vs dev)
+  decisions/ADR-0001-…            Repository-architecture decision (single monorepo, no Nx)
 ```
 
-## Audit status — high-fidelity pass complete
+## Working on the site
 
-The competitor audit has been through **two passes**:
+The app lives in `site/`. From the repo root:
 
-1. **Initial pass (WebSearch only):** 8 competitors, provisional HTML-level scores.
-2. **High-fidelity pass (2026-05-26):** Direct WebFetch of all competitor pages. HTML-level
-   criteria — `tel:` links, `alt` text, title tags, meta descriptions, on-page forms, CTAs —
-   **directly confirmed**. Audit expanded to **18 competitors**. Provisional caveats removed.
+```bash
+cd site
+npm install            # install dependencies
+npm run dev            # local dev server (hot reload)
+npm run build          # production build → site/dist/
+npm run preview        # serve the production build locally
+```
 
-See `research/competitor-audit/audit-report.md` for the full verified results, including three
-new strategic findings: the **AODA first-mover opportunity**, the **Sunday hours gap**, and the
-**Can Pharm / "Four Winds" name-confusion issue** (critical for GBP disambiguation).
+Node 20+ recommended. The build output (`site/dist/`) and `node_modules/` are git-ignored.
 
-> **Key finding:** Every independent pharmacy in the competitive set fails WCAG 2.2 AA — no
-> competitor has alt text on images. Four Winds Roots can launch as the first AODA-compliant
-> independent pharmacy in the Keele/Finch corridor.
+## Contributor rules (read before editing site content)
 
-## Key facts on file (verified via search)
-
-- **Name / address:** Four Winds Roots Pharmacy, 3932A Keele St, North York, ON M3J 1N8
-- **Phone:** (416) 398-8200 · **Fax:** (416) 398-6745
-- **Rating:** 4.9★ (highest among nearby pharmacies surveyed)
-- **Distinctive services:** holistic / herb–drug interaction review, blister packs, RAID home
-  health supplies, blood-pressure kiosk, optical & wellness
-- **Website:** none yet (this is the greenfield opportunity)
+- **Never present either pharmacist as a physician.** Do **not** add "Dr." in front of Winston
+  Clarke (he is "the pharmacist") or Pamela Clarke (she is "Natural Health Practitioner and
+  wellness author"). Ontario regulates how pharmacists use the title "Doctor," and Pamela's
+  doctoral certificate is not from a recognised Ontario health regulator. This is the single
+  highest-risk area for a pharmacy site — keep it as-is. See `docs/GUIDANCE.md` §6.
+- **Do not publish unconfirmed services or facts.** Opening hours, the legal company name, the
+  optical/wellness service list, and any compounding claim must be owner-confirmed before they
+  go live. Use HTML comments for builder notes — never visitor-visible `TODO:` text.
 
 ## Deployment
 
-The Astro site in `site/` deploys to Netlify on every push to `feature/astro-scaffold`.
+The Astro site in `site/` deploys to **Netlify**. The trunk branch is **`main`**.
 
-- **Live URL:** https://charming-zuccutto-52dc64.netlify.app
+- **Live (preview) URL:** https://charming-zuccutto-52dc64.netlify.app
+- **Intended production domain:** `fourwindsrootspharmacy.ca` *(registration pending — set as the
+  canonical `site:` in `site/astro.config.mjs`; until registered, search visibility is limited)*
 - **Netlify site ID:** `1e8d8d8f-ff38-41a8-8c44-d4a1daf5ef8d` (account: `roots-4-winds-pharmacy`)
-- **Repo connection:** `https://github.com/thisis-romar/four-winds-roots-web` (the local folder is named `roots-4-winds-pharmacy` but the GitHub remote is `four-winds-roots-web` — same repo, two names)
 - **CI:** `.github/workflows/deploy.yml` runs on push and produces a Netlify deploy
 
-### Required Netlify build settings (not in `netlify.toml`)
+> **Note:** confirm Netlify's *Production branch* is set to **`main`** (Site → Build & deploy →
+> Continuous deployment) now that `main` is the repository's trunk.
 
-When (re-)creating the Netlify site, set these in **Site → Build & deploy → Build settings**. They are NOT reliably picked up from `netlify.toml` alone:
+### Required Netlify build settings (not reliably read from `netlify.toml`)
+
+Set these in **Site → Build & deploy → Build settings**:
 
 | Setting | Value |
 |---|---|
@@ -90,16 +95,23 @@ When (re-)creating the Netlify site, set these in **Site → Build & deploy → 
 | Build command | `npm run build` |
 | **Publish directory** | **`dist`** |
 
-If publish directory is empty, Netlify publishes the *base* directory (i.e., `site/` itself), and every route returns 404 because there is no `index.html` at that root — even though the deploy status shows "ready". This bit us once; fixed on 2026-05-28 by setting `build_settings.dir = "dist"` via the Netlify API.
+If the publish directory is empty, Netlify publishes the *base* directory (`site/` itself) and
+every route returns 404 even though the deploy shows "ready". (Fixed 2026-05-28 by setting
+`build_settings.dir = "dist"` via the Netlify API.)
 
 ### Local one-off deploy
 
-```powershell
+```bash
 cd site
-netlify deploy --dir=dist                # preview (unique URL, doesn't touch production)
-netlify deploy --dir=dist --prod         # promote to charming-zuccutto-52dc64.netlify.app
+netlify deploy --dir=dist            # preview (unique URL, doesn't touch production)
+netlify deploy --dir=dist --prod     # promote to production
 ```
 
-### What we know is missing
+## Key facts on file (verified)
 
-See [FOLLOWUPS.md](FOLLOWUPS.md) for the deploy-related and SEO gaps identified after the 2026-05-27 "Check if site is live" session.
+- **Name / address:** Four Winds Roots Pharmacy, 3932A Keele St, North York, ON M3J 1N8
+- **Phone:** (416) 398-8200 · **Fax:** (416) 398-6745
+- **Rating:** 4.9★ (highest among nearby pharmacies surveyed)
+- **Distinctive services:** holistic / herb–drug interaction review, blister packs, free delivery,
+  medication reviews, optical & wellness
+- **Opening hours:** ⚠️ **unconfirmed** — must be verified by phone before launch
