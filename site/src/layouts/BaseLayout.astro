@@ -76,14 +76,15 @@ const schemaJsonLd = JSON.stringify(
     <!--
       Privacy-friendly analytics — Plausible (no cookies, GDPR/PHIPA safe).
       NOT loaded on health-data form pages (noAnalytics = true).
-      TODO: confirm data-domain matches final registered domain before go-live.
+      INTERIM: data-domain set to the live Netlify host so analytics match the crawlable URL.
+      REVERT to fourwindsrootspharmacy.ca once that domain is registered.
       Font-src and style-src in netlify.toml CSP also need fonts.googleapis.com
       and fonts.gstatic.com added before go-live.
     -->
     {!noAnalytics && (
       <script
         defer
-        data-domain="fourwindsrootspharmacy.ca"
+        data-domain="charming-zuccutto-52dc64.netlify.app"
         src="https://plausible.io/js/script.js"
       ></script>
     )}
@@ -207,29 +208,15 @@ const schemaJsonLd = JSON.stringify(
         </section>
 
         <!-- Hours block -->
-        <!-- TODO: confirm exact hours with owner before publishing -->
+        <!--
+          INTERIM: opening hours unverified — call-to-confirm shown instead of the specific times
+          so the site doesn't publish wrong hours. RESTORE the table once hours are confirmed.
+          Previous placeholder values: Mon–Fri 9:00 am – 6:00 pm | Sat 9:00 am – 2:00 pm | Sun Closed.
+        -->
         <section class="footer-hours" aria-labelledby="footer-hours-heading">
           <h2 id="footer-hours-heading" class="footer-hours__title">Hours</h2>
-          <table class="footer-hours__table" aria-label="Pharmacy hours of operation">
-            <caption class="sr-only">Four Winds Roots Pharmacy hours of operation</caption>
-            <tbody>
-              <tr>
-                <th scope="row">Monday – Friday</th>
-                <td><!-- TODO: confirm with owner -->9:00 am – 6:00 pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Saturday</th>
-                <td><!-- TODO: confirm with owner -->9:00 am – 2:00 pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Sunday</th>
-                <td><!-- TODO: confirm with owner -->Closed</td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- TODO: add statutory holiday hours once confirmed with owner -->
           <p class="footer-hours__holiday-note">
-            <em>Holiday hours may vary — call to confirm:
+            <em>Our opening hours are being confirmed — please call for today's hours:
               <a
                 href="#"
                 class="tel-protected"
