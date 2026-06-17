@@ -18,106 +18,23 @@
 import PhoneLink from './PhoneLink.astro';
 ---
 
-<form
-  data-component="DeliveryRequestForm"
-  class="pharmacy-form"
-  method="POST"
-  action="TODO_FORM_ENDPOINT"
-  aria-label="Free prescription delivery request form"
-  novalidate
->
-  <fieldset>
-    <legend>Your Information</legend>
-    <div class="form-group">
-      <label for="delivery-name">Your Full Name <span aria-hidden="true">*</span></label>
-      <input
-        type="text"
-        id="delivery-name"
-        name="patient_name"
-        required
-        aria-required="true"
-        autocomplete="name"
-      />
-    </div>
-    <div class="form-group">
-      <label for="delivery-phone">Your Phone Number <span aria-hidden="true">*</span></label>
-      <input
-        type="tel"
-        id="delivery-phone"
-        name="contact_phone"
-        required
-        aria-required="true"
-        autocomplete="tel"
-        placeholder="(xxx) xxx-xxxx"
-      />
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Delivery Details</legend>
-    <div class="form-group">
-      <label for="delivery-address">Delivery Address <span aria-hidden="true">*</span></label>
-      <input
-        type="text"
-        id="delivery-address"
-        name="delivery_address"
-        required
-        aria-required="true"
-        autocomplete="street-address"
-        placeholder="Street address, unit number, city"
-      />
-    </div>
-    <div class="form-group">
-      <label for="delivery-time">Preferred Delivery Time</label>
-      <select id="delivery-time" name="preferred_time">
-        <!-- TODO: confirm available delivery windows with owner -->
-        <option value="">No preference</option>
-        <option value="morning">Morning (9 am – 12 pm)</option>
-        <option value="afternoon">Afternoon (12 pm – 5 pm)</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="delivery-notes">Delivery Notes (optional)</label>
-      <textarea
-        id="delivery-notes"
-        name="delivery_notes"
-        rows="2"
-        placeholder="e.g., buzz code, leave at door, building name"
-      ></textarea>
-    </div>
-  </fieldset>
-
-  <!-- Honeypot spam prevention -->
-  <div aria-hidden="true" style="display: none; visibility: hidden; position: absolute;">
-    <label for="delivery-website">Leave this blank</label>
-    <input type="text" id="delivery-website" name="website" tabindex="-1" autocomplete="off" />
-  </div>
-
-  <!-- Explicit informed consent -->
-  <div class="form-group form-group--consent">
-    <label class="form-consent-label">
-      <input
-        type="checkbox"
-        name="consent"
-        required
-        aria-required="true"
-        aria-describedby="delivery-consent-description"
-      />
-      <span id="delivery-consent-description">
-        <!-- TODO: have consent language reviewed by owner before publishing -->
-        I consent to Four Winds Roots Pharmacy using the above information to arrange delivery
-        of my prescriptions. My information will be handled in accordance with PHIPA.
-        <a href="/privacy-policy">Privacy Policy</a>
-      </span>
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn-call">Request Free Delivery</button>
-
-  <!-- TODO: Implement success and error states (aria-live) -->
-  <div role="status" aria-live="polite" class="form-status" id="delivery-form-status"></div>
-
-  <p class="form-fallback">
-    Prefer to call? <PhoneLink />
+<!--
+  Online delivery-request form temporarily DISABLED. It collected PHIPA-protected data but had no
+  compliant backend wired. Until a PHIPA-safe vendor is selected
+  (see research/phipa-vendor-comparison.md), we direct patients to call/visit instead.
+  The full original form markup is preserved in git history — restore it once a backend exists.
+-->
+<div class="pharmacy-form-cta" role="note" aria-labelledby="delivery-cta-heading">
+  <h3 id="delivery-cta-heading">Arrange free delivery — give us a call</h3>
+  <p>
+    Online delivery requests are coming soon. To set up free delivery now, just call our pharmacy
+    team and we'll arrange it with you:
   </p>
-</form>
+  <ul>
+    <li><strong>Call us:</strong> <PhoneLink /> — have your delivery address and phone number ready.</li>
+    <li><strong>Visit us:</strong> 3932A Keele St, North York, ON M3J 1N8</li>
+  </ul>
+  <p class="pharmacy-form-cta__action">
+    <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+  </p>
+</div>

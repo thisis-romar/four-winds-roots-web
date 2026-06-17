@@ -19,195 +19,27 @@
 import PhoneLink from './PhoneLink.astro';
 ---
 
-<!-- TODO: Style TransferForm with design tokens; implement real backend action -->
-<form
-  data-component="TransferForm"
-  class="pharmacy-form"
-  method="POST"
-  action="TODO_FORM_ENDPOINT"
-  aria-label="Prescription transfer request form"
-  novalidate
->
-  <fieldset>
-    <legend>Your Current Pharmacy</legend>
-    <div class="form-group">
-      <label for="transfer-from-pharmacy">Pharmacy Name <span aria-hidden="true">*</span></label>
-      <input
-        type="text"
-        id="transfer-from-pharmacy"
-        name="from_pharmacy_name"
-        required
-        aria-required="true"
-        autocomplete="organization"
-        placeholder="e.g., Shoppers Drug Mart on Yonge"
-      />
-    </div>
-    <div class="form-group">
-      <label for="transfer-from-phone">Pharmacy Phone Number <span aria-hidden="true">*</span></label>
-      <input
-        type="tel"
-        id="transfer-from-phone"
-        name="from_pharmacy_phone"
-        required
-        aria-required="true"
-        autocomplete="tel"
-        placeholder="(xxx) xxx-xxxx"
-      />
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Your Information</legend>
-    <div class="form-group">
-      <label for="transfer-patient-name">Your Full Name <span aria-hidden="true">*</span></label>
-      <input
-        type="text"
-        id="transfer-patient-name"
-        name="patient_name"
-        required
-        aria-required="true"
-        autocomplete="name"
-      />
-    </div>
-    <div class="form-group">
-      <label for="transfer-patient-dob">Date of Birth <span aria-hidden="true">*</span></label>
-      <input
-        type="date"
-        id="transfer-patient-dob"
-        name="patient_dob"
-        required
-        aria-required="true"
-        autocomplete="bday"
-      />
-    </div>
-    <div class="form-group">
-      <label for="transfer-contact-phone">Your Phone Number <span aria-hidden="true">*</span></label>
-      <input
-        type="tel"
-        id="transfer-contact-phone"
-        name="contact_phone"
-        required
-        aria-required="true"
-        autocomplete="tel"
-        placeholder="(xxx) xxx-xxxx"
-      />
-    </div>
-    <div class="form-group">
-      <label for="transfer-contact-email">Your Email Address (optional)</label>
-      <input
-        type="email"
-        id="transfer-contact-email"
-        name="contact_email"
-        autocomplete="email"
-      />
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Medications to Transfer</legend>
-    <div class="form-group">
-      <label for="transfer-medications">
-        Medication Names
-        <span class="form-hint">List each medication on a separate line, or include the Rx number if you have it.</span>
-      </label>
-      <textarea
-        id="transfer-medications"
-        name="medications"
-        rows="4"
-        required
-        aria-required="true"
-        aria-describedby="transfer-medications-hint"
-        placeholder="e.g., Metformin 500mg&#10;Lisinopril 10mg"
-      ></textarea>
-      <span id="transfer-medications-hint" class="form-hint">
-        Don't worry if you don't have all the details — we'll confirm with your current pharmacy.
-      </span>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Pickup or Delivery</legend>
-    <div class="form-group form-group--radio">
-      <label>
-        <input type="radio" name="fulfillment" value="pickup" checked />
-        I'll pick it up at the pharmacy
-      </label>
-      <label>
-        <input type="radio" name="fulfillment" value="delivery" />
-        Free delivery to my address
-      </label>
-    </div>
-    <div class="form-group" id="delivery-address-group">
-      <label for="transfer-delivery-address">Delivery Address</label>
-      <input
-        type="text"
-        id="transfer-delivery-address"
-        name="delivery_address"
-        autocomplete="street-address"
-        placeholder="Your delivery address"
-      />
-    </div>
-  </fieldset>
-
-  <!-- Honeypot spam prevention — hidden from users and screen readers -->
-  <div aria-hidden="true" style="display: none; visibility: hidden; position: absolute;">
-    <label for="transfer-website">Leave this blank</label>
-    <input type="text" id="transfer-website" name="website" tabindex="-1" autocomplete="off" />
-  </div>
-
-  <!-- PHIPA Privacy Notice — required visible disclosure (OPC/OCP best practice) -->
-  <div class="phipa-notice" role="note" aria-labelledby="transfer-privacy-notice-heading">
-    <h3 id="transfer-privacy-notice-heading">Privacy Notice</h3>
-    <p>
-      <strong>What we collect:</strong> Your name, contact information, date of birth, current
-      pharmacy details, and a list of the prescriptions you wish to transfer.
-    </p>
-    <p>
-      <strong>How it is used:</strong> Solely to contact your current pharmacy and process your
-      transfer request. Your information is not used for marketing and is never sold or shared
-      with third parties outside of your direct care.
-    </p>
-    <p>
-      <strong>Storage:</strong> This website does not store your health information.
-      Your submission is transmitted securely to pharmacy staff and retained in our dispensary
-      records in accordance with Ontario College of Pharmacists record-keeping requirements
-      (minimum 10 years).
-    </p>
-    <p>
-      <strong>Your rights:</strong> Under the <em>Personal Health Information Protection Act
-      (PHIPA)</em>, you have the right to access or correct your records. Contact us at
-      <PhoneLink /> or in person at 3932A Keele St, North York.
-      See our <a href="/privacy-policy">Privacy Policy</a> for full details.
-    </p>
-  </div>
-
-  <!-- Explicit informed consent — PHIPA requirement -->
-  <div class="form-group form-group--consent">
-    <label class="form-consent-label">
-      <input
-        type="checkbox"
-        name="consent"
-        required
-        aria-required="true"
-        aria-describedby="consent-description"
-      />
-      <span id="consent-description">
-        <!-- TODO: have consent language reviewed by owner and OCP before publishing -->
-        I consent to Four Winds Roots Pharmacy contacting my current pharmacy to transfer my
-        prescriptions, and to using the information above to process my request. My information
-        will be handled in accordance with PHIPA and will not be shared or sold.
-        <a href="/privacy-policy">Privacy Policy</a>
-      </span>
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn-transfer">Start My Transfer</button>
-
-  <!-- TODO: Implement success and error states (aria-live region) -->
-  <div role="status" aria-live="polite" class="form-status" id="transfer-form-status"></div>
-
-  <p class="form-fallback">
-    Prefer to call? We're happy to take this over the phone:
-    <PhoneLink />
+<!--
+  Online transfer form temporarily DISABLED. It collected PHIPA-protected health data but had no
+  compliant backend wired. Until a PHIPA-safe vendor is selected
+  (see research/phipa-vendor-comparison.md), we direct patients to call/fax/visit instead.
+  The full original form markup is preserved in git history — restore it once a backend exists.
+-->
+<div class="pharmacy-form-cta" role="note" aria-labelledby="transfer-cta-heading">
+  <h3 id="transfer-cta-heading">Transfer your prescriptions — call, fax, or visit</h3>
+  <p>
+    Online transfer requests are coming soon. In the meantime our pharmacy team can start your
+    transfer in a couple of minutes — we'll contact your current pharmacy for you.
   </p>
-</form>
+  <ul>
+    <li>
+      <strong>Call us:</strong> <PhoneLink /> — please have your current pharmacy's name and phone
+      number, and your medication names, handy.
+    </li>
+    <li><strong>Fax us:</strong> (416) 398-6745</li>
+    <li><strong>Visit us:</strong> 3932A Keele St, North York, ON M3J 1N8</li>
+  </ul>
+  <p class="pharmacy-form-cta__action">
+    <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+  </p>
+</div>

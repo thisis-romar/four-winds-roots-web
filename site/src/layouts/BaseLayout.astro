@@ -56,9 +56,8 @@ const schemaJsonLd = JSON.stringify(
     <meta property="og:url" content={canonical} />
     <!-- TODO: add og:image once pharmacy photos are taken (storefront + team) -->
 
-    <!-- Favicon -->
-    <!-- TODO: add favicon files once logo is commissioned -->
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <!-- Favicon — interim SVG monogram; replace with the commissioned logo when available -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Performance: preconnect to Google Fonts before the stylesheet request -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,8 +77,7 @@ const schemaJsonLd = JSON.stringify(
       NOT loaded on health-data form pages (noAnalytics = true).
       INTERIM: data-domain set to the live Netlify host so analytics match the crawlable URL.
       REVERT to fourwindsrootspharmacy.ca once that domain is registered.
-      Font-src and style-src in netlify.toml CSP also need fonts.googleapis.com
-      and fonts.gstatic.com added before go-live.
+      (CSP for Google Fonts + Plausible is correctly configured in site/public/_headers.)
     -->
     {!noAnalytics && (
       <script

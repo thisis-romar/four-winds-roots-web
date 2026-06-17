@@ -143,15 +143,21 @@ import PhoneLink from '../components/PhoneLink.astro';
         <strong>For prescriptions and health information, please call us directly:</strong>
         <PhoneLink />
       </p>
-      <!-- General enquiry form — no PHIPA-sensitive data (no health info, no Rx data) -->
-      <!-- TODO: wire form action to a backend (Formspree, Netlify Forms, or similar) before go-live -->
+      <!-- General enquiry form — no PHIPA-sensitive data (no health info, no Rx data).
+           Wired to Netlify Forms: detected at deploy via data-netlify + the hidden form-name input.
+           Submissions land in the Netlify dashboard (Forms) and can be emailed to the pharmacy.
+           Keep this form free of health/Rx data — the hint below enforces that. On submit, Netlify
+           shows its hosted success page. -->
       <form
         class="contact-form"
+        name="contact"
         method="POST"
-        action="#"
+        data-netlify="true"
+        netlify-honeypot="website"
         novalidate
         aria-label="General enquiry form"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <!-- Honeypot — hidden from real users, catches most bots -->
         <div class="contact-form__honeypot" aria-hidden="true">
           <label for="contact-website">Website</label>
