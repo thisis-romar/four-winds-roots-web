@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Four Winds Roots Pharmacy">
+  <rect width="64" height="64" rx="14" fill="#1f6b4f"/>
+  <!-- Four-winds spark + roots motif, simplified into an 'FW' monogram -->
+  <path d="M20 18h16v6h-9v6h8v6h-8v10h-7V18z" fill="#ffffff"/>
+  <path d="M40 18h6l3 14 3-14h5l-6 28h-5l-6-28z" fill="#cfe8d8"/>
+</svg>

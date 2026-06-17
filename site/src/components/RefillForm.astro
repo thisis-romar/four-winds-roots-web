@@ -17,151 +17,27 @@
 import PhoneLink from './PhoneLink.astro';
 ---
 
-<form
-  data-component="RefillForm"
-  class="pharmacy-form"
-  method="POST"
-  action="TODO_FORM_ENDPOINT"
-  aria-label="Prescription refill request form"
-  novalidate
->
-  <fieldset>
-    <legend>Your Prescription</legend>
-    <div class="form-group">
-      <label for="refill-rx-number">
-        Prescription Number(s)
-        <span class="form-hint">Found on your prescription label</span>
-      </label>
-      <input
-        type="text"
-        id="refill-rx-number"
-        name="rx_number"
-        autocomplete="off"
-        placeholder="e.g., RX-12345"
-        aria-describedby="refill-rx-hint"
-      />
-      <span id="refill-rx-hint" class="form-hint">
-        If you don't have the number, that's okay — we can look it up with your name.
-      </span>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Your Information</legend>
-    <div class="form-group">
-      <label for="refill-patient-name">Your Full Name <span aria-hidden="true">*</span></label>
-      <input
-        type="text"
-        id="refill-patient-name"
-        name="patient_name"
-        required
-        aria-required="true"
-        autocomplete="name"
-      />
-    </div>
-    <div class="form-group">
-      <label for="refill-patient-dob">Date of Birth <span aria-hidden="true">*</span></label>
-      <input
-        type="date"
-        id="refill-patient-dob"
-        name="patient_dob"
-        required
-        aria-required="true"
-        autocomplete="bday"
-      />
-    </div>
-    <div class="form-group">
-      <label for="refill-contact-phone">Your Phone Number <span aria-hidden="true">*</span></label>
-      <input
-        type="tel"
-        id="refill-contact-phone"
-        name="contact_phone"
-        required
-        aria-required="true"
-        autocomplete="tel"
-        placeholder="(xxx) xxx-xxxx"
-      />
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Pickup or Delivery</legend>
-    <div class="form-group form-group--radio">
-      <label>
-        <input type="radio" name="fulfillment" value="pickup" checked />
-        I'll pick it up at the pharmacy
-      </label>
-      <label>
-        <input type="radio" name="fulfillment" value="delivery" />
-        Free delivery to my address
-      </label>
-    </div>
-    <div class="form-group" id="refill-delivery-address-group">
-      <label for="refill-delivery-address">Delivery Address</label>
-      <input
-        type="text"
-        id="refill-delivery-address"
-        name="delivery_address"
-        autocomplete="street-address"
-        placeholder="Your delivery address in North York"
-      />
-    </div>
-  </fieldset>
-
-  <!-- Honeypot spam prevention -->
-  <div aria-hidden="true" style="display: none; visibility: hidden; position: absolute;">
-    <label for="refill-website">Leave this blank</label>
-    <input type="text" id="refill-website" name="website" tabindex="-1" autocomplete="off" />
-  </div>
-
-  <!-- PHIPA Privacy Notice — required visible disclosure -->
-  <div class="phipa-notice" role="note" aria-labelledby="refill-privacy-notice-heading">
-    <h3 id="refill-privacy-notice-heading">Privacy Notice</h3>
-    <p>
-      <strong>What we collect:</strong> Your name, contact information, and prescription
-      number(s) or medication name(s) for refill processing.
-    </p>
-    <p>
-      <strong>How it is used:</strong> Solely to prepare and dispense your prescription refill.
-      Your information is not used for marketing and is never sold or shared with third parties
-      outside of your direct care.
-    </p>
-    <p>
-      <strong>Storage:</strong> This website does not store your health information.
-      Your submission is transmitted securely to pharmacy staff and retained in dispensary records
-      per Ontario College of Pharmacists requirements (minimum 10 years).
-    </p>
-    <p>
-      <strong>Your rights:</strong> Under <em>PHIPA</em>, you may access or correct your records.
-      Contact us at <PhoneLink /> or see our <a href="/privacy-policy">Privacy Policy</a>.
-    </p>
-  </div>
-
-  <!-- Explicit informed consent -->
-  <div class="form-group form-group--consent">
-    <label class="form-consent-label">
-      <input
-        type="checkbox"
-        name="consent"
-        required
-        aria-required="true"
-        aria-describedby="refill-consent-description"
-      />
-      <span id="refill-consent-description">
-        <!-- TODO: have consent language reviewed by owner and OCP before publishing -->
-        I consent to Four Winds Roots Pharmacy using the above information to process my
-        prescription refill request. My information will be handled in accordance with PHIPA.
-        <a href="/privacy-policy">Privacy Policy</a>
-      </span>
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn-call">Request Refill</button>
-
-  <!-- TODO: Implement success and error states -->
-  <div role="status" aria-live="polite" class="form-status" id="refill-form-status"></div>
-
-  <p class="form-fallback">
-    Prefer to call? <PhoneLink />
+<!--
+  Online refill form temporarily DISABLED. It collected PHIPA-protected health data but had no
+  compliant backend wired. Until a PHIPA-safe vendor is selected
+  (see research/phipa-vendor-comparison.md), we direct patients to call/fax/visit instead.
+  The full original form markup is preserved in git history — restore it once a backend exists.
+-->
+<div class="pharmacy-form-cta" role="note" aria-labelledby="refill-cta-heading">
+  <h3 id="refill-cta-heading">Request a refill — call, fax, or visit</h3>
+  <p>
+    Online refill requests are coming soon. For now, the fastest way to refill is to reach our
+    pharmacy team directly:
   </p>
-</form>
+  <ul>
+    <li>
+      <strong>Call us:</strong> <PhoneLink /> — have your prescription number (on your label) or
+      your name and date of birth ready.
+    </li>
+    <li><strong>Fax us:</strong> (416) 398-6745</li>
+    <li><strong>Visit us:</strong> 3932A Keele St, North York, ON M3J 1N8</li>
+  </ul>
+  <p class="pharmacy-form-cta__action">
+    <PhoneLink class="btn btn-call" display="Call (416) 398-8200" />
+  </p>
+</div>

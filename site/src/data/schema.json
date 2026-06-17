@@ -19,14 +19,10 @@
     "Guardian Four Winds Pharmacy"
   ],
 
-  "@comment_url": "TEMPORARY: pointed at the live Netlify URL so search engines can index the site now. REVERT all three URLs below to https://fourwindsrootspharmacy.ca once that domain is registered.",
+  "@comment_url": "TEMPORARY: pointed at the live Netlify URL so search engines can index the site now. REVERT to https://fourwindsrootspharmacy.ca once that domain is registered.",
   "url": "https://charming-zuccutto-52dc64.netlify.app",
 
-  "logo": "https://charming-zuccutto-52dc64.netlify.app/images/logo.png",
-
-  "image": [
-    "https://charming-zuccutto-52dc64.netlify.app/images/storefront.jpg"
-  ],
+  "@comment_images": "logo and image fields REMOVED — the referenced /images/logo.png and /images/storefront.jpg do not exist yet and would 404, breaking Google Rich Results. Re-add (pointing at real files on the final domain) once the logo and storefront photo are available.",
 
   "address": {
     "@type": "PostalAddress",
